@@ -62,3 +62,61 @@
 	<string>
 	<cstddef>
 
+1666633731 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Cola.cpp
+	<iostream>
+	"Cola.h"
+	<string>
+	"NodoCola.h"
+
+1666632881 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Cola.h
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1666632110 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/NodoCola.h
+	"Vehiculo.h"
+	<cstddef>
+
+1666684002 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Vehiculo.h
+	<string>
+	<list>
+	<cstdlib>
+	<time.h>
+
+1666634107 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoCola.cpp
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1666634427 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoPila.cpp
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1666632716 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/NodoPila.h
+	<iostream>
+	"Vehiculo.h"
+
+1666634259 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Pila.cpp
+	"Pila.h"
+
+1666632929 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Pila.h
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1666636506 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
+	"Vehiculo.h"
+	<string>
+	<cstddef>
+
+1666624726 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ZonaReparto.cpp
+	"ZonaReparto.h"
+
+1666624725 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ZonaReparto.h
+
+1667239911 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+	"Gestor.h"
+	<time.h>
+
+1667240032 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
+	"vehiculo.h"
+

@@ -3,12 +3,13 @@
 #include "vehiculo.h"
 
 
+
 class Gestor
 {
     public:
         Gestor();
         virtual ~Gestor();
-        Vehiculo generarVehiculoRand();
+        static std::string generarBastidorRand();
     protected:
 
     private:

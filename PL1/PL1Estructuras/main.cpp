@@ -2,6 +2,9 @@
 #include <cstdlib>
 #include <time.h>
 #include <string>
+#include "Pila.h"
+#include "Cola.h"
+#include "Gestor.h"
 
 
 using namespace std;
@@ -17,12 +20,13 @@ int main()
 
     while (bucle){
         cout<<"Seleccione una opcion: \n1-Generar numero aleatorio de automóviles\n2-Generar numero determinado de automoviles\n3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n5-Salen un numero aleatorio de automóviles de la fabrica y llega a un almacén\n6-Salen un numero determinado de automoviles de la fabrica y llegan a un almacen\n7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n0-Salir\n";
-        cin>>opcion; //HOLA ESTE ES EL COMENTARIO QUE TE HE DICHO A VER SI TE SALE
+        cin>>opcion;
         if (opcion==0){
             bucle=false;
         }
         else if (opcion==1){
             //Generar un numero de automoviles aleatorio
+            cout<<Gestor::generarBastidorRand()<<"\n";
         }
         else if(opcion==2){
             //Generar un numero dado de automoviles
