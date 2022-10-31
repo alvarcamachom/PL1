@@ -1,5 +1,7 @@
 #include "Pila.h"
 
+using namespace std;
+
 Pila::Pila()
 {
     cima = NULL;

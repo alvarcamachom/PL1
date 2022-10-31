@@ -2,15 +2,17 @@
 #include <string>
 #include <cstddef>
 
+using namespace std;
+
 Vehiculo::Vehiculo()
 {
 modelo = "";
 color = "";
 bastidor = "";
-concesionario = 0;
+concesionario = "";
 }
 
-Vehiculo::Vehiculo(std::string m, std::string c, std::string b, int conc)
+Vehiculo::Vehiculo(string m, string c, string b, string conc)
 {
 modelo = m;
 color = c;
@@ -18,7 +20,7 @@ bastidor = b;
 concesionario = conc;
 }
 
-void Vehiculo::cargarVehiculo(std::string m, std::string c, std::string b, int conc)
+void Vehiculo::cargarVehiculo(string m, string c, string b, string conc)
 {
 modelo = m;
 color = c;
@@ -26,13 +28,13 @@ bastidor = b;
 concesionario = conc;
 }
 
-std::string Vehiculo::devolverModelo(){return modelo;}
-std::string Vehiculo::devolverColor(){return color;}
-std::string Vehiculo::devolverBastidor(){return bastidor;}
-int Vehiculo::devolverConcesionario(){return concesionario;}
+string Vehiculo::devolverModelo(){return modelo;}
+string Vehiculo::devolverColor(){return color;}
+string Vehiculo::devolverBastidor(){return bastidor;}
+string Vehiculo::devolverConcesionario(){return concesionario;}
 
-std::string Vehiculo::verVehiculo(){
-    return("El vehiculo es un " + modelo + ", color: " + color + ", con bastidor " + bastidor + ", con concesionario " + std::to_string(concesionario)+"\n");
+string Vehiculo::verVehiculo(){
+    return("El vehiculo es un " + modelo + ", color: " + color + ", con bastidor " + bastidor + ", con concesionario " + concesionario+"\n");
 }
 Vehiculo::~Vehiculo()
 {

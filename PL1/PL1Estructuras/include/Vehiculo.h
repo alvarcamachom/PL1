@@ -5,30 +5,26 @@
 #include <cstdlib>
 #include <time.h>
 
+using namespace std;
 
 class Vehiculo
 {
     public:
         //Constructores
         Vehiculo();
-        Vehiculo(std::string m, std::string c, std::string b, int conc);
+        Vehiculo(string m, string c, string b, string conc);
         virtual ~Vehiculo();
-        std::string verVehiculo();
-        void cargarVehiculo(std::string m, std::string c, std::string b, int conc);
-        std::string devolverModelo();
-        std::string devolverColor();
-        std::string devolverBastidor();
-        int devolverConcesionario();
-        /*std::string color[6] = {"azul","amarillo","verde","rojo","morado","negro"};
-        list<string> modelo  {"Zafira","Octavia","Golf","Astra","Insignia","Polo"};
-        list<char> letras {"a","b","c","d","e","f"};*/
-
+        string verVehiculo();
+        void cargarVehiculo(string m, string c, string b, string conc);
+        string devolverModelo();
+        string devolverColor();
+        string devolverBastidor();
+        string devolverConcesionario();
 
     protected:
 
     private:
-        std::string modelo, color, bastidor;
-        int concesionario;
+        string modelo, color, bastidor, concesionario;
 };
 
 #endif // VEHICULO_H

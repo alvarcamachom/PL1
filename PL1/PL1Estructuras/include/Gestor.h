@@ -1,15 +1,19 @@
 #ifndef GESTOR_H
 #define GESTOR_H
-#include "vehiculo.h"
+#include "Vehiculo.h"
 
-
+using namespace std;
 
 class Gestor
 {
     public:
         Gestor();
         virtual ~Gestor();
-        static std::string generarBastidorRand();
+        static string generarBastidorRand();
+        static string modeloRand();
+        static string colorRand();
+        static string concesionarioRand();
+
     protected:
 
     private:
