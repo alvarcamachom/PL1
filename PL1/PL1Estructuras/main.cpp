@@ -6,19 +6,25 @@
 #include "Cola.h"
 #include "Gestor.h"
 #include "Vehiculo.h"
+#include "ZonaReparto.h"
 
 
 using namespace std;
 
 int main()
 {
+    //Variables menú
     srand(time(NULL));
     int opcion;
     bool bucle = true;
-    int nv;
-    int nv2;
     string error = "Opcion no valida\n";
 
+    //Variables simulación
+    int nc = Gestor::generarNC(); //Genera el numero maximo de concesionarios
+    int nv = Gestor::generarNV(); //Genera el numero de vehiculos a fabricar
+    int ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
+    int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
+    ZonaReparto ZN,ZS,ZE,ZO;
     Vehiculo v;
 
     while (bucle){
@@ -39,7 +45,7 @@ int main()
             int nv = rand()%10; //numero de automoviles aleatorio
             for (int i=1; i<=nv; i++){
                 v.cargarVehiculo(Gestor::modeloRand(), Gestor::colorRand(), Gestor::generarBastidorRand(), Gestor::concesionarioRand()); //Cargar vehiculo con datos
-                cout<<v.verVehiculo();/*MAL (se carga en todas las iteraciones el mismo coche) no se como solucionarlo,
+                cout<<v.verVehiculo()<<endl;/*MAL (se carga en todas las iteraciones el mismo coche) no se como solucionarlo,
                 he estado haciendo un intento de crear NV coches y cargarlos y no he llegado a mas jeje*/
             }
 
@@ -62,7 +68,7 @@ int main()
         else if(opcion==6){
             //Sale un numero dado de automoviles de la fabrica y llegan a almacen
             cout<<"Cuantos automoviles salen de la fabrica?";
-            cin>>nv2;
+            cin>>nv;
         }
         else if(opcion==7){
             //Mostrar datos de los almacenes de la zona y registros

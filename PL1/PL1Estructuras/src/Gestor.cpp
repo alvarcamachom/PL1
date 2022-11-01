@@ -1,5 +1,6 @@
 #include "Gestor.h"
 #include <time.h>
+#include "Vehiculo.h"
 
 using namespace std;
 
@@ -7,6 +8,7 @@ Gestor::Gestor()
 {
     //ctor
 }
+
 
 string Gestor::generarBastidorRand(){
     srand(time(NULL));
@@ -44,6 +46,19 @@ string Gestor::concesionarioRand(){
     int u = rand()%4;
     string concesionario = concesionarios[u];
     return concesionario;
+}
+
+int Gestor::generarNC(){
+    int nc = rand()%7 +4; //numero aleatorio entre 4 y 10
+}
+int Gestor::generarNV(){
+    int nv = rand()%21 +10; //numero aleatorio entre 10 y 30
+}
+int Gestor::generarNS(){
+    int ns = rand()%6 +3; //numero aleatorio entre 3 y 8
+}
+int Gestor::generarNP(){
+    int nv = rand()%6 +7; //numero aleatorio entre 7 y 12
 }
 
 

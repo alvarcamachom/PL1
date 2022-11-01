@@ -130,3 +130,74 @@
 	"Gestor.h"
 	"Vehiculo.h"
 
+1667331811 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<string>
+	"Pila.h"
+	"Cola.h"
+	"Gestor.h"
+	"Vehiculo.h"
+	"ZonaReparto.h"
+
+1667327367 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\pila.h
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1667327367 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodopila.h
+	<iostream>
+	"Vehiculo.h"
+
+1667327367 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\vehiculo.h
+	<string>
+	<list>
+	<cstdlib>
+	<time.h>
+
+1667327367 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\cola.h
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1667327367 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodocola.h
+	"Vehiculo.h"
+	<cstddef>
+
+1667330959 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
+	"Vehiculo.h"
+
+1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\cola.cpp
+	<iostream>
+	"Cola.h"
+	<string>
+	"NodoCola.h"
+
+1667331604 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
+	"Gestor.h"
+	<time.h>
+	"Vehiculo.h"
+
+1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodocola.cpp
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodopila.cpp
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pila.cpp
+	"Pila.h"
+
+1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
+	"Vehiculo.h"
+	<string>
+	<cstddef>
+
+1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\zonareparto.cpp
+	"ZonaReparto.h"
+
+1667330510 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\zonareparto.h
+	"Cola.h"
+
