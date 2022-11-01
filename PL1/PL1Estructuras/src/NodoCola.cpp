@@ -2,6 +2,8 @@
 #include <string>
 #include "Vehiculo.h"
 
+using namespace std;
+
 NodoCola::NodoCola()
 {
     v = Vehiculo();

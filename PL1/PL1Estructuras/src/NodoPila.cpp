@@ -1,6 +1,8 @@
 #include "NodoPila.h"
 #include "Vehiculo.h"
 
+using namespace std;
+
 NodoPila::NodoPila()
 {
     vehiculo = Vehiculo();
