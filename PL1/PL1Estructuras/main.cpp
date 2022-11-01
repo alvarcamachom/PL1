@@ -9,6 +9,7 @@
 
 using namespace std;
 
+
 int main()
 {
     srand(time(NULL));
@@ -17,6 +18,7 @@ int main()
     int nv;
     int nv2;
     string error = "Opcion no valida\n";
+    Gestor g;
 
     while (bucle){
         cout<<"Seleccione una opcion: \n1-Generar numero aleatorio de automóviles\n2-Generar numero determinado de automoviles\n3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n5-Salen un numero aleatorio de automóviles de la fabrica y llega a un almacén\n6-Salen un numero determinado de automoviles de la fabrica y llegan a un almacen\n7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n0-Salir\n";
@@ -26,7 +28,7 @@ int main()
         }
         else if (opcion==1){
             //Generar un numero de automoviles aleatorio
-            cout<<Gestor::generarBastidorRand()<<"\n";
+            cout<<g.generarBastidorRand()<<"\n";
         }
         else if(opcion==2){
             //Generar un numero dado de automoviles

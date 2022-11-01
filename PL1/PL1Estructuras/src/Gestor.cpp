@@ -1,8 +1,7 @@
 #include "Gestor.h"
 #include <time.h>
 
-Gestor::Gestor()
-{
+Gestor::Gestor(){
     //ctor
 }
 

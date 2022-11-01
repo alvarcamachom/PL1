@@ -10,6 +10,7 @@ class Gestor
         Gestor();
         virtual ~Gestor();
         static std::string generarBastidorRand();
+
     protected:
 
     private:
