@@ -77,7 +77,7 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1667248317 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Vehiculo.h
+1667392750 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Vehiculo.h
 	<string>
 	<list>
 	<cstdlib>
@@ -103,24 +103,27 @@
 	"NodoPila.h"
 	"Vehiculo.h"
 
-1667248280 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
+1667393012 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
 	"Vehiculo.h"
+	"Gestor.h"
 	<string>
 	<cstddef>
 
 1667245030 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ZonaReparto.cpp
 	"ZonaReparto.h"
 
-1666624725 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ZonaReparto.h
+1667387628 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ZonaReparto.h
+	"Cola.h"
 
-1667245497 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+1667387628 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
-
-1667245497 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
 
-1667248331 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1667387628 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
+	"Vehiculo.h"
+
+1667393054 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -129,6 +132,7 @@
 	"Cola.h"
 	"Gestor.h"
 	"Vehiculo.h"
+	"ZonaReparto.h"
 
 1667331811 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>

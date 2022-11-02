@@ -9,6 +9,7 @@
 #include "ZonaReparto.h"
 
 
+
 using namespace std;
 
 int main()
@@ -37,14 +38,20 @@ int main()
         "9-Pueba generador\n0-Salir\n";
         cin>>opcion;
 
+        if (opcion != 2 && opcion != 6){
+            system("clear");/*Esto se supone que limpia el terminal despues de cada opción,
+            no se si funcionará en tu ordenador. Si no funciona cambia "clear" por "cls" y deberia ir*/
+        }
+
         if (opcion==0){
             bucle=false;
         }
+
         else if (opcion==1){
             //Generar un numero de automoviles aleatorio
             int nv = rand()%10; //numero de automoviles aleatorio
             for (int i=1; i<=nv; i++){
-                v.cargarVehiculo(Gestor::modeloRand(), Gestor::colorRand(), Gestor::generarBastidorRand(), Gestor::concesionarioRand()); //Cargar vehiculo con datos
+                Vehiculo v = Vehiculo(); //Cargar vehiculo con datos
                 cout<<v.verVehiculo()<<endl;/*MAL (se carga en todas las iteraciones el mismo coche) no se como solucionarlo,
                 he estado haciendo un intento de crear NV coches y cargarlos y no he llegado a mas jeje*/
             }

@@ -15,7 +15,6 @@ class Vehiculo
         Vehiculo(string m, string c, string b, string conc);
         virtual ~Vehiculo();
         string verVehiculo();
-        void cargarVehiculo(string m, string c, string b, string conc);
         string devolverModelo();
         string devolverColor();
         string devolverBastidor();
