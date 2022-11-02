@@ -10,24 +10,22 @@ Vehiculo::Vehiculo()
 modelo = Gestor::modeloRand();
 color = Gestor::colorRand();
 bastidor = Gestor::generarBastidorRand();
-concesionario = Gestor::concesionarioRand();
 }
 
-Vehiculo::Vehiculo(string m, string c, string b, string conc)
+Vehiculo::Vehiculo(string m, string c, string b)
 {
 modelo = m;
 color = c;
 bastidor = b;
-concesionario = conc;
 }
 
 string Vehiculo::devolverModelo(){return modelo;}
 string Vehiculo::devolverColor(){return color;}
 string Vehiculo::devolverBastidor(){return bastidor;}
-string Vehiculo::devolverConcesionario(){return concesionario;}
+
 
 string Vehiculo::verVehiculo(){
-    return("El vehiculo es un " + modelo + ", color: " + color + ", con bastidor " + bastidor + ", con concesionario " + concesionario+"\n");
+    return("El vehiculo es un " + modelo + ", color: " + color + ", bastidor " + bastidor +"\n");
 }
 Vehiculo::~Vehiculo()
 {

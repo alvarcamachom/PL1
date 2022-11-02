@@ -22,11 +22,13 @@ int main()
 
     //Variables simulación
     int nc = Gestor::generarNC(); //Genera el numero maximo de concesionarios
-    int nv = Gestor::generarNV(); //Genera el numero de vehiculos a fabricar
     int ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
     int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
     ZonaReparto ZN,ZS,ZE,ZO;
     Vehiculo v;
+    Cola c;
+    Gestor g;
+    Cola vehiculosFabrica;
 
     while (bucle){
         //Menu
@@ -44,26 +46,28 @@ int main()
         }
 
         if (opcion==0){
-            bucle=false;
+            bucle=false; //salir del menu
         }
 
         else if (opcion==1){
             //Generar un numero de automoviles aleatorio
-            int nv = rand()%10; //numero de automoviles aleatorio
+            int nv = Gestor::generarNV();
             for (int i=1; i<=nv; i++){
-                Vehiculo v = Vehiculo(); //Cargar vehiculo con datos
-                cout<<v.verVehiculo()<<endl;/*MAL (se carga en todas las iteraciones el mismo coche) no se como solucionarlo,
-                he estado haciendo un intento de crear NV coches y cargarlos y no he llegado a mas jeje*/
-            }
-
+                Vehiculo vh = Vehiculo(); //Generar vehiculo datos aleatorios
+                vehiculosFabrica.encolar(vh);//Meter vehiculo en cola (posiblemente mal porque en apartado 3 no se ve nada)
+                cout<<vh.verVehiculo()<<endl;
+        }
+        cout<<"Se han generado "<<nv<<" vehiculos"<<endl;
         }
         else if(opcion==2){
             //Generar un numero dado de automoviles
+            int nveh;
             cout<<"Cuantos automoviles generamos?\n";
-            cin>>nv;
+            cin>>nveh;
         }
         else if(opcion==3){
             //Mostrar automoviles en la fabrica
+            g.mostrarVehiculosFabrica();
         }
         else if(opcion==4){
             //Borrar automoviles
@@ -75,7 +79,7 @@ int main()
         else if(opcion==6){
             //Sale un numero dado de automoviles de la fabrica y llegan a almacen
             cout<<"Cuantos automoviles salen de la fabrica?";
-            cin>>nv;
+            //cin>>nveh;
         }
         else if(opcion==7){
             //Mostrar datos de los almacenes de la zona y registros
@@ -87,7 +91,6 @@ int main()
             cout<<Gestor::generarBastidorRand()<<"\n";
             cout<<Gestor::modeloRand()<<"\n";
             cout<<Gestor::colorRand()<<"\n";
-            cout<<Gestor::concesionarioRand()<<"\n";
         }
         else{
             cout<<error;

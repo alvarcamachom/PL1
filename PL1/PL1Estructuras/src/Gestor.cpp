@@ -1,6 +1,7 @@
 #include "Gestor.h"
 #include <time.h>
 #include "Vehiculo.h"
+#include "Pila.h"
 
 using namespace std;
 
@@ -11,7 +12,6 @@ Gestor::Gestor()
 
 
 string Gestor::generarBastidorRand(){
-    srand(time(NULL));
     string bastidor = "";
     string letras="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (int i = 0; i<5; i++){ //generamos las 5 letras aleatorias
@@ -32,34 +32,49 @@ string Gestor::modeloRand(){
 }
 
 string Gestor::colorRand(){
-    srand(time(NULL));
     string colores[6] ={"Azul","Verde","Amarillo","Gris","Negro","Blanco"};
     int t = rand()%6;
     string color = colores[t];
     return color;
 }
 
-string Gestor::concesionarioRand(){
-    srand(time(NULL));
-    string concesionarios[4] ={"Norte","Sur","Este","Oeste"};
-    int u = rand()%4;
-    string concesionario = concesionarios[u];
-    return concesionario;
-}
 
 int Gestor::generarNC(){
-    int nc = rand()%7 +4; //numero aleatorio entre 4 y 10
+    rand()%7 +4; //numero aleatorio entre 4 y 10 (numero concesionarios)
 }
 int Gestor::generarNV(){
-    int nv = rand()%21 +10; //numero aleatorio entre 10 y 30
+    return rand()%21 + 10; //numero aleatorio entre 10 y 30 (numero vehiculos)
 }
 int Gestor::generarNS(){
-    int ns = rand()%6 +3; //numero aleatorio entre 3 y 8
+    return rand()%6 +3; //numero aleatorio entre 3 y 8 (vehiculos que salen de fabrica)
 }
 int Gestor::generarNP(){
-    int nv = rand()%6 +7; //numero aleatorio entre 7 y 12
+    return rand()%6 +7; //numero aleatorio entre 7 y 12 (numero vehiculos que entran en camion)
 }
 
+void encolarVehiculo(int nv){
+    Cola vehiculosFabrica;
+    for (int i=1; i<=nv; i++){
+                Vehiculo vh = Vehiculo(); //Generar vehiculo datos aleatorios
+                vehiculosFabrica.encolar(vh);//Meter vehiculo en cola (posiblemente mal porque en apartado 3 no se ve nada)
+                cout<<vh.verVehiculo()<<endl;
+}
+}
+void Gestor::mostrarVehiculosFabrica(){//Muestra los vehiculos en la cola de la fabrica
+    Cola colaAux;
+    Vehiculo vAux;
+    while ((!vehiculosFabrica.es_vacia()) && (vehiculosFabrica.get_longitud() > 0)) {
+        cout<<"vehiculosFabrica longitud  = "+to_string(vehiculosFabrica.get_longitud()) + "\n";
+        vAux=vehiculosFabrica.desencolar();
+        cout<<vAux.verVehiculo();
+        colaAux.encolar(vAux);
+    }
+    while ((!colaAux.es_vacia()) && (colaAux.get_longitud() > 0 )){
+        cout<<"longitud  = "+to_string(colaAux.get_longitud()) + "\n";
+        vAux=colaAux.desencolar();
+        vehiculosFabrica.encolar(vAux);
+    }
+}
 
 Gestor::~Gestor()
 {
