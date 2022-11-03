@@ -18,7 +18,7 @@ class Gestor
         static int generarNV();
         static int generarNS();
         static int generarNP();
-        void encolarVehiculo(int nv);
+        void encolarVehiculo(Vehiculo v);
         void mostrarVehiculosFabrica();
         Cola vehiculosFabrica;
 

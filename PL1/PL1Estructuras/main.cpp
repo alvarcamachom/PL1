@@ -50,20 +50,31 @@ int main()
         }
 
         else if (opcion==1){
-            //Generar un numero de automoviles aleatorio
+            //Generar un numero de automoviles aleatorio y meterlos en el almacen
             int nv = Gestor::generarNV();
             for (int i=1; i<=nv; i++){
-                Vehiculo vh = Vehiculo(); //Generar vehiculo datos aleatorios
-                vehiculosFabrica.encolar(vh);//Meter vehiculo en cola (posiblemente mal porque en apartado 3 no se ve nada)
-                cout<<vh.verVehiculo()<<endl;
+                Vehiculo v = Vehiculo(); //Generar vehiculo datos aleatorios
+                g.encolarVehiculo(v);//Meter vehiculo en cola
+                cout<<v.verVehiculo();
+                cout<<"Vehiculo metido en almacen"<<endl;
+
         }
-        cout<<"Se han generado "<<nv<<" vehiculos"<<endl;
+        cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
         }
+
+
         else if(opcion==2){
             //Generar un numero dado de automoviles
             int nveh;
             cout<<"Cuantos automoviles generamos?\n";
             cin>>nveh;
+            for (int i=1; i<=nveh; i++){
+                Vehiculo v = Vehiculo(); //Generar vehiculo datos aleatorios
+                g.encolarVehiculo(v);//Meter vehiculo en cola
+                cout<<v.verVehiculo();
+                cout<<"Vehiculo metido en almacen"<<endl;
+        }
+                cout<<endl<<"Se han generado "<<nveh<<" vehiculos y se han metido al almacen"<<endl;
         }
         else if(opcion==3){
             //Mostrar automoviles en la fabrica

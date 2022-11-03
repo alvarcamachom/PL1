@@ -25,7 +25,7 @@ string Vehiculo::devolverBastidor(){return bastidor;}
 
 
 string Vehiculo::verVehiculo(){
-    return("El vehiculo es un " + modelo + ", color: " + color + ", bastidor " + bastidor +"\n");
+    return("vehiculo: " + modelo + ", color: " + color + ", bastidor: " + bastidor +"\n");
 }
 Vehiculo::~Vehiculo()
 {

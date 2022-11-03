@@ -40,7 +40,7 @@ string Gestor::colorRand(){
 
 
 int Gestor::generarNC(){
-    rand()%7 +4; //numero aleatorio entre 4 y 10 (numero concesionarios)
+    return rand()%7 +4; //numero aleatorio entre 4 y 10 (numero concesionarios)
 }
 int Gestor::generarNV(){
     return rand()%21 + 10; //numero aleatorio entre 10 y 30 (numero vehiculos)
@@ -52,25 +52,20 @@ int Gestor::generarNP(){
     return rand()%6 +7; //numero aleatorio entre 7 y 12 (numero vehiculos que entran en camion)
 }
 
-void encolarVehiculo(int nv){
-    Cola vehiculosFabrica;
-    for (int i=1; i<=nv; i++){
-                Vehiculo vh = Vehiculo(); //Generar vehiculo datos aleatorios
-                vehiculosFabrica.encolar(vh);//Meter vehiculo en cola (posiblemente mal porque en apartado 3 no se ve nada)
-                cout<<vh.verVehiculo()<<endl;
+void Gestor::encolarVehiculo(Vehiculo v){
+    vehiculosFabrica.encolar(v);//Meter vehiculo en cola
 }
-}
+
 void Gestor::mostrarVehiculosFabrica(){//Muestra los vehiculos en la cola de la fabrica
     Cola colaAux;
     Vehiculo vAux;
-    while ((!vehiculosFabrica.es_vacia()) && (vehiculosFabrica.get_longitud() > 0)) {
-        cout<<"vehiculosFabrica longitud  = "+to_string(vehiculosFabrica.get_longitud()) + "\n";
+    cout<<"Se muestran los vehiculos almacenados en el almacen: "<<endl;
+    while (!(vehiculosFabrica.es_vacia()) && (vehiculosFabrica.get_longitud() > 0)) {
         vAux=vehiculosFabrica.desencolar();
         cout<<vAux.verVehiculo();
         colaAux.encolar(vAux);
     }
     while ((!colaAux.es_vacia()) && (colaAux.get_longitud() > 0 )){
-        cout<<"longitud  = "+to_string(colaAux.get_longitud()) + "\n";
         vAux=colaAux.desencolar();
         vehiculosFabrica.encolar(vAux);
     }
