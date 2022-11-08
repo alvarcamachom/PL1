@@ -33,6 +33,7 @@ Vehiculo Cola::desencolar()
             ultimo = NULL;
             aux->siguiente = NULL;
             delete(aux);
+
             }
         else
             { primero = primero->siguiente;
@@ -41,6 +42,7 @@ Vehiculo Cola::desencolar()
             }
         longitud--;
         return v;
+
     }
 }
 

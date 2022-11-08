@@ -14,6 +14,9 @@ using namespace std;
 
 int main()
 {
+    Cola cola;
+
+
     //Variables menú
     srand(time(NULL));
     int opcion;
@@ -21,9 +24,10 @@ int main()
     string error = "Opcion no valida\n";
 
     //Variables simulación
+    int nv; //Número de vehiculos a generar
     int nc = Gestor::generarNC(); //Genera el numero maximo de concesionarios
-    int ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
     int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
+    int ns ;//Número de vehiculos a sacar de la fabrica
     ZonaReparto ZN,ZS,ZE,ZO;
     Gestor g;
 
@@ -39,8 +43,9 @@ int main()
         cin>>opcion;
 
         if (opcion != 2 && opcion != 6){
-            system("clear");/*Esto se supone que limpia el terminal despues de cada opción,
-            no se si funcionará en tu ordenador. Si no funciona cambia "clear" por "cls" y deberia ir*/
+            system("cls");/*Esto se supone que limpia el terminal despues de cada opción,
+            no se si funcionará en tu ordenador. Si no funciona cambia "clear" por "cls" y deberia ir ME VA MUCHAS GRACIAS
+            */
         }
 
         if (opcion==0){
@@ -49,7 +54,7 @@ int main()
 
         else if (opcion==1){
             //Generar un numero de automoviles aleatorio y meterlos en el almacen
-            int nv = Gestor::generarNV();
+            nv = Gestor::generarNV();
             for (int i=1; i<=nv; i++){
                 Vehiculo v = Vehiculo(); //Generar vehiculo datos aleatorios
                 g.encolarVehiculo(v);//Meter vehiculo en cola
@@ -63,16 +68,15 @@ int main()
 
         else if(opcion==2){
             //Generar un numero dado de automoviles
-            int nveh;
             cout<<"Cuantos automoviles generamos?\n";
-            cin>>nveh;
-            for (int i=1; i<=nveh; i++){
+            cin>>nv;
+            for (int i=1; i<=nv; i++){
                 Vehiculo v = Vehiculo(); //Generar vehiculo datos aleatorios
                 g.encolarVehiculo(v);//Meter vehiculo en cola
                 cout<<v.verVehiculo();
                 cout<<"Vehiculo metido en almacen"<<endl;
         }
-                cout<<endl<<"Se han generado "<<nveh<<" vehiculos y se han metido al almacen"<<endl;
+                cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
         }
         else if(opcion==3){
             //Mostrar automoviles en la fabrica
@@ -83,12 +87,14 @@ int main()
         }
         else if(opcion==5){
             //Sale un numero aleatorio de automoviles de la fabrica y llegan a almacen
-            int nv2 = rand()%10; //numero de automoviles aleatorio
+            ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
+
+
         }
         else if(opcion==6){
             //Sale un numero dado de automoviles de la fabrica y llegan a almacen
             cout<<"Cuantos automoviles salen de la fabrica?";
-            //cin>>nveh;
+            cin>>ns;
         }
         else if(opcion==7){
             //Mostrar datos de los almacenes de la zona y registros
