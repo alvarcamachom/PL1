@@ -57,18 +57,7 @@ void Gestor::encolarVehiculo(Vehiculo v){
 }
 
 void Gestor::mostrarVehiculosFabrica(){//Muestra los vehiculos en la cola de la fabrica
-    Cola colaAux;
-    Vehiculo vAux;
-    cout<<"Se muestran los vehiculos almacenados en el almacen: "<<endl;
-    while (!(vehiculosFabrica.es_vacia()) && (vehiculosFabrica.get_longitud() > 0)) {
-        vAux=vehiculosFabrica.desencolar();
-        cout<<vAux.verVehiculo();
-        colaAux.encolar(vAux);
-    }
-    while ((!colaAux.es_vacia()) && (colaAux.get_longitud() > 0 )){
-        vAux=colaAux.desencolar();
-        vehiculosFabrica.encolar(vAux);
-    }
+    vehiculosFabrica.mostrar_cola();
 }
 
 Gestor::~Gestor()

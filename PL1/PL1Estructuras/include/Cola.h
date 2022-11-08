@@ -19,7 +19,7 @@ class Cola
         int get_longitud();
         Vehiculo desencolar();
         bool es_vacia();
-        void mostrarCola();
+        void mostrar_cola();
 };
 
 #endif // COLAS_H

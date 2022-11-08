@@ -65,7 +65,21 @@ bool Cola::es_vacia()
     { return ((primero == NULL) && (ultimo == NULL));
     }
 
+void Cola::mostrar_cola(){//Muestra los vehiculos en la cola de la fabrica
+    Cola colaAux;
+    Vehiculo vAux;
+    cout<<"Se muestran los vehiculos almacenados en el almacen: "<<endl;
+    while (!(es_vacia()) && (get_longitud() > 0)) {
+        vAux=desencolar();
+        cout<<vAux.verVehiculo();
+        colaAux.encolar(vAux);
+    }
+    while ((!colaAux.es_vacia()) && (colaAux.get_longitud() > 0 )){
+        vAux=colaAux.desencolar();
+        encolar(vAux);
+    }
 
+}
 Cola::~Cola()
 {
     //dtor

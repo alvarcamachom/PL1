@@ -25,10 +25,8 @@ int main()
     int ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
     int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
     ZonaReparto ZN,ZS,ZE,ZO;
-    Vehiculo v;
-    Cola c;
     Gestor g;
-    Cola vehiculosFabrica;
+
 
     while (bucle){
         //Menu
