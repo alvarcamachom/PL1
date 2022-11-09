@@ -11,7 +11,7 @@ Cola::Cola()
 }
 
 void Cola::encolar(Vehiculo v)
-{ NodoCola *nuevo_nodo = new
+{ /*NodoCola *nuevo_nodo = new
     NodoCola(v, nuevo_nodo);
         if(es_vacia())
             { primero = nuevo_nodo;
@@ -21,30 +21,45 @@ void Cola::encolar(Vehiculo v)
             { ultimo->siguiente = nuevo_nodo;
             ultimo = nuevo_nodo;
             }
-            longitud++;
+            longitud++;*/
+    NodoCola* nuevo_nodo=new NodoCola(v, ultimo);
+    if(es_vacia())
+    {
+        primero=nuevo_nodo;
+        ultimo=nuevo_nodo;
+    }
+    else
+    {
+        ultimo->siguiente=nuevo_nodo;
+        ultimo=nuevo_nodo;
+    }
+    longitud++;
 }
 
-Vehiculo Cola::desencolar()
-    { if(!es_vacia())
-        {Vehiculo v = primero->v;
-        NodoCola *aux = primero;
-        if((primero == ultimo) && (primero->siguiente == NULL))
-            { primero = NULL;
-            ultimo = NULL;
-            aux->siguiente = NULL;
+Vehiculo Cola::desencolar(){
+     if(!es_vacia())
+    {
+        Vehiculo v =primero->v;
+        NodoCola*aux=primero;
+        if((primero==ultimo)&&(primero->siguiente==NULL))
+        {
+            primero=NULL;
+            ultimo=NULL;
+            aux->siguiente=NULL;
             delete(aux);
-
-            }
+        }
         else
-            { primero = primero->siguiente;
-            aux->siguiente = NULL;
+        {
+            primero=primero->siguiente;
+            aux->siguiente=NULL;
             delete(aux);
-            }
+        }
         longitud--;
         return v;
+    }
 
     }
-}
+
 
 Vehiculo Cola::inicio()
     { if(!es_vacia())

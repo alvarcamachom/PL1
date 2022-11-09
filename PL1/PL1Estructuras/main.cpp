@@ -30,6 +30,7 @@ int main()
     int ns ;//Número de vehiculos a sacar de la fabrica
     ZonaReparto ZN,ZS,ZE,ZO;
     Gestor g;
+    Vehiculo v;
 
 
     while (bucle){
@@ -56,8 +57,7 @@ int main()
             //Generar un numero de automoviles aleatorio y meterlos en el almacen
             nv = Gestor::generarNV();
             for (int i=1; i<=nv; i++){
-                Vehiculo v = Vehiculo(); //Generar vehiculo datos aleatorios
-                g.encolarVehiculo(v);//Meter vehiculo en cola
+                g.encolarVehiculo(Vehiculo());//Meter vehiculo aleatorio en cola
                 cout<<v.verVehiculo();
                 cout<<"Vehiculo metido en almacen"<<endl;
 
@@ -71,8 +71,7 @@ int main()
             cout<<"Cuantos automoviles generamos?\n";
             cin>>nv;
             for (int i=1; i<=nv; i++){
-                Vehiculo v = Vehiculo(); //Generar vehiculo datos aleatorios
-                g.encolarVehiculo(v);//Meter vehiculo en cola
+                g.encolarVehiculo(Vehiculo());
                 cout<<v.verVehiculo();
                 cout<<"Vehiculo metido en almacen"<<endl;
         }
