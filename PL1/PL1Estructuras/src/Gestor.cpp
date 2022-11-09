@@ -53,7 +53,7 @@ int Gestor::generarNP(){
 }
 
 void Gestor::encolarVehiculo(Vehiculo v){
-    vehiculosFabrica.encolar(v);//Meter vehiculo en cola
+    vehiculosFabrica.encolar(v );//Meter vehiculo en cola
 }
 
 void Gestor::mostrarVehiculosFabrica(){//Muestra los vehiculos en la cola de la fabrica

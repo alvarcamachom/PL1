@@ -212,3 +212,78 @@
 1667330510 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\zonareparto.h
 	"Cola.h"
 
+1668033082 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<string>
+	"Pila.h"
+	"Cola.h"
+	"Gestor.h"
+	"Vehiculo.h"
+	"ZonaReparto.h"
+
+1666866624 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\pila.h
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1666866624 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\nodopila.h
+	<iostream>
+	"Vehiculo.h"
+
+1667892052 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\vehiculo.h
+	<string>
+	<list>
+	<cstdlib>
+	<time.h>
+
+1668031829 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\cola.h
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1666866624 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\nodocola.h
+	"Vehiculo.h"
+	<cstddef>
+
+1667892052 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\gestor.h
+	"Vehiculo.h"
+	"Pila.h"
+	"Cola.h"
+
+1668032399 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\zonareparto.h
+	"Cola.h"
+
+1668031830 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\cola.cpp
+	<iostream>
+	"Cola.h"
+	<string>
+	"NodoCola.h"
+
+1668031830 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\gestor.cpp
+	"Gestor.h"
+	<time.h>
+	"Vehiculo.h"
+	"Pila.h"
+
+1668031830 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\nodocola.cpp
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1667892052 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\nodopila.cpp
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1667892052 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pila.cpp
+	"Pila.h"
+
+1667892052 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\vehiculo.cpp
+	"Vehiculo.h"
+	"Gestor.h"
+	<string>
+	<cstddef>
+
+1668032471 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\zonareparto.cpp
+	"ZonaReparto.h"
+

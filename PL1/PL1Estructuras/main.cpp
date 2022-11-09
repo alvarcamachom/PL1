@@ -28,7 +28,11 @@ int main()
     int nc = Gestor::generarNC(); //Genera el numero maximo de concesionarios
     int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
     int ns ;//Número de vehiculos a sacar de la fabrica
-    ZonaReparto ZN,ZS,ZE,ZO;
+    ZonaReparto ZN = ZonaReparto("Zona Norte");
+    ZonaReparto ZO = ZonaReparto ("Zona Oeste");
+    ZonaReparto ZS = ZonaReparto ("Zona Sur");
+    ZonaReparto ZE = ZonaReparto ("Zona Este");
+    ZonaReparto zonas [4]={ZN,ZO,ZS,ZE};
     Gestor g;
     Vehiculo v;
 
@@ -44,7 +48,7 @@ int main()
         cin>>opcion;
 
         if (opcion != 2 && opcion != 6){
-            system("clear");/*Esto se supone que limpia el terminal despues de cada opción,
+            system("cls");/*Esto se supone que limpia el terminal despues de cada opción,
             no se si funcionará en tu ordenador. Si no funciona cambia "clear" por "cls" y deberia ir ME VA MUCHAS GRACIAS
             */
         }
@@ -87,6 +91,12 @@ int main()
         else if(opcion==5){
             //Sale un numero aleatorio de automoviles de la fabrica y llegan a almacen
             ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
+            string zona = zonas[rand()%4].getNombre();
+
+
+
+
+            cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
 
 
         }
@@ -94,6 +104,9 @@ int main()
             //Sale un numero dado de automoviles de la fabrica y llegan a almacen
             cout<<"Cuantos automoviles salen de la fabrica?";
             cin>>ns;
+            string zona = zonas[rand()%4].getNombre();
+            cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
+
         }
         else if(opcion==7){
             //Mostrar datos de los almacenes de la zona y registros
