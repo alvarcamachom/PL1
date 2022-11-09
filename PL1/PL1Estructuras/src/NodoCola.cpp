@@ -6,14 +6,13 @@ using namespace std;
 
 NodoCola::NodoCola()
 {
-    v = Vehiculo();
     siguiente=NULL;
     //constructor por defecto
 }
 
 NodoCola::NodoCola(Vehiculo v, NodoCola *sig)
 {
-    v = Vehiculo();
+    Vehiculo ve = v;
     siguiente=sig;
     //constructor 2
 }

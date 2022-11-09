@@ -68,7 +68,7 @@ bool Cola::es_vacia()
     }
 
 void Cola::mostrar_cola(){//Muestra los vehiculos en la cola de la fabrica
-    Cola colaAux;
+    /*Cola colaAux;
     Vehiculo vAux;
     cout<<"Se muestran los vehiculos almacenados en el almacen: "<<endl;
     while (!(es_vacia()) && (get_longitud() > 0)) {
@@ -79,9 +79,27 @@ void Cola::mostrar_cola(){//Muestra los vehiculos en la cola de la fabrica
     while ((!colaAux.es_vacia()) && (colaAux.get_longitud() > 0 )){
         vAux=colaAux.desencolar();
         encolar(vAux);
+    }*/
+    NodoCola *aux=primero;
+    if(es_vacia())
+    {
+        cout<<"Cola vacia: "<<endl;
     }
-
+    else
+    {
+        cout<<""<<endl;
+        for(int i=0; i<longitud; i++)
+        {
+            cout<<"Vehiculo "<<i+1<<endl;
+            cout<<aux->v.devolverModelo()<<endl;
+            cout<<aux->v.devolverColor()<<endl;
+            cout<<aux->v.devolverBastidor()<<endl;
+            aux=aux->siguiente;
+        }
+    }
 }
+
+
 Cola::~Cola()
 {
     //dtor

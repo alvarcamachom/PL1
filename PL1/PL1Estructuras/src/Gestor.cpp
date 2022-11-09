@@ -25,7 +25,7 @@ string Gestor::generarBastidorRand(){
 }
 
 string Gestor::modeloRand(){
-    string modelos[6] = {"Zafira","Octavia","Golf","Astra","Insignia","Polo"};
+    string modelos[6] = {"Opel Zafira","Skoda Octavia","Volkswagen Golf","Opel Astra","Opel Insignia","Volkswagen Polo"};
     int s = rand()%6;
     string modelo = modelos[s]; //elegimos elemento aleatorio s de la lista
     return modelo;

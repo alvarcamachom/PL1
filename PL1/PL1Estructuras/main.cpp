@@ -43,7 +43,7 @@ int main()
         cin>>opcion;
 
         if (opcion != 2 && opcion != 6){
-            system("cls");/*Esto se supone que limpia el terminal despues de cada opción,
+            system("clear");/*Esto se supone que limpia el terminal despues de cada opción,
             no se si funcionará en tu ordenador. Si no funciona cambia "clear" por "cls" y deberia ir ME VA MUCHAS GRACIAS
             */
         }
