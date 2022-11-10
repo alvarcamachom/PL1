@@ -106,9 +106,10 @@ void Cola::mostrar_cola(){//Muestra los vehiculos en la cola de la fabrica
         for(int i=0; i<longitud; i++)
         {
             cout<<"Vehiculo "<<i+1<<endl;
-            cout<<aux->v.devolverModelo()<<endl;
+            /*cout<<aux->v.devolverModelo()<<endl;
             cout<<aux->v.devolverColor()<<endl;
-            cout<<aux->v.devolverBastidor()<<endl;
+            cout<<aux->v.devolverBastidor()<<endl;*/
+            cout<<aux->v.verVehiculo()<<endl;
             aux=aux->siguiente;
         }
     }

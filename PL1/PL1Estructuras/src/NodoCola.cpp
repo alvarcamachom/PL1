@@ -12,7 +12,6 @@ NodoCola::NodoCola()
 
 NodoCola::NodoCola(Vehiculo v, NodoCola *sig)
 {
-    Vehiculo ve = v;
     siguiente=sig;
     //constructor 2
 }
