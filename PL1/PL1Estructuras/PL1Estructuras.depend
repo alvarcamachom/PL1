@@ -62,7 +62,7 @@
 	<string>
 	<cstddef>
 
-1668195348 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Cola.cpp
+1668196457 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Cola.cpp
 	<iostream>
 	"Cola.h"
 	<string>
@@ -126,7 +126,7 @@
 	"Pila.h"
 	"Cola.h"
 
-1668195609 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1668196647 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
