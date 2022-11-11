@@ -75,6 +75,22 @@ void Gestor::mostrarVehiculosFabrica() //Muestra los vehiculos en la cola de la 
     vehiculosFabrica.mostrar_cola();
 }
 
+void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
+{
+    if(vehiculosFabrica.es_vacia())
+    {
+        cout<<"La fabrica esta vacia"<<endl;
+    }
+    else
+    {
+        while(!vehiculosFabrica.es_vacia())
+        {
+            vehiculosFabrica.desencolar();
+        }
+    }
+    cout<<"Se han borrado los vehiculos del almacen"<<endl;
+}
+
 Gestor::~Gestor()
 {
     //dtor

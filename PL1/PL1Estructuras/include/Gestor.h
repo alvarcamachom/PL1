@@ -20,6 +20,7 @@ class Gestor
         static int generarNP();
         void crearVehiculo(int nv);
         void mostrarVehiculosFabrica();
+        void borrarVehiculosFabrica();
         Cola vehiculosFabrica;
 
     protected:

@@ -7,15 +7,11 @@ class ZonaReparto
 {
     public:
         ZonaReparto();
-        ZonaReparto(string);
         virtual ~ZonaReparto();
-        string getNombre();
-        Cola cola_zona; //debería ser private(?
 
     protected:
 
     private:
-        string nombre;
 };
 
 #endif // ZONAREPARTO_H
