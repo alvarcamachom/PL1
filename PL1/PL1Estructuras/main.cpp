@@ -32,61 +32,58 @@ int main()
     ZonaReparto ZO = ZonaReparto ("Zona Oeste");
     ZonaReparto ZS = ZonaReparto ("Zona Sur");
     ZonaReparto ZE = ZonaReparto ("Zona Este");
-    ZonaReparto zonas [4]={ZN,ZO,ZS,ZE};
+    ZonaReparto zonas [4]= {ZN,ZO,ZS,ZE};
     Gestor g;
     Vehiculo v;
 
 
-    while (bucle){
+    while (bucle)
+    {
         //Menu
         cout<<"Seleccione una opcion: \n1-Generar numero aleatorio de automóviles\n2-Generar numero determinado de automoviles\n"
-        "3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n"
-        "5-Salen un numero aleatorio de automóviles de la fabrica y llega a un almacén\n"
-        "6-Salen un numero determinado de automoviles de la fabrica y llegan a un almacen\n"
-        "7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n"
-        "9-Pueba generador\n0-Salir\n";
+            "3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n"
+            "5-Salen un numero aleatorio de automóviles de la fabrica y llega a un almacén\n"
+            "6-Salen un numero determinado de automoviles de la fabrica y llegan a un almacen\n"
+            "7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n"
+            "9-Pueba generador\n0-Salir\n";
         cin>>opcion;
 
-        if (opcion != 2 && opcion != 6){
+        if (opcion != 2 && opcion != 6)
+        {
             system("clear");
         }
 
-        if (opcion==0){
+        if (opcion==0)
+        {
             bucle=false; //salir del menu
         }
 
-        else if (opcion==1){
+        else if (opcion==1)
+        {
             //Generar un numero de automoviles aleatorio y meterlos en el almacen
-            nv = Gestor::generarNV();
-            for (int i=1; i<=nv; i++){
-                g.encolarVehiculo(Vehiculo());//Meter vehiculo aleatorio en cola
-                cout<<v.verVehiculo();
-                cout<<"Vehiculo metido en almacen"<<endl;
-
+            nv = g.generarNV();
+            g.crearVehiculo(nv);
+            cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
         }
-        cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
-        }
-
-
-        else if(opcion==2){
+        else if (opcion==2)
+        {
             //Generar un numero dado de automoviles
             cout<<"Cuantos automoviles generamos?\n";
             cin>>nv;
-            for (int i=1; i<=nv; i++){
-                g.encolarVehiculo(Vehiculo());
-                cout<<v.verVehiculo();
-                cout<<"Vehiculo metido en almacen"<<endl;
+            g.crearVehiculo(nv);
+            cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
         }
-                cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
-        }
-        else if(opcion==3){
+        else if(opcion==3)
+        {
             //Mostrar automoviles en la fabrica
             g.mostrarVehiculosFabrica();
         }
-        else if(opcion==4){
+        else if(opcion==4)
+        {
             //Borrar automoviles
         }
-        else if(opcion==5){
+        else if(opcion==5)
+        {
             //Sale un numero aleatorio de automoviles de la fabrica y llegan a almacen
             ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
             string zona = zonas[rand()%4].getNombre();
@@ -98,7 +95,8 @@ int main()
 
 
         }
-        else if(opcion==6){
+        else if(opcion==6)
+        {
             //Sale un numero dado de automoviles de la fabrica y llegan a almacen
             cout<<"Cuantos automoviles salen de la fabrica?";
             cin>>ns;
@@ -106,18 +104,22 @@ int main()
             cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
 
         }
-        else if(opcion==7){
+        else if(opcion==7)
+        {
             //Mostrar datos de los almacenes de la zona y registros
         }
-        else if(opcion==8){
+        else if(opcion==8)
+        {
             //Simular hasta terminar automoviles
         }
-        else if(opcion==9){//Esta opcion es solo para probar el generador de cosas aleatorias de gestor luego se quita
+        else if(opcion==9) //Esta opcion es solo para probar el generador de cosas aleatorias de gestor luego se quita
+        {
             cout<<Gestor::generarBastidorRand()<<"\n";
             cout<<Gestor::modeloRand()<<"\n";
             cout<<Gestor::colorRand()<<"\n";
         }
-        else{
+        else
+        {
             cout<<error;
         }
     }
