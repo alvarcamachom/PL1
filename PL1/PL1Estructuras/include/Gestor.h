@@ -11,9 +11,6 @@ class Gestor
     public:
         Gestor();
         virtual ~Gestor();
-        static string generarBastidorRand();
-        static string modeloRand();
-        static string colorRand();
         static int generarNC();
         static int generarNV();
         static int generarNS();

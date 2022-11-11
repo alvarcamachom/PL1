@@ -116,9 +116,7 @@ int main()
         }
         else if(opcion==9) //Esta opcion es solo para probar el generador de cosas aleatorias de gestor luego se quita
         {
-            cout<<Gestor::generarBastidorRand()<<"\n";
-            cout<<Gestor::modeloRand()<<"\n";
-            cout<<Gestor::colorRand()<<"\n";
+
         }
         else
         {

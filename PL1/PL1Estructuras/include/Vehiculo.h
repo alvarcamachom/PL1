@@ -14,6 +14,13 @@ class Vehiculo
         Vehiculo();
         Vehiculo(string m, string c, string b, int con);
         virtual ~Vehiculo();
+
+        //Setters
+        string generarBastidorRand();
+        string modeloRand();
+        string colorRand();
+
+        //Getters
         string verVehiculo();
         string devolverModelo();
         string devolverColor();
