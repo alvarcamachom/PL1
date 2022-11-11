@@ -3,6 +3,7 @@
 #include "Vehiculo.h"
 #include "Pila.h"
 #include "Cola.h"
+#include "ZonaReparto.h"
 
 using namespace std;
 
@@ -12,13 +13,15 @@ class Gestor
         Gestor();
         virtual ~Gestor();
         static int generarNC();
-        static int generarNV();
-        static int generarNS();
+        int generarNV();
+        int generarNS();
         static int generarNP();
         void crearVehiculo(int nv);
         void mostrarVehiculosFabrica();
         void borrarVehiculosFabrica();
+        void vehiculosAZona(int ns, ZonaReparto zona);
         Cola vehiculosFabrica;
+
 
     protected:
 

@@ -62,13 +62,13 @@
 	<string>
 	<cstddef>
 
-1668196457 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Cola.cpp
+1668199533 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Cola.cpp
 	<iostream>
 	"Cola.h"
 	<string>
 	"NodoCola.h"
 
-1667904723 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Cola.h
+1668199533 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Cola.h
 	"NodoCola.h"
 	<string>
 	"Vehiculo.h"
@@ -109,24 +109,25 @@
 	<string>
 	<cstddef>
 
-1668187851 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ZonaReparto.cpp
+1668197412 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ZonaReparto.cpp
 	"ZonaReparto.h"
 
-1668188005 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ZonaReparto.h
+1668198772 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ZonaReparto.h
 	"Cola.h"
 
-1668195977 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+1668197838 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
 	"Pila.h"
 
-1668192641 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
+1668199569 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
+	"ZonaReparto.h"
 
-1668196647 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1668199182 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>

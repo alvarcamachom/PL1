@@ -2,6 +2,7 @@
 #include <time.h>
 #include "Vehiculo.h"
 #include "Pila.h"
+#include "Cola.h"
 
 using namespace std;
 
@@ -9,9 +10,6 @@ Gestor::Gestor()
 {
     //ctor
 }
-
-
-
 
 int Gestor::generarNC()
 {
@@ -23,7 +21,8 @@ int Gestor::generarNV()
 }
 int Gestor::generarNS()
 {
-    return rand()%6 +3; //numero aleatorio entre 3 y 8 (vehiculos que salen de fabrica)
+    int limite = vehiculosFabrica.get_longitud();
+    return rand()%limite; //numero aleatorio hasta el maximo de vehiculos en almacen (vehiculos que salen de fabrica)
 }
 int Gestor::generarNP()
 {
@@ -58,6 +57,16 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
             vehiculosFabrica.desencolar();
         }
     }
+}
+
+void Gestor::vehiculosAZona(int ns, ZonaReparto zona){
+
+    for (int i=1; i<=ns; i++){//sacar vehiculos de almacen y meter en zona ns veces
+        Vehiculo veh = vehiculosFabrica.inicio();
+        /*Aqui quiero en cada iteracion ir sacando coche de cola
+        almacen y meterlo en la cola de la zona ns veces*/
+    }
+
 }
 
 Gestor::~Gestor()

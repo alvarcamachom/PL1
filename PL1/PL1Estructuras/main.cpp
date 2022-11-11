@@ -28,11 +28,11 @@ int main()
     int nc = Gestor::generarNC(); //Genera el numero maximo de concesionarios
     int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
     int ns ;//Número de vehiculos a sacar de la fabrica
-    /*ZonaReparto ZN = ZonaReparto("Zona Norte");
+    ZonaReparto ZN = ZonaReparto("Zona Norte");
     ZonaReparto ZO = ZonaReparto ("Zona Oeste");
     ZonaReparto ZS = ZonaReparto ("Zona Sur");
     ZonaReparto ZE = ZonaReparto ("Zona Este");
-    ZonaReparto zonas [4]= {ZN,ZO,ZS,ZE}; he quitado esto porque se supone que no hace falta*/
+    ZonaReparto zonas [4]= {ZN,ZO,ZS,ZE};
     Gestor g;
     Vehiculo v;
 
@@ -87,25 +87,33 @@ int main()
         else if(opcion==5)
         {
             //Sale un numero aleatorio de automoviles de la fabrica y llegan a almacen
-            ns = Gestor::generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
-            //string zona = zonas[rand()%4].getNombre();
-
-
-
-
-            //cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
-
-
+            if (g.vehiculosFabrica.es_vacia())
+            {
+                cout<<"Almacen vacio"<<endl;
+            }
+            else
+            {
+                ns = g.generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
+                string zona = zonas[rand()%4].getNombre();
+                g.vehiculosAZona(ns, zona);
+                cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
+            }
         }
         else if(opcion==6)
         {
-            /*
-            //Sale un numero dado de automoviles de la fabrica y llegan a almacen
-            cout<<"Cuantos automoviles salen de la fabrica?";
-            cin>>ns;
-            string zona = zonas[rand()%4].getNombre();
-            cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;*/
+            if (g.vehiculosFabrica.es_vacia())
+            {
+                cout<<"Almacen vacio"<<endl;
+            }
+            else
+            {
+                //Sale un numero dado de automoviles de la fabrica y llegan a almacen
+                cout<<"Cuantos automoviles salen de la fabrica?";
+                cin>>ns;
+                string zona = zonas[rand()%4].getNombre();
+                cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
 
+            }
         }
         else if(opcion==7)
         {
