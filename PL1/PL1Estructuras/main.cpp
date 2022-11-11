@@ -50,7 +50,7 @@ int main()
 
         if (opcion != 2 && opcion != 6)
         {
-            system("clear");
+            system("cls");
         }
 
         if (opcion==0)
