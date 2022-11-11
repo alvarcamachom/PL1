@@ -45,7 +45,7 @@ int main()
             "5-Salen un numero aleatorio de automóviles de la fabrica y llega a un almacén\n"
             "6-Salen un numero determinado de automoviles de la fabrica y llegan a un almacen\n"
             "7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n"
-            "9-Pueba generador\n0-Salir\n";
+            "\n0-Salir\n";
         cin>>opcion;
 
         if (opcion != 2 && opcion != 6)
@@ -77,6 +77,7 @@ int main()
         {
             //Mostrar automoviles en la fabrica
             g.mostrarVehiculosFabrica();
+
         }
         else if(opcion==4)
         {
@@ -113,10 +114,6 @@ int main()
         else if(opcion==8)
         {
             //Simular hasta terminar automoviles
-        }
-        else if(opcion==9) //Esta opcion es solo para probar el generador de cosas aleatorias de gestor luego se quita
-        {
-
         }
         else
         {

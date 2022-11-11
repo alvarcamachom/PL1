@@ -11,18 +11,8 @@ Cola::Cola()
 }
 
 void Cola::encolar(Vehiculo v)
-{ /*NodoCola *nuevo_nodo = new
-    NodoCola(v, nuevo_nodo);
-        if(es_vacia())
-            { primero = nuevo_nodo;
-            ultimo = nuevo_nodo;
-            }
-        else
-            { ultimo->siguiente = nuevo_nodo;
-            ultimo = nuevo_nodo;
-            }
-            longitud++;*/
-    NodoCola* nuevo_nodo=new NodoCola(v, ultimo);
+{
+    NodoCola* nuevo_nodo=new NodoCola(v);
     if(es_vacia())
     {
         primero=nuevo_nodo;
@@ -83,22 +73,10 @@ bool Cola::es_vacia()
     }
 
 void Cola::mostrar_cola(){//Muestra los vehiculos en la cola de la fabrica
-    /*Cola colaAux;
-    Vehiculo vAux;
-    cout<<"Se muestran los vehiculos almacenados en el almacen: "<<endl;
-    while (!(es_vacia()) && (get_longitud() > 0)) {
-        vAux=desencolar();
-        cout<<vAux.verVehiculo();
-        colaAux.encolar(vAux);
-    }
-    while ((!colaAux.es_vacia()) && (colaAux.get_longitud() > 0 )){
-        vAux=colaAux.desencolar();
-        encolar(vAux);
-    }*/
     NodoCola *aux=primero;
     if(es_vacia())
     {
-        cout<<"Cola vacia: "<<endl;
+        cout<<"Almacen vacio"<<endl;
     }
     else
     {
