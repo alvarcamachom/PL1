@@ -50,7 +50,7 @@ int main()
 
         if (opcion != 2 && opcion != 6)
         {
-            system("clear");
+            system("cls");
         }
 
         if (opcion==0)
@@ -82,7 +82,8 @@ int main()
         else if(opcion==4)
         {
             //Borrar automoviles
-            g.borrarVehiculosFabrica();
+            //g.borrarVehiculosFabrica();
+            g.vehiculosFabrica.desencolar();
         }
         else if(opcion==5)
         {

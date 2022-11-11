@@ -137,7 +137,7 @@
 	"Vehiculo.h"
 	"ZonaReparto.h"
 
-1668188802 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
+1668192820 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -200,7 +200,7 @@
 1667327367 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pila.cpp
 	"Pila.h"
 
-1668188802 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
+1668189453 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
