@@ -5,17 +5,16 @@ using namespace std;
 
 class ZonaReparto
 {
-    public:
-        ZonaReparto();
-        ZonaReparto(string);
-        virtual ~ZonaReparto();
-        string getNombre();
-        Cola cola_zona; //deberia ser private -no se jeje pero sino deberia serlo tambien la de gestor
+public:
+    ZonaReparto();
+    ZonaReparto(string);
+    virtual ~ZonaReparto();
+    string getNombre();
+protected:
 
-    protected:
-
-    private:
-        string nombre;
+private:
+    string nombre;
+    Cola vehiculosZona;
 };
 
 #endif // ZONAREPARTO_H

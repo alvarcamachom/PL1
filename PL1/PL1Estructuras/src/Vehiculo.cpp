@@ -72,7 +72,7 @@ int Vehiculo::devolverConcesionario()
 
 string Vehiculo::verVehiculo()
 {
-    return("vehiculo: " + devolverModelo() + ", color: " + devolverColor() + ", bastidor: " + devolverBastidor() + ", concesionario: " +"\n");
+    return("Vehiculo: " + devolverModelo() + ", color: " + devolverColor() + ", bastidor: " + devolverBastidor() + ", concesionario: " + "\n");
 }
 Vehiculo::~Vehiculo()
 {

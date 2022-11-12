@@ -50,7 +50,7 @@ int main()
 
         if (opcion != 2 && opcion != 6)
         {
-            system("cls");
+            system("clear");
         }
 
         if (opcion==0)
@@ -83,6 +83,7 @@ int main()
         {
             //Borrar automoviles
             g.borrarVehiculosFabrica();
+            cout<<"Se han eliminado los vehiculos del almacen"<<endl;
         }
         else if(opcion==5)
         {
@@ -94,7 +95,7 @@ int main()
             else
             {
                 ns = g.generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
-                string zona = zonas[rand()%4].getNombre();
+                string zona = zonas[rand()%4].getNombre(); //elige la zona a la que van
                 g.vehiculosAZona(ns, zona);
                 cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
             }
@@ -111,6 +112,7 @@ int main()
                 cout<<"Cuantos automoviles salen de la fabrica?";
                 cin>>ns;
                 string zona = zonas[rand()%4].getNombre();
+                g.vehiculosAZona(ns, zona);//llamada a metodo de gestor que mete vehiculos en las zonas
                 cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
 
             }

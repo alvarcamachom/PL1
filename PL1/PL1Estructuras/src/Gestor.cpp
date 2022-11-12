@@ -3,6 +3,7 @@
 #include "Vehiculo.h"
 #include "Pila.h"
 #include "Cola.h"
+#include "ZonaReparto.h"
 
 using namespace std;
 
@@ -21,8 +22,7 @@ int Gestor::generarNV()
 }
 int Gestor::generarNS()
 {
-    int limite = vehiculosFabrica.get_longitud();
-    return rand()%limite; //numero aleatorio hasta el maximo de vehiculos en almacen (vehiculos que salen de fabrica)
+    return rand()%6 +3; //numero aleatorio de vehiculos en almacen (vehiculos que salen de fabrica)
 }
 int Gestor::generarNP()
 {
@@ -34,9 +34,10 @@ void Gestor::crearVehiculo(int nv)
     for (int i=1; i<=nv; i++)
     {
         vehiculosFabrica.encolar(Vehiculo());//Meter vehiculo en cola
-        cout<<vehiculosFabrica.fin().verVehiculo();
-        cout<<"Vehiculo metido en almacen"<<endl;
+        //cout<<vehiculosFabrica.fin().verVehiculo();
+        //cout<<"Vehiculo metido en almacen"<<endl;
 
+        //desactivado el metodo de fin por si nos arrepentimos de quitarlo
     }
 }
 void Gestor::mostrarVehiculosFabrica() //Muestra los vehiculos en la cola de la fabrica
@@ -59,16 +60,18 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
     }
 }
 
-void Gestor::vehiculosAZona(int ns, ZonaReparto zona){
+void Gestor::vehiculosAZona(int ns, ZonaReparto zona)
+{
 
-    for (int i=1; i<=ns; i++){//sacar vehiculos de almacen y meter en zona ns veces
+    for (int i=1; i<=ns; i++) //sacar vehiculos de almacen y meter en zona ns veces
+    {
         Vehiculo veh = vehiculosFabrica.inicio();
-        /*Aqui quiero en cada iteracion ir sacando coche de cola
-        almacen y meterlo en la cola de la zona ns veces*/
-        cola_zona.encolar(veh);
+        vehiculosZona.encolar(veh);
         vehiculosFabrica.desencolar();
     }
-
+    //ZonaReparto z = ZonaReparto(zona, vehiculosZona);
+    /*crear objeto zona de atributos nombre zona y la cola??? no se podria
+    pq el unico atributo de zona es el nombre, no sabria como hacerlo*/
 }
 
 Gestor::~Gestor()

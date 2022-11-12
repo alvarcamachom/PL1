@@ -9,11 +9,12 @@ ZonaReparto::ZonaReparto()
 
 ZonaReparto::ZonaReparto(string nombreZona)
 {
-    //ctor
+    //ctor parametros
     nombre=nombreZona;
 }
 
-string ZonaReparto::getNombre(){
+string ZonaReparto::getNombre()
+{
     return nombre;
 }
 

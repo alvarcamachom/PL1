@@ -57,12 +57,12 @@ Vehiculo Cola::inicio()
         }
     }
 
-Vehiculo Cola::fin()
+/*Vehiculo Cola::fin()
     { if(!es_vacia())
         { return ultimo->v;
         }
     }
-
+*/
 int Cola::get_longitud()
     { return longitud;
     }
