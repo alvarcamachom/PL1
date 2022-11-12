@@ -20,6 +20,7 @@ class Gestor
         void mostrarVehiculosFabrica();
         void borrarVehiculosFabrica();
         void vehiculosAZona(int , ZonaReparto);
+        void cargaCamion(Pila,int);
         void mostrarVehiculosZona(ZonaReparto);
 
 

@@ -74,6 +74,13 @@ void Gestor::vehiculosAZona(int ns, ZonaReparto zona)
     pq el unico atributo de zona es el nombre, no sabria como hacerlo*/
 }
 
+void Gestor::cargaCamion(Pila camion,int n){
+        for (int i; i<=n ; i++){
+            camion.apilar(vehiculosFabrica.inicio());
+            vehiculosFabrica.desencolar();
+        }
+}
+
 void Gestor::mostrarVehiculosZona(ZonaReparto zona) //Muestra los vehiculos en la cola de la fabrica
 {
     vehiculosZona.mostrar_cola();

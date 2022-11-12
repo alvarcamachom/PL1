@@ -39,15 +39,16 @@ int main()
     Gestor g;
     Vehiculo v;
     ZonaReparto zona;
+    Pila prueba;
 
 
     while (bucle)
     {
         //Menu
-        cout<<"Seleccione una opcion: \n1-Generar numero aleatorio de automóviles\n2-Generar numero determinado de automoviles\n"
+        cout<<"Seleccione una opcion: \n1-Generar "<<nv<<" automóviles\n2-Generar numero pedido de automoviles\n"
             "3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n"
-            "5-Salen un numero aleatorio de automóviles de la fabrica y llega a un almacén\n"
-            "6-Salen un numero determinado de automoviles de la fabrica y llegan a un almacen\n"
+            "5-Salen "<<ns<<" automóviles de la fabrica y llega a un almacén\n"
+            "6-Salen un numero pedido de automoviles de la fabrica y llegan a un almacen\n"
             "7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n"
             "\n0-Salir\n";
         cin>>opcion;
@@ -93,6 +94,9 @@ int main()
         }
         else if(opcion==5)
         {
+
+
+
             zona = zonas[rand()%4];//elige la zona a la que van
             //Sale un numero aleatorio de automoviles de la fabrica y llegan a almacen
 
@@ -101,7 +105,7 @@ int main()
                 cout<<"Almacen vacio"<<endl;
             }
 
-            else if (ns>g.vehiculosFabrica.longitud)
+            else if (ns>g.vehiculosFabrica.get_longitud())
             {
                 cout<<"No hay suficientes automoviles para sacarlos"<< endl;
 
@@ -113,6 +117,9 @@ int main()
                 cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona.getNombre() <<endl;
             }
         }
+
+
+
         else if(opcion==6)
         {
             zona = zonas[rand()%4];//elige la zona a la que van
@@ -124,26 +131,35 @@ int main()
                 cout<<"Almacen vacio"<<endl;
             }
 
-            else if (ns>g.vehiculosFabrica.longitud)
+            else if (ns>g.vehiculosFabrica.get_longitud())
             {
                 cout<<"No hay suficientes automoviles para sacarlos"<< endl;
             }
 
             else
             {
+                if (ns<np-zona.camion1.get_profundidad())//miramos si los coches que se sacan caben en el primer camión
+                {
+                    g.cargaCamion(zona.camion1,ns);
+
+                    }
+                }
                 g.vehiculosAZona(ns, zona);//llamada a metodo de gestor que mete vehiculos en las zonas
                 cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona.getNombre() <<endl;
 
             }
-        }
+
         else if(opcion==7)
         {
             //Mostrar datos de los almacenes de la zona y registros
+
+
 
         }
         else if(opcion==8)
         {
             //Simular hasta terminar automoviles
+
         }
         else
         {

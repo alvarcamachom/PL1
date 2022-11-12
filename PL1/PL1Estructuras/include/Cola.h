@@ -6,7 +6,7 @@
 
 class Cola
 {
-    public:
+    private:
         NodoCola * primero;
         NodoCola * ultimo;
         int longitud;

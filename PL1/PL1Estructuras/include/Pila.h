@@ -8,6 +8,7 @@ class Pila
 {
     private:
         pnodo cima;
+        int profundidad;
     public:
         Pila();
         virtual~Pila();
@@ -15,6 +16,7 @@ class Pila
         void apilar(Vehiculo v);
         void desapilar();
         Vehiculo mostrar();
+        int get_profundidad();
 
     protected:
 
