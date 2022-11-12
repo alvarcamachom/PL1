@@ -26,8 +26,8 @@ int main()
     //Variables simulación, se pueden establecer manualmente desde aquí.
     int nv = 12; /*Gestor::generarNS(); //Genera el número de vehiculos a generar*/
     int nc = 5; /*Gestor::generarNC(); //Genera el numero maximo de concesionarios*/
-    int np = 3; /*Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)*/
-    int ns = 7 ;/*Gestor::generarNS(); //Genera el número de vehiculos a sacar de la fabrica*/
+    int np = 7; /*Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)*/
+    int ns = 4 ;/*Gestor::generarNS(); //Genera el número de vehiculos a sacar de la fabrica*/
 
     //Instancias de las diferentes zonas
     ZonaReparto ZN = ZonaReparto("Zona Norte");
@@ -38,6 +38,7 @@ int main()
 
     Gestor g;
     Vehiculo v;
+    ZonaReparto zona;
 
 
     while (bucle)
@@ -92,33 +93,46 @@ int main()
         }
         else if(opcion==5)
         {
+            zona = zonas[rand()%4];//elige la zona a la que van
             //Sale un numero aleatorio de automoviles de la fabrica y llegan a almacen
+
             if (g.vehiculosFabrica.es_vacia())
             {
                 cout<<"Almacen vacio"<<endl;
+            }
+
+            else if (ns>g.vehiculosFabrica.longitud)
+            {
+                cout<<"No hay suficientes automoviles para sacarlos"<< endl;
+
             }
             else
             {
 
-                string zona = zonas[rand()%4].getNombre(); //elige la zona a la que van
-                g.vehiculosAZona(ns, ZN);
-                cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
+                g.vehiculosAZona(ns, zona);
+                cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona.getNombre() <<endl;
             }
         }
         else if(opcion==6)
         {
+            zona = zonas[rand()%4];//elige la zona a la que van
+            cout<<"Cuantos automoviles salen de la fabrica?";
+            cin>>ns;
+
             if (g.vehiculosFabrica.es_vacia())
             {
                 cout<<"Almacen vacio"<<endl;
             }
+
+            else if (ns>g.vehiculosFabrica.longitud)
+            {
+                cout<<"No hay suficientes automoviles para sacarlos"<< endl;
+            }
+
             else
             {
-                //Sale un numero dado de automoviles de la fabrica y llegan a almacen
-                cout<<"Cuantos automoviles salen de la fabrica?";
-                cin>>ns;
-                string zona = zonas[rand()%4].getNombre();
                 g.vehiculosAZona(ns, zona);//llamada a metodo de gestor que mete vehiculos en las zonas
-                cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
+                cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona.getNombre() <<endl;
 
             }
         }
