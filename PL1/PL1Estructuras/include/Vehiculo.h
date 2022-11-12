@@ -19,6 +19,7 @@ class Vehiculo
         string generarBastidorRand();
         string modeloRand();
         string colorRand();
+        void set_concesionario(int);
 
         //Getters
         string verVehiculo();
@@ -26,6 +27,7 @@ class Vehiculo
         string devolverColor();
         string devolverBastidor();
         int devolverConcesionario();
+
 
     protected:
 

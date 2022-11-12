@@ -60,31 +60,8 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
     }
 }
 
-void Gestor::vehiculosAZona(int ns, ZonaReparto zona)
-{
 
-    for (int i=1; i<=ns; i++) //sacar vehiculos de almacen y meter en zona ns veces
-    {
-        Vehiculo veh = vehiculosFabrica.inicio();
-        vehiculosZona.encolar(veh);
-        vehiculosFabrica.desencolar();
-    }
-    //ZonaReparto z = ZonaReparto(zona, vehiculosZona);
-    /*crear objeto zona de atributos nombre zona y la cola??? no se podria
-    pq el unico atributo de zona es el nombre, no sabria como hacerlo*/
-}
 
-void Gestor::cargaCamion(Pila camion,int n){
-        for (int i; i<=n ; i++){
-            camion.apilar(vehiculosFabrica.inicio());
-            vehiculosFabrica.desencolar();
-        }
-}
-
-void Gestor::mostrarVehiculosZona(ZonaReparto zona) //Muestra los vehiculos en la cola de la fabrica
-{
-    vehiculosZona.mostrar_cola();
-}
 
 Gestor::~Gestor()
 {

@@ -17,6 +17,7 @@ class Pila
         void desapilar();
         Vehiculo mostrar();
         int get_profundidad();
+        void verPila();
 
     protected:
 

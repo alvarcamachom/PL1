@@ -26,7 +26,7 @@ void Cola::encolar(Vehiculo v)
     longitud++;
 }
 
-Vehiculo Cola::desencolar(){
+Vehiculo Cola::desencolar(){ //Operacion parcial, no usar si es vacia ya que no devuelve.
      if(!es_vacia())
     {
         Vehiculo v =primero->v;
@@ -57,12 +57,6 @@ Vehiculo Cola::inicio()
         }
     }
 
-/*Vehiculo Cola::fin()
-    { if(!es_vacia())
-        { return ultimo->v;
-        }
-    }
-*/
 int Cola::get_longitud()
     { return longitud;
     }

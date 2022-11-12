@@ -52,6 +52,10 @@ string Vehiculo::colorRand()
     return color;
 }
 
+void Vehiculo::set_concesionario(int n){
+    concesionario=n;
+}
+
 string Vehiculo::devolverModelo()
 {
     return modelo;
@@ -72,8 +76,9 @@ int Vehiculo::devolverConcesionario()
 
 string Vehiculo::verVehiculo()
 {
-    return("Vehiculo: " + devolverModelo() + ", color: " + devolverColor() + ", bastidor: " + devolverBastidor() + ", concesionario: " + "\n");
+    return("Vehiculo: " + devolverModelo() + ", color: " + devolverColor() + ", bastidor: " + devolverBastidor() + ", concesionario: " + to_string(devolverConcesionario()) + "\n");
 }
+
 Vehiculo::~Vehiculo()
 {
     //dtor

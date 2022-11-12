@@ -44,6 +44,23 @@ Vehiculo Pila::mostrar() //Es parcial, No usar con pila vacia ya que no devuelve
     else{return cima->vehiculo;}
 }
 
+void Pila::verPila(){
+    NodoPila *aux=cima;
+    if(esVacia()){
+        cout<<"Camion vacio \n";
+    }
+    else{
+            cout<<"";
+    for (int i=0; i<profundidad;i++){
+        cout<<"Vehiculo "<<i<<": ";
+        cout<<aux->vehiculo.verVehiculo()<<"\n";
+        aux=aux->siguiente;
+    }
+
+    }
+
+}
+
 //destructor
 Pila::~Pila()
 {
