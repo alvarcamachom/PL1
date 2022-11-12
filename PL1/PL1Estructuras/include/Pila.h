@@ -13,7 +13,8 @@ class Pila
         virtual~Pila();
         bool esVacia();
         void apilar(Vehiculo v);
-        Vehiculo desapilar();
+        void desapilar();
+        Vehiculo mostrar();
 
     protected:
 

@@ -19,7 +19,7 @@ void Pila::apilar(Vehiculo v)
     cima = nuevo;
 }
 
-Vehiculo Pila::desapilar()
+void Pila::desapilar()
 {
     pnodo nodo; //puntero aux para manipular el nodo
     if(cima)
@@ -28,6 +28,12 @@ Vehiculo Pila::desapilar()
         cima = nodo->siguiente;
         delete nodo;
     }
+}
+
+Vehiculo Pila::mostrar() //Es parcial, No usar con pila vacia ya que no devuelve nada y da error.
+{
+    if (esVacia()){cout<<"Error. Pila vacia. No llamar a la funcion."<<endl;} //Las tildes se ven mal en la consola
+    else{return cima->vehiculo;}
 }
 
 //destructor

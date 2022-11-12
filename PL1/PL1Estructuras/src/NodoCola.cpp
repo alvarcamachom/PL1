@@ -11,9 +11,9 @@ NodoCola::NodoCola()
     //constructor por defecto
 }
 
-NodoCola::NodoCola(Vehiculo v, NodoCola *sig)
+NodoCola::NodoCola(Vehiculo veh, NodoCola *sig)
 {
-    v = Vehiculo();
+    v = veh;
     siguiente=sig;
     //constructor 2
 }

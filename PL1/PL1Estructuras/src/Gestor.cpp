@@ -33,11 +33,11 @@ void Gestor::crearVehiculo(int nv)
 {
     for (int i=1; i<=nv; i++)
     {
-        vehiculosFabrica.encolar(Vehiculo());//Meter vehiculo en cola
-        //cout<<vehiculosFabrica.fin().verVehiculo();
-        //cout<<"Vehiculo metido en almacen"<<endl;
-
-        //desactivado el metodo de fin por si nos arrepentimos de quitarlo
+        Vehiculo carro = Vehiculo();
+        cout << carro.verVehiculo()<<endl; //Mostramos el vehículo antes de meterlo a la cola
+        vehiculosFabrica.encolar(carro);//Meter vehiculo en cola
+        cout<<"Vehiculo metido en almacen"<<endl;
+        cout<<""<<endl;
     }
 }
 void Gestor::mostrarVehiculosFabrica() //Muestra los vehiculos en la cola de la fabrica
@@ -72,6 +72,11 @@ void Gestor::vehiculosAZona(int ns, ZonaReparto zona)
     //ZonaReparto z = ZonaReparto(zona, vehiculosZona);
     /*crear objeto zona de atributos nombre zona y la cola??? no se podria
     pq el unico atributo de zona es el nombre, no sabria como hacerlo*/
+}
+
+void Gestor::mostrarVehiculosZona(ZonaReparto zona) //Muestra los vehiculos en la cola de la fabrica
+{
+    vehiculosZona.mostrar_cola();
 }
 
 Gestor::~Gestor()

@@ -19,7 +19,8 @@ class Gestor
         void crearVehiculo(int nv);
         void mostrarVehiculosFabrica();
         void borrarVehiculosFabrica();
-        void vehiculosAZona(int ns, ZonaReparto zona);
+        void vehiculosAZona(int , ZonaReparto);
+        void mostrarVehiculosZona(ZonaReparto);
 
 
         Cola vehiculosFabrica;

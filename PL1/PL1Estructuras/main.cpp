@@ -23,16 +23,19 @@ int main()
     bool bucle = true;
     string error = "Opcion no valida\n";
 
-    //Variables simulación
-    int nv; //Número de vehiculos a generar
-    int nc = Gestor::generarNC(); //Genera el numero maximo de concesionarios
-    int np = Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)
-    int ns ;//Número de vehiculos a sacar de la fabrica
+    //Variables simulación, se pueden establecer manualmente desde aquí.
+    int nv = 12; /*Gestor::generarNS(); //Genera el número de vehiculos a generar*/
+    int nc = 5; /*Gestor::generarNC(); //Genera el numero maximo de concesionarios*/
+    int np = 3; /*Gestor::generarNP(); //Genera el numero de vehiculos que caben en un camión (pila)*/
+    int ns = 7 ;/*Gestor::generarNS(); //Genera el número de vehiculos a sacar de la fabrica*/
+
+    //Instancias de las diferentes zonas
     ZonaReparto ZN = ZonaReparto("Zona Norte");
     ZonaReparto ZO = ZonaReparto ("Zona Oeste");
     ZonaReparto ZS = ZonaReparto ("Zona Sur");
     ZonaReparto ZE = ZonaReparto ("Zona Este");
-    ZonaReparto zonas [4]= {ZN,ZO,ZS,ZE};
+    ZonaReparto zonas [4]= {ZN,ZO,ZS,ZE}; //Vector con las cuatro zonas, para elegir.
+
     Gestor g;
     Vehiculo v;
 
@@ -50,7 +53,7 @@ int main()
 
         if (opcion != 2 && opcion != 6)
         {
-            system("clear");
+            system("cls");
         }
 
         if (opcion==0)
@@ -61,9 +64,9 @@ int main()
         else if (opcion==1)
         {
             //Generar un numero de automoviles aleatorio y meterlos en el almacen
-            nv = g.generarNV();
             g.crearVehiculo(nv);
             cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
+            cout<<""<<endl;
         }
         else if (opcion==2)
         {
@@ -72,10 +75,12 @@ int main()
             cin>>nv;
             g.crearVehiculo(nv);
             cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
+            cout<<""<<endl;
         }
         else if(opcion==3)
         {
             //Mostrar automoviles en la fabrica
+            cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
             g.mostrarVehiculosFabrica();
 
         }
@@ -94,9 +99,9 @@ int main()
             }
             else
             {
-                ns = g.generarNS(); //Genera el numero de vehiculos a sacar de la fabrica
+
                 string zona = zonas[rand()%4].getNombre(); //elige la zona a la que van
-                g.vehiculosAZona(ns, zona);
+                g.vehiculosAZona(ns, ZN);
                 cout<<"Salen "<< ns <<" automoviles hacia la zona "<< zona <<endl;
             }
         }
@@ -120,6 +125,7 @@ int main()
         else if(opcion==7)
         {
             //Mostrar datos de los almacenes de la zona y registros
+
         }
         else if(opcion==8)
         {
