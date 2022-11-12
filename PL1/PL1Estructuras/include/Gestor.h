@@ -23,7 +23,7 @@ class Gestor
 
 
         Cola vehiculosFabrica;
-
+        Cola
 
     protected:
 

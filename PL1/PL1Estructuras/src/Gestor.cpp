@@ -65,6 +65,8 @@ void Gestor::vehiculosAZona(int ns, ZonaReparto zona){
         Vehiculo veh = vehiculosFabrica.inicio();
         /*Aqui quiero en cada iteracion ir sacando coche de cola
         almacen y meterlo en la cola de la zona ns veces*/
+        cola_zona.encolar(veh);
+        vehiculosFabrica.desencolar();
     }
 
 }
