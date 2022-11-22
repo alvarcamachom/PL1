@@ -11,6 +11,7 @@ public:
     ZonaReparto(string);
     virtual ~ZonaReparto();
     string getNombre();
+    void setNombre(string);
     Cola vehiculosZona;
     Pila camion1;
     Pila camion2;

@@ -18,6 +18,11 @@ string ZonaReparto::getNombre()
     return nombre;
 }
 
+void ZonaReparto::setNombre(string nom)
+{
+    nombre=nom;
+}
+
 ZonaReparto::~ZonaReparto()
 {
     //dtor

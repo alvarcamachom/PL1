@@ -31,11 +31,12 @@ int main()
     //cambiar ns tmb al final opcion5&6 si se cambia
 
     //Instancias de las diferentes zonas
-    ZonaReparto ZN = ZonaReparto("Zona Norte");
-    ZonaReparto ZO = ZonaReparto ("Zona Oeste");
-    ZonaReparto ZS = ZonaReparto ("Zona Sur");
-    ZonaReparto ZE = ZonaReparto ("Zona Este");
-    ZonaReparto zonas [4]= {ZN,ZO,ZS,ZE}; //Vector con las cuatro zonas, para elegir.
+    int vectoro[4]={1,2,3,4};
+    ZonaReparto zonas [4];
+    zonas[0].setNombre("Zona Norte");
+    zonas[1].setNombre("Zona Oeste");
+    zonas[2].setNombre("Zona Sur");
+    zonas[3].setNombre("Zona Este");
 
     Gestor g;
     Vehiculo v;
@@ -121,8 +122,9 @@ int main()
 
                     for (int i=1; i<=ns ; i++){
                         zonas[zona].camion1.apilar(g.vehiculosFabrica.inicio());
+                        zonas[zona].camion1.verPila();
                         g.vehiculosFabrica.desencolar();
-                        cout<<"vehiculo metido \n";
+                        cout<<"vehiculo metido en la zona "<< zonas[zona].getNombre()<<"\n";
                         }
 
                     cout<< "Se han cargado " << ns << " automoviles al camion 1. \n"<<endl;
@@ -214,17 +216,17 @@ int main()
             //Mostrar datos de los camiones de las zonas y sus registros
 
 
-            cout<<"Registro de la zona Norte,"<<"\n"; ZN.vehiculosZona.mostrar_cola();
-            cout<<"Camion1 de la zona Norte,"<<"\n"; ZN.camion1.verPila();
+            cout<<"Registro de la zona Norte,"<<"\n"; zonas[0].vehiculosZona.mostrar_cola();
+            cout<<"Camion1 de la zona Norte,"<<"\n"; zonas[0].camion1.verPila();
 
-            cout<<"Registro de la zona Este,"<< "\n"; ZE.vehiculosZona.mostrar_cola();
-            cout<<"Camion1 de la zona Este,"<<"\n"; ZN.camion1.verPila();
+            cout<<"Registro de la zona Oeste,"<< "\n"; zonas[1].vehiculosZona.mostrar_cola();
+            cout<<"Camion1 de la zona Oeste,"<<"\n"; zonas[1].camion1.verPila();
 
-            cout<<"Registro de la zona Sur, "<< "\n"; ZS.vehiculosZona.mostrar_cola();
-            cout<<"Camion1 de la zona Sur,"<<"\n"; ZN.camion1.verPila();
+            cout<<"Registro de la zona Sur, "<< "\n"; zonas[2].vehiculosZona.mostrar_cola();
+            cout<<"Camion1 de la zona Sur,"<<"\n"; zonas[2].camion1.verPila();
 
-            cout<<"Registro de la zona Oeste, "<<" \n"; ZO.vehiculosZona.mostrar_cola();
-            cout<<"Camion1 de la zona Oeste,"<<"\n"; ZN.camion1.verPila();
+            cout<<"Registro de la zona Este, "<<" \n"; zonas[3].vehiculosZona.mostrar_cola();
+            cout<<"Camion1 de la zona Este,"<<"\n"; zonas[3].camion1.verPila();
 
 
 
