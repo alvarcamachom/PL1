@@ -18,8 +18,6 @@ class Gestor
         void vehiculosAZona(int zona, int ns);
         void mostrarZonas();
         void finSimulacion(int ns);
-
-
         Cola vehiculosFabrica;
 
     protected:

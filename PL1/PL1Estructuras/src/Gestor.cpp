@@ -64,30 +64,30 @@ void Gestor::vehiculosAZona(int zona, int ns)
         cout<<"No hay suficientes automoviles para sacarlos"<< endl;
     }
 
-    else if (ns <= np - zonas[zona].camion1.get_profundidad()+1)//miramos si los coches que se sacan caben en el primer camión
+    else if (ns <= np - zonas[zona].profundidadCamion1()+1)//miramos si los coches que se sacan caben en el primer camión
     {
 
         for (int i=1; i<=ns ; i++)
         {
-            zonas[zona].camion1.apilar(vehiculosFabrica.inicio());
+            zonas[zona].meterCamion1(vehiculosFabrica.inicio());
             vehiculosFabrica.desencolar();
             cout<<"vehiculo metido en el camion de la zona "<< zonas[zona].getNombre()<<"\n";
-            zonas[zona].camion1.verPila();
+            zonas[zona].verCamion1();
         }
 
         cout<< "Se han cargado " << ns << " automoviles al camion 1. \n"<<endl;
-        cout<<"el camion 1 tiene "<<zonas[zona].camion1.get_profundidad() <<" automoviles \n";
+        cout<<"el camion 1 tiene "<<zonas[zona].profundidadCamion1() <<" automoviles \n";
 
-        if (zonas[zona].camion1.get_profundidad()>=np)  //El camion está lleno
+        if (zonas[zona].profundidadCamion1()>=np)  //El camion está lleno
         {
             //llevar a zona camion 1
-            while(!zonas[zona].camion1.esVacia())
+            while(!zonas[zona].esCamion1Vacio())
             {
-                Vehiculo v = zonas[zona].camion1.mostrar();
+                Vehiculo v = zonas[zona].mostrarCamion1();
                 int conc = rand()%nc+1;
                 v.set_concesionario(conc); //Asignamos un concesionario entre 1 y el máximo establecido (nc)
-                zonas[zona].vehiculosZona.encolar(v);
-                zonas[zona].camion1.desapilar();
+                zonas[zona].meterRegistro(v);
+                zonas[zona].sacarCamion1();
             }
 
             cout<<"Camion 1 lleno, saliendo para la "<< zonas[zona].getNombre()<<"\n";
@@ -99,11 +99,11 @@ void Gestor::vehiculosAZona(int zona, int ns)
     {
 
         int contador=0;
-        while (zonas[zona].camion1.get_profundidad()<=np) //mientras haya hueco metemos al camion 1
+        while (zonas[zona].profundidadCamion1()<=np) //mientras haya hueco metemos al camion 1
         {
 
 
-            zonas[zona].camion1.apilar(vehiculosFabrica.inicio());
+            zonas[zona].meterCamion1(vehiculosFabrica.inicio());
             vehiculosFabrica.desencolar();
             cout<<"vehiculo metido \n";
             contador+=1;
@@ -111,44 +111,44 @@ void Gestor::vehiculosAZona(int zona, int ns)
 
         ns= ns-contador;
         cout<< "Se han cargado " << contador << " automoviles al camion 1. \n"<<endl;
-        cout<<"el camion 1 tiene "<<zonas[zona].camion1.get_profundidad() <<" automoviles \n";
+        cout<<"el camion 1 tiene "<<zonas[zona].profundidadCamion1() <<" automoviles \n";
 
 
 
         for (int i=1; i<=ns ; i++)  //Ahora metemos al camion 2 los que falten, ns-contador
         {
-            zonas[zona].camion2.apilar(vehiculosFabrica.inicio());
+            zonas[zona].meterCamion2(vehiculosFabrica.inicio());
             vehiculosFabrica.desencolar();
             cout<<"vehiculo metido \n";
         }
         cout<< "Se han cargado " << ns << " automoviles al camion 2. \n"<<endl;
-        cout<<"el camion 2 tiene "<<zonas[zona].camion2.get_profundidad() <<" automoviles \n";
+        cout<<"el camion 2 tiene "<<zonas[zona].profundidadCamion2() <<" automoviles \n";
 
 
         //llevar a zona camion 1
-        while(!zonas[zona].camion1.esVacia())
+        while(!zonas[zona].esCamion1Vacio())
         {
-            Vehiculo v = zonas[zona].camion1.mostrar();
+            Vehiculo v = zonas[zona].mostrarCamion1();
             int conc = rand()%nc+1;
             v.set_concesionario(conc); //Asignamos un concesionario entre 1 y el máximo establecido (nc)
-            zonas[zona].vehiculosZona.encolar(v);
-            zonas[zona].camion1.desapilar();
+            zonas[zona].meterRegistro(v);
+            zonas[zona].sacarCamion1();
         }
 
 
         cout<<"Camion1 lleno, saliendo para la "<< zonas[zona].getNombre()<<"\n";
 
 
-        if (zonas[zona].camion2.get_profundidad()==np)  //El camion2 tambien está lleno
+        if (zonas[zona].profundidadCamion2()==np)  //El camion2 tambien está lleno
         {
             //llevar a zona camión 2
-            while(!zonas[zona].camion2.esVacia())
+            while(!zonas[zona].esCamion2Vacio())
             {
-                Vehiculo v = zonas[zona].camion2.mostrar();
+                Vehiculo v = zonas[zona].mostrarCamion2();
                 int conc = rand()%nc+1;
                 v.set_concesionario(conc); //Asignamos un concesionario entre 1 y el máximo establecido (nc)
-                zonas[zona].vehiculosZona.encolar(v);
-                zonas[zona].camion2.desapilar();
+                zonas[zona].meterRegistro(v);
+                zonas[zona].sacarCamion2();
             }
             cout<<"Camion2 lleno, saliendo para la "<< zonas[zona].getNombre()<<"\n";
         }
@@ -156,11 +156,11 @@ void Gestor::vehiculosAZona(int zona, int ns)
         else   //El camion 2 no está lleno asi que pasamos sus coches al 1 para que se puedan volver a llenar
         {
             Pila aux=Pila();
-            while(!zonas[zona].camion2.esVacia())
+            while(!zonas[zona].esCamion2Vacio())
             {
-                aux.apilar(zonas[zona].camion2.mostrar());
-                zonas[zona].camion1.apilar(aux.mostrar()); //Hace falta apilar por una pila intermedia aux para mantener el orden
-                zonas[zona].camion2.desapilar();
+                aux.apilar(zonas[zona].mostrarCamion2());
+                zonas[zona].meterCamion1(aux.mostrar()); //Hace falta apilar por una pila intermedia aux para mantener el orden
+                zonas[zona].sacarCamion2();
             }
         }
 
@@ -174,32 +174,32 @@ void Gestor::mostrarZonas()
 {
 
     cout<<"Registro de la zona Norte,"<<"\n";
-    zonas[0].vehiculosZona.mostrar_cola();
+    zonas[0].verRegistro();
     cout<<"Camion1 de la zona Norte,"<<"\n";
-    zonas[0].camion1.verPila();
+    zonas[0].verCamion1();
     cout<<"Camion2 de la zona Norte,"<<"\n";
-    zonas[0].camion2.verPila();
+    zonas[0].verCamion2();
 
     cout<<"Registro de la zona Oeste,"<< "\n";
-    zonas[1].vehiculosZona.mostrar_cola();
+    zonas[1].verRegistro();
     cout<<"Camion1 de la zona Oeste,"<<"\n";
-    zonas[1].camion1.verPila();
+    zonas[1].verCamion1();
     cout<<"Camion2 de la zona Oeste,"<<"\n";
-    zonas[1].camion2.verPila();
+    zonas[1].verCamion2();
 
     cout<<"Registro de la zona Sur, "<< "\n";
-    zonas[2].vehiculosZona.mostrar_cola();
+    zonas[2].verRegistro();
     cout<<"Camion1 de la zona Sur,"<<"\n";
-    zonas[2].camion1.verPila();
+    zonas[2].verCamion1();
     cout<<"Camion2 de la zona Sur,"<<"\n";
-    zonas[2].camion2.verPila();
+    zonas[2].verCamion2();
 
     cout<<"Registro de la zona Este, "<<" \n";
-    zonas[3].vehiculosZona.mostrar_cola();
+    zonas[3].verRegistro();
     cout<<"Camion1 de la zona Este,"<<"\n";
-    zonas[3].camion1.verPila();
+    zonas[3].verCamion1();
     cout<<"Camion2 de la zona Este,"<<"\n";
-    zonas[3].camion2.verPila();
+    zonas[3].verCamion2();
 
 
 
@@ -207,81 +207,7 @@ void Gestor::mostrarZonas()
 
 void Gestor::finSimulacion(int ns)
 {
-    while(!vehiculosFabrica.es_vacia())
-    {
-        int zona=rand()%4; //elige la zona a la que van, están en un vector las 4 al principio del main
 
-        int contador=0;
-        while (zonas[zona].camion1.get_profundidad()<=np) //mientras haya hueco metemos al camion 1
-        {
-
-
-            zonas[zona].camion1.apilar(vehiculosFabrica.inicio());
-            vehiculosFabrica.desencolar();
-            cout<<"vehiculo metido \n";
-            contador+=1;
-        }
-
-        ns = ns-contador;
-        cout<< "Se han cargado " << contador << " automoviles al camion 1. \n"<<endl;
-        cout<<"el camion 1 tiene "<<zonas[zona].camion1.get_profundidad() <<" automoviles \n";
-
-
-
-        for (int i=1; i<=ns ; i++)  //Ahora metemos al camion 2 los que falten, ns-contador
-        {
-            zonas[zona].camion2.apilar(vehiculosFabrica.inicio());
-            vehiculosFabrica.desencolar();
-            cout<<"vehiculo metido \n";
-        }
-        cout<< "Se han cargado " << ns << " automoviles al camion 2. \n"<<endl;
-        cout<<"el camion 2 tiene "<<zonas[zona].camion2.get_profundidad() <<" automoviles \n";
-
-
-        //llevar a zona camion 1
-        while(!zonas[zona].camion1.esVacia())
-        {
-            Vehiculo v = zonas[zona].camion1.mostrar();
-            int conc = rand()%nc+1;
-            v.set_concesionario(conc); //Asignamos un concesionario entre 1 y el máximo establecido (nc)
-            zonas[zona].vehiculosZona.encolar(v);
-            zonas[zona].camion1.desapilar();
-        }
-
-
-        cout<<"Camion1 lleno, saliendo para la "<< zonas[zona].getNombre()<<"\n";
-
-
-        if (zonas[zona].camion2.get_profundidad()==np)  //El camion2 tambien está lleno
-        {
-            //llevar a zona camión 2
-            while(!zonas[zona].camion2.esVacia())
-            {
-                Vehiculo v = zonas[zona].camion2.mostrar();
-                int conc = rand()%nc+1;
-                v.set_concesionario(conc); //Asignamos un concesionario entre 1 y el máximo establecido (nc)
-                zonas[zona].vehiculosZona.encolar(v);
-                zonas[zona].camion2.desapilar();
-            }
-            cout<<"Camion2 lleno, saliendo para la "<< zonas[zona].getNombre()<<"\n";
-        }
-
-        else   //El camion 2 no está lleno asi que pasamos sus coches al 1 para que se puedan volver a llenar
-        {
-            Pila aux=Pila();
-            while(!zonas[zona].camion2.esVacia())
-            {
-                aux.apilar(zonas[zona].camion2.mostrar());
-                zonas[zona].camion1.apilar(aux.mostrar()); //Hace falta apilar por una pila intermedia aux para mantener el orden
-                zonas[zona].camion2.desapilar();
-            }
-        }
-
-
-
-
-
-    }
 }
 
 Gestor::~Gestor()
