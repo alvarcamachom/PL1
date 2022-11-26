@@ -26,7 +26,6 @@ int main()
     int nc = 5;
     int np = 7;
     int ns = 4 ;
-    //cambiar ns tmb al final opcion 5&6 si se cambia
 
     Gestor g;
     Vehiculo v;
@@ -46,7 +45,7 @@ int main()
 
         if (opcion != 2 && opcion != 6)
         {
-            system("clear");
+            system("cls");
         }
 
         if (opcion==0)

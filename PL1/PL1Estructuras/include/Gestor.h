@@ -25,12 +25,10 @@ class Gestor
     protected:
 
     private:
-
-                int vectoro[4]={1,2,3,4};
                 ZonaReparto zonas [4];
-                int np = 7;
+                int np = 7; //esto deberia estar en el main, y creo que en los .h no se da valor, solo se define
                 int nc = 5;
-                ZonaReparto zona;
+                ZonaReparto zona; //esto para que?
 };
 
 #endif // GESTOR_H

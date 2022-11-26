@@ -53,6 +53,7 @@ void Gestor::vehiculosAZona(int zona, int ns)
     zonas[1].setNombre("Zona Oeste");
     zonas[2].setNombre("Zona Sur");
     zonas[3].setNombre("Zona Este");
+
     if (vehiculosFabrica.es_vacia())
     {
         cout<<"Almacen vacio"<<endl;
@@ -69,9 +70,9 @@ void Gestor::vehiculosAZona(int zona, int ns)
         for (int i=1; i<=ns ; i++)
         {
             zonas[zona].camion1.apilar(vehiculosFabrica.inicio());
-            zonas[zona].camion1.verPila();
             vehiculosFabrica.desencolar();
-            cout<<"vehiculo metido en la zona "<< zonas[zona].getNombre()<<"\n";
+            cout<<"vehiculo metido en el camion de la zona "<< zonas[zona].getNombre()<<"\n";
+            zonas[zona].camion1.verPila();
         }
 
         cout<< "Se han cargado " << ns << " automoviles al camion 1. \n"<<endl;
@@ -176,21 +177,29 @@ void Gestor::mostrarZonas()
     zonas[0].vehiculosZona.mostrar_cola();
     cout<<"Camion1 de la zona Norte,"<<"\n";
     zonas[0].camion1.verPila();
+    cout<<"Camion2 de la zona Norte,"<<"\n";
+    zonas[0].camion2.verPila();
 
     cout<<"Registro de la zona Oeste,"<< "\n";
     zonas[1].vehiculosZona.mostrar_cola();
     cout<<"Camion1 de la zona Oeste,"<<"\n";
     zonas[1].camion1.verPila();
+    cout<<"Camion2 de la zona Oeste,"<<"\n";
+    zonas[1].camion2.verPila();
 
     cout<<"Registro de la zona Sur, "<< "\n";
     zonas[2].vehiculosZona.mostrar_cola();
     cout<<"Camion1 de la zona Sur,"<<"\n";
     zonas[2].camion1.verPila();
+    cout<<"Camion2 de la zona Sur,"<<"\n";
+    zonas[2].camion2.verPila();
 
     cout<<"Registro de la zona Este, "<<" \n";
     zonas[3].vehiculosZona.mostrar_cola();
     cout<<"Camion1 de la zona Este,"<<"\n";
     zonas[3].camion1.verPila();
+    cout<<"Camion2 de la zona Este,"<<"\n";
+    zonas[3].camion2.verPila();
 
 
 

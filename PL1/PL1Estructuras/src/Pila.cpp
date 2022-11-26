@@ -52,7 +52,7 @@ void Pila::verPila(){
     else{
             cout<<"";
     for (int i=0; i<profundidad;i++){
-        cout<<"Vehiculo "<<i<<": ";
+        cout<<"Vehiculo "<<i+1<<": ";
         cout<<aux->vehiculo.verVehiculo()<<"\n";
         aux=aux->siguiente;
     }
