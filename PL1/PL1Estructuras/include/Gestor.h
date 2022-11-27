@@ -11,6 +11,8 @@ class Gestor
 {
     public:
         Gestor();
+
+
         virtual ~Gestor();
         void crearVehiculo(int nv);
         void mostrarVehiculosFabrica();
@@ -18,15 +20,15 @@ class Gestor
         void vehiculosAZona(int zona, int ns);
         void mostrarZonas();
         void finSimulacion(int ns);
-        Cola vehiculosFabrica;
+
 
     protected:
 
     private:
-                ZonaReparto zonas [4];
-                int np = 7; //esto deberia estar en el main, y creo que en los .h no se da valor, solo se define
-                int nc = 5;
-                ZonaReparto zona; //esto para que?
+
+        ZonaReparto zonas [4];
+        Cola vehiculosFabrica;
+        ZonaReparto zona; //esto para que?
 };
 
 #endif // GESTOR_H

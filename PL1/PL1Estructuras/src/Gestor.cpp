@@ -7,10 +7,18 @@
 
 using namespace std;
 
+    int nv = 12;
+    int ns = 4 ;
+    int np = 7;
+    int nc = 5;
+
+
+
 Gestor::Gestor()
 {
     //ctor
 }
+
 
 void Gestor::crearVehiculo(int nv)
 {
@@ -166,7 +174,7 @@ void Gestor::vehiculosAZona(int zona, int ns)
 
     }
 
-    ns = 4 ; //restauramos ns
+
 }
 
 
@@ -207,6 +215,31 @@ void Gestor::mostrarZonas()
 
 void Gestor::finSimulacion(int ns)
 {
+
+while(!vehiculosFabrica.es_vacia()){
+
+    int zona=rand()%4;
+
+    if (ns>vehiculosFabrica.get_longitud()){
+
+        vehiculosAZona(zona, vehiculosFabrica.get_longitud()); //Si queremos sacar más de los que quedan, sacamos todos los que queden
+
+        cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
+        mostrarVehiculosFabrica();
+
+        mostrarZonas();
+    }
+    else{
+
+        vehiculosAZona(zona, ns);
+
+        cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
+        mostrarVehiculosFabrica();
+
+        mostrarZonas();
+    }
+
+}
 
 }
 

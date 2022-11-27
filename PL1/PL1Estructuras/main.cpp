@@ -23,13 +23,12 @@ int main()
 
     //Variables simulación, se pueden establecer manualmente desde aquí.
     int nv = 12;
-    int nc = 5;
-    int np = 7;
     int ns = 4 ;
+    int np = 7;
+    int nc = 5;
 
-    Gestor g;
+    Gestor g ;
     Vehiculo v;
-    Pila prueba;
 
 
     while (bucle)
@@ -63,11 +62,13 @@ int main()
         else if (opcion==2)
         {
             //Generar un numero dado de automoviles
+            int nvORIGINAL = nv;
             cout<<"Cuantos automoviles generamos?\n";
             cin>>nv;
             g.crearVehiculo(nv);
             cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
             cout<<""<<endl;
+            nv = nvORIGINAL;
         }
         else if(opcion==3)
         {
@@ -86,15 +87,18 @@ int main()
 
         else if(opcion==6 || opcion==5)
         {
+            int nsORIGINAL=ns;
             //Vehiculos a la zona
             if (opcion==6)
             {
+
                 cout<<"Cuantos automoviles salen de la fabrica?";
                 cin>>ns;
             }
 
-            int zona=rand()%4; //elige la zona a la que van, están en un vector las 4 al principio del main
+            int zona=rand()%4; //elige la zona a la que van, están en un vector las 4
             g.vehiculosAZona(zona, ns);
+            ns=nsORIGINAL;
         }
         else if(opcion==7)
         {

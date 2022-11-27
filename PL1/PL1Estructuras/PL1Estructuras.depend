@@ -141,7 +141,7 @@
 	"Vehiculo.h"
 	"ZonaReparto.h"
 
-1669497976 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
+1669573244 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -175,7 +175,7 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1669502174 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
+1669572816 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
@@ -187,7 +187,7 @@
 	<string>
 	"NodoCola.h"
 
-1669503717 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
+1669572889 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
