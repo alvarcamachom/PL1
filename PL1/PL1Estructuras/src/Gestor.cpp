@@ -57,10 +57,9 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
 
 void Gestor::vehiculosAZona(int zona, int ns)
 {
-    zonas[0].setNombre("Zona Norte");
-    zonas[1].setNombre("Zona Oeste");
-    zonas[2].setNombre("Zona Sur");
-    zonas[3].setNombre("Zona Este");
+    zonas[0].setNombre("A");
+    zonas[1].setNombre("B");
+    zonas[2].setNombre("C");
 
     if (vehiculosFabrica.es_vacia())
     {

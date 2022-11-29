@@ -38,16 +38,16 @@ string Vehiculo::generarBastidorRand()
 
 string Vehiculo::modeloRand()
 {
-    string modelos[6] = {"Opel Zafira","Skoda Octavia","Volkswagen Golf","Opel Astra","Opel Insignia","Volkswagen Polo"};
-    int s = rand()%6;
+    string modelos[5] = {"M1","M2","M3","M4","M5"};
+    int s = rand()%5;
     string modelo = modelos[s]; //elegimos elemento aleatorio s de la lista
     return modelo;
 }
 
 string Vehiculo::colorRand()
 {
-    string colores[6] = {"Azul","Verde","Amarillo","Gris","Negro","Blanco"};
-    int t = rand()%6;
+    string colores[3] = {"C1","C2","C3"};
+    int t = rand()%3;
     string color = colores[t];
     return color;
 }

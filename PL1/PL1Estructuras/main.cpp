@@ -44,7 +44,7 @@ int main()
 
         if (opcion != 2 && opcion != 6)
         {
-            system("cls");
+            system("cls"); //Para borrar la consola despues de cada accion
         }
 
         if (opcion==0)
