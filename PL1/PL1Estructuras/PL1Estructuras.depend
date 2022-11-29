@@ -228,7 +228,7 @@
 	"Pila.h"
 	"Vehiculo.h"
 
-1669104740 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\main.cpp
+1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -262,15 +262,16 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1669102778 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\gestor.h
+1669709334 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
 	"ZonaReparto.h"
 
-1669104608 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\zonareparto.h
+1669709334 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\zonareparto.h
 	"Cola.h"
 	"Pila.h"
+	"Vehiculo.h"
 
 1669102778 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\cola.cpp
 	<iostream>
@@ -278,7 +279,7 @@
 	<string>
 	"NodoCola.h"
 
-1669102779 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\gestor.cpp
+1669709654 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -295,15 +296,24 @@
 	"NodoPila.h"
 	"Vehiculo.h"
 
-1669102779 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pila.cpp
+1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pila.cpp
 	"Pila.h"
 
-1669102779 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\vehiculo.cpp
+1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
 	<cstddef>
 
-1669104608 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\zonareparto.cpp
+1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\zonareparto.cpp
 	"ZonaReparto.h"
+	"Vehiculo.h"
+	"Pila.h"
+	"Cola.h"
+
+1669710538 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pedido.cpp
+	"Pedido.h"
+
+1669710381 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\pedido.h
+	<string>
 

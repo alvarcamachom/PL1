@@ -38,6 +38,7 @@
 		<Unit filename="include/Gestor.h" />
 		<Unit filename="include/NodoCola.h" />
 		<Unit filename="include/NodoPila.h" />
+		<Unit filename="include/Pedido.h" />
 		<Unit filename="include/Pila.h" />
 		<Unit filename="include/Vehiculo.h" />
 		<Unit filename="include/ZonaReparto.h" />
@@ -46,14 +47,12 @@
 		<Unit filename="src/Gestor.cpp" />
 		<Unit filename="src/NodoCola.cpp" />
 		<Unit filename="src/NodoPila.cpp" />
+		<Unit filename="src/Pedido.cpp" />
 		<Unit filename="src/Pila.cpp" />
 		<Unit filename="src/Vehiculo.cpp" />
 		<Unit filename="src/ZonaReparto.cpp" />
 		<Extensions>
-			<envvars />
-			<code_completion />
 			<lib_finder disable_auto="1" />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

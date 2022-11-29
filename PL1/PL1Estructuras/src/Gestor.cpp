@@ -180,33 +180,30 @@ void Gestor::vehiculosAZona(int zona, int ns)
 void Gestor::mostrarZonas()
 {
 
-    cout<<"Registro de la zona Norte,"<<"\n";
+    cout<<"Registro de la zona A,"<<"\n";
     zonas[0].verRegistro();
-    cout<<"Camion1 de la zona Norte,"<<"\n";
+    cout<<"Camion1 de la zona A,"<<"\n";
     zonas[0].verCamion1();
-    cout<<"Camion2 de la zona Norte,"<<"\n";
+    cout<<"Camion2 de la zona A,"<<"\n";
     zonas[0].verCamion2();
+    cout<<endl;
 
-    cout<<"Registro de la zona Oeste,"<< "\n";
+    cout<<"Registro de la zona B,"<< "\n";
     zonas[1].verRegistro();
-    cout<<"Camion1 de la zona Oeste,"<<"\n";
+    cout<<"Camion1 de la zona B,"<<"\n";
     zonas[1].verCamion1();
-    cout<<"Camion2 de la zona Oeste,"<<"\n";
+    cout<<"Camion2 de la zona B,"<<"\n";
     zonas[1].verCamion2();
+    cout<<endl;
 
-    cout<<"Registro de la zona Sur, "<< "\n";
+    cout<<"Registro de la zona C, "<< "\n";
     zonas[2].verRegistro();
-    cout<<"Camion1 de la zona Sur,"<<"\n";
+    cout<<"Camion1 de la zona C,"<<"\n";
     zonas[2].verCamion1();
-    cout<<"Camion2 de la zona Sur,"<<"\n";
+    cout<<"Camion2 de la zona C,"<<"\n";
     zonas[2].verCamion2();
+    cout<<endl;
 
-    cout<<"Registro de la zona Este, "<<" \n";
-    zonas[3].verRegistro();
-    cout<<"Camion1 de la zona Este,"<<"\n";
-    zonas[3].verCamion1();
-    cout<<"Camion2 de la zona Este,"<<"\n";
-    zonas[3].verCamion2();
 
 
 
