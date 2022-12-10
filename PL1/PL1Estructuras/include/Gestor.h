@@ -20,6 +20,7 @@ class Gestor
         void vehiculosAZona(int zona, int ns);
         void mostrarZonas();
         void finSimulacion(int ns);
+        void pruebaLista();
 
 
     protected:

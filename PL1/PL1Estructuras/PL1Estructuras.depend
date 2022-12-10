@@ -120,7 +120,7 @@
 	"Pila.h"
 	"Vehiculo.h"
 
-1669573709 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+1670675180 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -128,13 +128,13 @@
 	"Cola.h"
 	"ZonaReparto.h"
 
-1669709150 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
+1670678021 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
 	"ZonaReparto.h"
 
-1669574088 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1670678021 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -144,6 +144,7 @@
 	"Gestor.h"
 	"Vehiculo.h"
 	"ZonaReparto.h"
+	"Lista.h"
 
 1669573244 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>
@@ -316,4 +317,22 @@
 
 1669710381 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\pedido.h
 	<string>
+
+1669893147 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Pedido.cpp
+	"Pedido.h"
+
+1669893147 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Pedido.h
+	<string>
+
+1670676041 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoLista.cpp
+	"NodoLista.h"
+	"Vehiculo.h"
+
+1670676069 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/NodoLista.h
+	"Vehiculo.h"
+	<iostream>
+
+1670675904 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Lista.h
+	"NodoLista.h"
+	"Vehiculo.h"
 

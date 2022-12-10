@@ -4,6 +4,7 @@
 #include "Pila.h"
 #include "Cola.h"
 #include "ZonaReparto.h"
+#include "Lista.h"
 
 using namespace std;
 
@@ -237,6 +238,17 @@ while(!vehiculosFabrica.es_vacia()){
 
 }
 
+}
+
+void Gestor::pruebaLista(){
+        Lista listaPrueba;
+            while(!vehiculosFabrica.es_vacia()){
+                for(int i=0; i<vehiculosFabrica.get_longitud(); i++){ //para pasar todos los vehiculos del almacen a la lista
+                    listaPrueba.insertar_izquierda(vehiculosFabrica.inicio());//meter en la lista por la izquierda coche
+                    vehiculosFabrica.desencolar();
+                }
+            }
+            listaPrueba.mostrar();
 }
 
 Gestor::~Gestor()

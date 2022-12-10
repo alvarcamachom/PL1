@@ -7,6 +7,7 @@
 #include "Gestor.h"
 #include "Vehiculo.h"
 #include "ZonaReparto.h"
+#include "Lista.h"
 
 
 
@@ -38,7 +39,7 @@ int main()
             "3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n"
             "5-Salen "<<ns<<" automóviles de la fabrica y llega a un almacén\n"
             "6-Salen un numero pedido de automoviles de la fabrica y llegan a un almacen\n"
-            "7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n"
+            "7-Mostrar datos de los almacenes de zona y registro\n8-Realizar simulacion hasta terminar los automoviles disponibles\n9-Pruebas lista\n"
             "\n0-Salir\n";
         cin>>opcion;
 
@@ -110,6 +111,10 @@ int main()
         {
             //Simular hasta terminar automoviles
             g.finSimulacion(ns);
+        }
+        else if(opcion==9)
+        {
+            g.pruebaLista();
         }
         else
         {
