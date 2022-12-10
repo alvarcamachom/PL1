@@ -10,6 +10,10 @@ class Pedido
         Pedido();
         virtual ~Pedido();
 
+        string modeloRand();
+        string colorRand();
+        string tipoRand();
+
         string getModelo();
         string getTipo();
         string getColor();

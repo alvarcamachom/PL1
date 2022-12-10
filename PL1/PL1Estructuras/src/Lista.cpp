@@ -198,8 +198,11 @@ void Lista::mostrar() {
    aux = primero;
    if (es_vacia()) {cout<<"Lista Vac’a"<<endl;}
    else {
+       int o=0;
    while(aux) {
-      cout << aux->v;
+        o++;
+        cout<< "Vehiculo " <<o <<endl;
+      cout << aux->v.verVehiculo();
       aux = aux->siguiente;
    }
    cout << endl;

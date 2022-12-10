@@ -146,7 +146,7 @@
 	"ZonaReparto.h"
 	"Lista.h"
 
-1669573244 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
+1670706629 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -156,6 +156,7 @@
 	"Gestor.h"
 	"Vehiculo.h"
 	"ZonaReparto.h"
+	"Lista.h"
 
 1668288931 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\pila.h
 	"NodoPila.h"
@@ -180,7 +181,7 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1669572816 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
+1670706629 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
@@ -192,13 +193,14 @@
 	<string>
 	"NodoCola.h"
 
-1669572889 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
+1670706629 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
 	"ZonaReparto.h"
+	"Lista.h"
 
 1668259120 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodocola.cpp
 	"NodoCola.h"
@@ -212,7 +214,7 @@
 1669497437 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pila.cpp
 	"Pila.h"
 
-1668285785 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
+1670706629 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
@@ -335,4 +337,28 @@
 1670675904 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Lista.h
 	"NodoLista.h"
 	"Vehiculo.h"
+
+1670706629 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\lista.h
+	"NodoLista.h"
+	"Vehiculo.h"
+
+1670706629 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodolista.h
+	"Vehiculo.h"
+	<iostream>
+
+1670706629 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodolista.cpp
+	"NodoLista.h"
+	"Vehiculo.h"
+
+1670706629 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pedido.cpp
+	"Pedido.h"
+
+1670708081 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\pedido.h
+	<string>
+
+1670707671 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\lista.cpp
+	"Lista.h"
+	"NodoLista.h"
+	"Vehiculo.h"
+	<iostream>
 
