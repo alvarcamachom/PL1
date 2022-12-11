@@ -8,17 +8,21 @@ class Pedido
 {
     public:
         Pedido();
+        Pedido(string m, string col);
         virtual ~Pedido();
 
         string modeloRand();
         string colorRand();
         string tipoRand();
+        string zonaRand();
 
         string getModelo();
         string getTipo();
         string getColor();
         string getZona();
         int getConcesionario();
+
+        string verPedido();
 
 
     protected:

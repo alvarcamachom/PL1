@@ -27,7 +27,7 @@ class Gestor
 
     private:
 
-        ZonaReparto zonas [3];
+        ZonaReparto zonas [4];
         Cola vehiculosFabrica;
         ZonaReparto zona; //esto para que?
 };

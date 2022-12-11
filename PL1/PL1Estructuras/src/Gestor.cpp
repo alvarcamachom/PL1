@@ -58,9 +58,10 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
 
 void Gestor::vehiculosAZona(int zona, int ns)
 {
-    zonas[0].setNombre("A");
-    zonas[1].setNombre("B");
-    zonas[2].setNombre("C");
+    zonas[0].setNombre("N");
+    zonas[1].setNombre("S");
+    zonas[2].setNombre("E");
+    zonas[2].setNombre("O");
 
     if (vehiculosFabrica.es_vacia())
     {
@@ -181,28 +182,36 @@ void Gestor::vehiculosAZona(int zona, int ns)
 void Gestor::mostrarZonas()
 {
 
-    cout<<"Registro de la zona A,"<<"\n";
+    cout<<"Registro de la zona N,"<<"\n";
     zonas[0].verRegistro();
-    cout<<"Camion1 de la zona A,"<<"\n";
+    cout<<"Camion1 de la zona N,"<<"\n";
     zonas[0].verCamion1();
-    cout<<"Camion2 de la zona A,"<<"\n";
+    cout<<"Camion2 de la zona N,"<<"\n";
     zonas[0].verCamion2();
     cout<<endl;
 
-    cout<<"Registro de la zona B,"<< "\n";
+    cout<<"Registro de la zona S,"<< "\n";
     zonas[1].verRegistro();
-    cout<<"Camion1 de la zona B,"<<"\n";
+    cout<<"Camion1 de la zona S,"<<"\n";
     zonas[1].verCamion1();
-    cout<<"Camion2 de la zona B,"<<"\n";
+    cout<<"Camion2 de la zona S,"<<"\n";
     zonas[1].verCamion2();
     cout<<endl;
 
-    cout<<"Registro de la zona C, "<< "\n";
+    cout<<"Registro de la zona E, "<< "\n";
     zonas[2].verRegistro();
-    cout<<"Camion1 de la zona C,"<<"\n";
+    cout<<"Camion1 de la zona E,"<<"\n";
     zonas[2].verCamion1();
-    cout<<"Camion2 de la zona C,"<<"\n";
+    cout<<"Camion2 de la zona E,"<<"\n";
     zonas[2].verCamion2();
+    cout<<endl;
+
+        cout<<"Registro de la zona O, "<< "\n";
+    zonas[3].verRegistro();
+    cout<<"Camion1 de la zona O,"<<"\n";
+    zonas[3].verCamion1();
+    cout<<"Camion2 de la zona O,"<<"\n";
+    zonas[3].verCamion2();
     cout<<endl;
 
 

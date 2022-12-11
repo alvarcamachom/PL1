@@ -8,6 +8,7 @@
 #include "Vehiculo.h"
 #include "ZonaReparto.h"
 #include "Lista.h"
+#include "Pedido.h"
 
 
 
@@ -115,6 +116,11 @@ int main()
         else if(opcion==9)
         {
             g.pruebaLista();
+        }
+        else if(opcion==10)
+        {
+            Pedido ped= Pedido();
+            cout<<ped.verPedido()<<endl;
         }
         else
         {
