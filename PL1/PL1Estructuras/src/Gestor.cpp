@@ -4,7 +4,6 @@
 #include "Pila.h"
 #include "Cola.h"
 #include "ZonaReparto.h"
-#include "Lista.h"
 
 using namespace std;
 
@@ -21,7 +20,7 @@ Gestor::Gestor()
 }
 
 
-void Gestor::crearVehiculo(int nv)
+void Gestor::crearVehiculo(int nv) //Genera nv vehiuclos aleatorios
 {
     for (int i=1; i<=nv; i++)
     {
@@ -30,6 +29,46 @@ void Gestor::crearVehiculo(int nv)
         vehiculosFabrica.encolar(carro);//Meter vehiculo en cola
         cout<<"Vehiculo metido en almacen"<<endl;
         cout<<""<<endl;
+    }
+}
+
+void Gestor::generarNVVehiculos(int nv) //Genera nv vehivulos aleatorios, de cada color y de cada modelo
+{
+    for (int i=1; i<=nv; i++)
+    {
+
+        vehiculosFabrica.encolar(Vehiculo("M1","C1"));//Meter vehiculo en cola
+        vehiculosFabrica.encolar(Vehiculo("M2","C1"));
+        vehiculosFabrica.encolar(Vehiculo("M3","C1"));
+        vehiculosFabrica.encolar(Vehiculo("M4","C1"));
+        vehiculosFabrica.encolar(Vehiculo("M5","C1"));
+        vehiculosFabrica.encolar(Vehiculo("M1","C2"));
+        vehiculosFabrica.encolar(Vehiculo("M2","C2"));
+        vehiculosFabrica.encolar(Vehiculo("M3","C2"));
+        vehiculosFabrica.encolar(Vehiculo("M4","C2"));
+        vehiculosFabrica.encolar(Vehiculo("M5","C2"));
+        vehiculosFabrica.encolar(Vehiculo("M1","C3"));
+        vehiculosFabrica.encolar(Vehiculo("M2","C3"));
+        vehiculosFabrica.encolar(Vehiculo("M3","C3"));
+        vehiculosFabrica.encolar(Vehiculo("M4","C3"));
+        vehiculosFabrica.encolar(Vehiculo("M5","C3"));
+
+    }
+}
+
+void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc *2 pedidos
+{
+    for (int i; i<=nc*2;i++){
+        Pedido ped = Pedido();
+        if(ped.getTipo()=="P"){
+            //listaPedidos.insertar_izquierda(ped) cambiar implementacion de listas
+        }
+        else if(ped.getTipo()=="N"){ //Else if en vez de else para asegurar que el tipo es N o P, y no otra cosa
+            //listaPedidos.insertar_derecha(ped)
+        }
+        else{
+            cout<<"Error en la prioridad del pedido"<<endl;
+        }
     }
 }
 
@@ -258,6 +297,7 @@ void Gestor::pruebaLista(){
                 }
             }
             listaPrueba.mostrar();
+
 }
 
 Gestor::~Gestor()

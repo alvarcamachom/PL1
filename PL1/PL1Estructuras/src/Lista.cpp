@@ -84,6 +84,7 @@ void Lista::insertar_enPosicion(int posicion, Vehiculo v)
 			longitud++;
 		}
 	}
+	else{cout<<"Error, posicion no existe."<<endl;}
 }
 
 Vehiculo Lista::ver_primero()
@@ -180,7 +181,7 @@ void Lista::borrar_posicion(int posicion)
 	}
 }
 
-void Lista::vaciar_lista()
+void Lista::vaciar_lista()//esto esta bien?
 {
 	if(!es_vacia())
 	{

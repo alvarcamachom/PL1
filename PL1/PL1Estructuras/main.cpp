@@ -10,7 +10,8 @@
 #include "Lista.h"
 #include "Pedido.h"
 
-
+//dudas: asignar concesionario a pedido con nc? método vaciar lista, no hace falta un bucle?
+//En la lista van pedidos, no vehiuclos. Cambiar toda la implementacion
 
 using namespace std;
 
@@ -36,7 +37,7 @@ int main()
     while (bucle)
     {
         //Menu
-        cout<<"Seleccione una opcion: \n1-Generar "<<nv<<" automóviles\n2-Generar numero pedido de automoviles\n"
+        cout<<"Seleccione una opcion: \n1-Generar "<<nv<<" automóviles\n2-Generar numero pedido de automoviles, de cada modelo y color\n"
             "3-Mostrar automoviles en fabrica\n4-Borrar automoviles en fabrica\n"
             "5-Salen "<<ns<<" automóviles de la fabrica y llega a un almacén\n"
             "6-Salen un numero pedido de automoviles de la fabrica y llegan a un almacen\n"
@@ -65,10 +66,10 @@ int main()
         {
             //Generar un numero dado de automoviles
             int nvORIGINAL = nv;
-            cout<<"Cuantos automoviles generamos?\n";
+            cout<<"Cuantos automoviles (de cada modelo y color) generamos?\n";
             cin>>nv;
-            g.crearVehiculo(nv);
-            cout<<endl<<"Se han generado "<<nv<<" vehiculos y se han metido al almacen"<<endl;
+            g.generarNVVehiculos(nv);
+            cout<<endl<<"Se han generado "<<nv*15<<" vehiculos y se han metido al almacen"<<endl; //3 colores, 5 modelos --> 15 posibilidades
             cout<<""<<endl;
             nv = nvORIGINAL;
         }
@@ -121,6 +122,9 @@ int main()
         {
             Pedido ped= Pedido();
             cout<<ped.verPedido()<<endl;
+            if(ped.getZona() == "N"){
+                g.vehiculosAZona(1,1);
+            }
         }
         else
         {
@@ -129,3 +133,5 @@ int main()
     }
     return 0;
 }
+
+

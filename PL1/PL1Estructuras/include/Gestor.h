@@ -4,6 +4,8 @@
 #include "Pila.h"
 #include "Cola.h"
 #include "ZonaReparto.h"
+#include "Lista.h"
+#include "Pedido.h"
 
 using namespace std;
 
@@ -21,6 +23,8 @@ class Gestor
         void mostrarZonas();
         void finSimulacion(int ns);
         void pruebaLista();
+        void generarNVVehiculos(int nv);
+        void generarPedidos(int nc);
 
 
     protected:
@@ -29,6 +33,8 @@ class Gestor
 
         ZonaReparto zonas [4];
         Cola vehiculosFabrica;
+        Lista listaPedidos;
+
         ZonaReparto zona; //esto para que?
 };
 

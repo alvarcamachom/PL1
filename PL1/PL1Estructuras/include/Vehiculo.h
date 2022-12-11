@@ -13,6 +13,7 @@ class Vehiculo
         //Constructores
         Vehiculo();
         Vehiculo(string m, string c, string b, int con);
+        Vehiculo(string m, string c);
         virtual ~Vehiculo();
 
         //Setters

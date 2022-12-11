@@ -21,6 +21,14 @@ Vehiculo::Vehiculo(string m, string c, string b, int con)
     concesionario = con;
 }
 
+Vehiculo::Vehiculo(string m, string c)
+{
+    modelo = m;
+    color = c;
+    bastidor = Vehiculo::generarBastidorRand();
+    concesionario = 0;
+}
+
 string Vehiculo::generarBastidorRand()
 {
     string bastidor = "";
