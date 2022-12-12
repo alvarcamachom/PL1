@@ -6,8 +6,9 @@ Pedido::Pedido()
     tipo = Pedido::tipoRand();
     modelo = Pedido::modeloRand();
     color = Pedido::colorRand();
-    zona= Pedido::zonaRand();
-    //falta concesionario
+    zona = Pedido::zonaRand();
+    concesionario = 0;
+    //falta concesionario-- pongo 0 de momento
 
 }
 
@@ -16,7 +17,8 @@ Pedido::Pedido(string m, string col)
     modelo = m;
     color = col;
     tipo = Pedido::tipoRand();
-    zona= Pedido::zonaRand();
+    zona = Pedido::zonaRand();
+    concesionario = 0;
     //falta concesionario
 }
 
@@ -56,10 +58,6 @@ string Pedido::zonaRand()
     string zona = zonas[r];
     return zona;
 }
-
-
-
-
 
 string Pedido::getColor()
 {

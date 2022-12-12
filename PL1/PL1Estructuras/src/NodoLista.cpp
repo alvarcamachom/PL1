@@ -1,16 +1,16 @@
 #include "NodoLista.h"
-#include "Vehiculo.h"
+#include "Pedido.h"
 
 NodoLista::NodoLista()
 {
-    v=Vehiculo();
+    p = Pedido();
     siguiente=NULL;
     //constructor por defecto
 }
 
-NodoLista::NodoLista(Vehiculo veh, NodoLista *sig)
+NodoLista::NodoLista(Pedido pe, NodoLista *sig)
 	{
-            v = veh;
+            p = pe;
             siguiente = sig;
 
     }

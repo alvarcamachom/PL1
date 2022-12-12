@@ -1,7 +1,7 @@
 #ifndef LISTA_H
 #define LISTA_H
 #include "NodoLista.h"
-#include "Vehiculo.h"
+#include "Pedido.h"
 
 class Lista
 {
@@ -13,13 +13,13 @@ public:
     Lista();
     ~Lista();
     int get_longitud();
-	void insertar_derecha(Vehiculo);
-	void insertar_izquierda(Vehiculo);
-	void insertar_enPosicion(int, Vehiculo);
+	void insertar_derecha(Pedido);
+	void insertar_izquierda(Pedido);
+	void insertar_enPosicion(int, Pedido);
 	bool es_vacia();
-	Vehiculo ver_primero();
-	Vehiculo ver_ultimo();
-	Vehiculo ver_posicion(int);
+	Pedido ver_primero();
+	Pedido ver_ultimo();
+	Pedido ver_posicion(int);
 	void borrar_izquierda();
 	void borrar_posicion(int);
 	void vaciar_lista();

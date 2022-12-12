@@ -1,6 +1,6 @@
 #include "Lista.h"
 #include "NodoLista.h"
-#include "Vehiculo.h"
+#include "Pedido.h"
 using namespace std;
 #include <iostream>
 
@@ -20,9 +20,9 @@ int Lista::get_longitud()
 	return longitud;
 }
 
-void Lista::insertar_izquierda(Vehiculo v)
+void Lista::insertar_izquierda(Pedido p)
 {
-	NodoLista *nuevo_nodo = new NodoLista(v);
+	NodoLista *nuevo_nodo = new NodoLista(p);
 
 	if(es_vacia())
 	{
@@ -38,9 +38,9 @@ void Lista::insertar_izquierda(Vehiculo v)
 	}
 }
 
-void Lista::insertar_derecha(Vehiculo v)
+void Lista::insertar_derecha(Pedido p)
 {
-	NodoLista *nuevo_nodo = new NodoLista(v);
+	NodoLista *nuevo_nodo = new NodoLista(p);
 
 	if(es_vacia())
 	{
@@ -56,22 +56,22 @@ void Lista::insertar_derecha(Vehiculo v)
 	}
 }
 
-void Lista::insertar_enPosicion(int posicion, Vehiculo v)
+void Lista::insertar_enPosicion(int posicion, Pedido p)
 {
 	if((posicion >=1) && (posicion <= (longitud + 1)))
 	{
 		if(posicion == 1)
 		{
-			insertar_izquierda(v);
+			insertar_izquierda(p);
 		}
 		else if(posicion == (longitud + 1))
 		{
-			insertar_derecha(v);
+			insertar_derecha(p);
 		}
 		else
 		{
 			NodoLista *aux = primero;
-			NodoLista *nuevo_nodo = new NodoLista(v);
+			NodoLista *nuevo_nodo = new NodoLista(p);
 
 			for(int i = 1; i < posicion-1; i++)
 			{
@@ -87,23 +87,23 @@ void Lista::insertar_enPosicion(int posicion, Vehiculo v)
 	else{cout<<"Error, posicion no existe."<<endl;}
 }
 
-Vehiculo Lista::ver_primero()
+Pedido Lista::ver_primero()
 {
 	if(!es_vacia())
 	{
-		return primero->v;
+		return primero->p;
 	}
 }
 
-Vehiculo Lista::ver_ultimo()
+Pedido Lista::ver_ultimo()
 {
 	if(!es_vacia())
 	{
-		return ultimo->v;
+		return ultimo->p;
 	}
 }
 
-Vehiculo Lista::ver_posicion(int posicion)
+Pedido Lista::ver_posicion(int posicion)
 {
 	if(!es_vacia())
 	{
@@ -114,7 +114,7 @@ Vehiculo Lista::ver_posicion(int posicion)
 			aux = aux->siguiente;
 		}
 
-		return aux->v;
+		return aux->p;
 	}
 }
 
@@ -152,7 +152,7 @@ void Lista::borrar_izquierda()
 void Lista::borrar_posicion(int posicion)
 {
     //(posicion<1) || (posicion>longitud)
-	if  (es_vacia()) {cout<<"No existe la posici—n"<<endl;}
+	if  (es_vacia()) {cout<<"No existe la posicion"<<endl;}
 	else {
 
 		if(posicion == 1)
@@ -191,19 +191,17 @@ void Lista::vaciar_lista()//esto esta bien?
 }
 
 
-
-
 void Lista::mostrar() {
    NodoLista *aux;
 
    aux = primero;
-   if (es_vacia()) {cout<<"Lista Vac’a"<<endl;}
+   if (es_vacia()) {cout<<"Lista Vacia"<<endl;}
    else {
        int o=0;
    while(aux) {
         o++;
-        cout<< "Vehiculo " <<o <<endl;
-      cout << aux->v.verVehiculo();
+        cout<< "Pedido: " <<o <<endl;
+      cout << aux->p.verPedido();
       aux = aux->siguiente;
    }
    cout << endl;

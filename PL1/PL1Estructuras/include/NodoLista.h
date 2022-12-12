@@ -1,6 +1,6 @@
 #ifndef NODOLISTA_H
 #define NODOLISTA_H
-#include "Vehiculo.h"
+#include "Pedido.h"
 #include <iostream>
 
 using namespace std;
@@ -10,10 +10,10 @@ class NodoLista
  friend class Lista;
 private:
 	NodoLista *siguiente;
-	Vehiculo v;
+	Pedido p;
 public:
     NodoLista();
-	NodoLista(Vehiculo v, NodoLista *sig = NULL);
+	NodoLista(Pedido p, NodoLista *sig = NULL);
 	~NodoLista();
 
 

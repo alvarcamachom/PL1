@@ -4,13 +4,14 @@
 #include "Pila.h"
 #include "Cola.h"
 #include "ZonaReparto.h"
+#include "Pedido.h"
 
 using namespace std;
 
-    int nv = 12;
-    int ns = 4 ;
-    int np = 7;
-    int nc = 5;
+int nv = 12;
+int ns = 4 ;
+int np = 7;
+int nc = 5;
 
 
 
@@ -56,20 +57,26 @@ void Gestor::generarNVVehiculos(int nv) //Genera nv vehivulos aleatorios, de cad
     }
 }
 
-void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc *2 pedidos
+void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos
 {
-    for (int i; i<=nc*2;i++){
+    for (int i=0; i<nc*2; i++)
+    {
         Pedido ped = Pedido();
-        if(ped.getTipo()=="P"){
-            //listaPedidos.insertar_izquierda(ped) cambiar implementacion de listas
+
+        if(ped.getTipo()=="P")
+        {
+            listaPedidos.insertar_izquierda(ped);
         }
-        else if(ped.getTipo()=="N"){ //Else if en vez de else para asegurar que el tipo es N o P, y no otra cosa
-            //listaPedidos.insertar_derecha(ped)
+        else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
+        {
+            listaPedidos.insertar_derecha(ped);
         }
-        else{
+        else
+        {
             cout<<"Error en la prioridad del pedido"<<endl;
         }
     }
+    cout<<"Se han metido los pedidos a la lista"<<endl;
 }
 
 
@@ -100,7 +107,7 @@ void Gestor::vehiculosAZona(int zona, int ns)
     zonas[0].setNombre("N");
     zonas[1].setNombre("S");
     zonas[2].setNombre("E");
-    zonas[2].setNombre("O");
+    zonas[3].setNombre("O");
 
     if (vehiculosFabrica.es_vacia())
     {
@@ -245,7 +252,7 @@ void Gestor::mostrarZonas()
     zonas[2].verCamion2();
     cout<<endl;
 
-        cout<<"Registro de la zona O, "<< "\n";
+    cout<<"Registro de la zona O, "<< "\n";
     zonas[3].verRegistro();
     cout<<"Camion1 de la zona O,"<<"\n";
     zonas[3].verCamion1();
@@ -261,43 +268,75 @@ void Gestor::mostrarZonas()
 void Gestor::finSimulacion(int ns)
 {
 
-while(!vehiculosFabrica.es_vacia()){
+    while(!vehiculosFabrica.es_vacia())
+    {
 
-    int zona=rand()%4;
+        int zona=rand()%4;
 
-    if (ns>vehiculosFabrica.get_longitud()){
+        if (ns>vehiculosFabrica.get_longitud())
+        {
 
-        vehiculosAZona(zona, vehiculosFabrica.get_longitud()); //Si queremos sacar más de los que quedan, sacamos todos los que queden
+            vehiculosAZona(zona, vehiculosFabrica.get_longitud()); //Si queremos sacar más de los que quedan, sacamos todos los que queden
 
-        cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
-        mostrarVehiculosFabrica();
+            cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
+            mostrarVehiculosFabrica();
 
-        mostrarZonas();
-    }
-    else{
+            mostrarZonas();
+        }
+        else
+        {
 
-        vehiculosAZona(zona, ns);
+            vehiculosAZona(zona, ns);
 
-        cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
-        mostrarVehiculosFabrica();
+            cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
+            mostrarVehiculosFabrica();
 
-        mostrarZonas();
+            mostrarZonas();
+        }
+
     }
 
 }
 
+void Gestor::verPedidos(){
+    listaPedidos.mostrar();
 }
 
-void Gestor::pruebaLista(){
-        Lista listaPrueba;
-            while(!vehiculosFabrica.es_vacia()){
-                for(int i=0; i<vehiculosFabrica.get_longitud(); i++){ //para pasar todos los vehiculos del almacen a la lista
-                    listaPrueba.insertar_izquierda(vehiculosFabrica.inicio());//meter en la lista por la izquierda coche
-                    vehiculosFabrica.desencolar();
-                }
-            }
-            listaPrueba.mostrar();
+void Gestor::borrarPedidos(){
+    listaPedidos.vaciar_lista();
+    cout<<"Se ha borrado la lista de pedidos"<<endl;
+}
 
+void Gestor::pruebaLista()
+{
+    Lista listaPrueba;
+    Pedido pedido1 = Pedido();
+    Pedido pedido2 = Pedido();
+    Pedido pedido3 = Pedido();
+    listaPrueba.insertar_izquierda(pedido1);
+    listaPrueba.insertar_izquierda(pedido2);
+    listaPrueba.insertar_izquierda(pedido3);
+    listaPrueba.mostrar();
+    cout<<"Borro dato del medio"<<endl;
+    listaPrueba.borrar_posicion(1);
+    listaPrueba.mostrar();
+    //Listas funciona bien con pedidos
+}
+
+void Gestor::buscarListaPedidos(){
+    //un intento de buscar vehiculo de la cola de fabrica en la lista de pedidos, un desastre sin sentido jajaj
+    for (int i=0; i<vehiculosFabrica.get_longitud(); i++){
+        Vehiculo vehic = vehiculosFabrica.inicio();
+        colaAux.encolar(vehic);
+        string colorV = vehic.devolverColor();
+        string modeloV = vehic.devolverModelo();
+        Pedido pedid = listaPedidos.ver_posicion(i+1);
+        string colorP = pedid.getColor();
+        string modeloP = pedid.getModelo();
+        if (colorV==colorP and modeloV==modeloP){
+            cout<<"estatattyw4e5yw45tae"<<endl;
+        }
+    }
 }
 
 Gestor::~Gestor()

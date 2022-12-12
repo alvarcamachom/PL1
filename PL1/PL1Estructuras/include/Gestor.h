@@ -25,6 +25,9 @@ class Gestor
         void pruebaLista();
         void generarNVVehiculos(int nv);
         void generarPedidos(int nc);
+        void verPedidos();
+        void borrarPedidos();
+        void buscarListaPedidos();
 
 
     protected:
@@ -33,9 +36,10 @@ class Gestor
 
         ZonaReparto zonas [4];
         Cola vehiculosFabrica;
+        Cola colaAux;
         Lista listaPedidos;
 
-        ZonaReparto zona; //esto para que?
+        ZonaReparto zona; //esto para que? --no se
 };
 
 #endif // GESTOR_H
