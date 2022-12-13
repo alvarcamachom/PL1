@@ -81,6 +81,40 @@ void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos
     cout<<"Se han metido los pedidos a la lista"<<endl;
 }
 
+void Gestor::generarPedidosCustom(int nc)
+{
+    for (int i=0; i<nc; i++)
+    {
+        string col;
+        string mod;
+        //string tipo;
+        //string zona;
+        cout<<"Color pedido "<<i+1<<": C1, C2, C3"<<endl;
+        cin>>col;
+        cout<<"Modelo pedido "<<i+1<<": M1, M2, M3, M4, M5"<<endl;
+        cin>>mod;
+        //cout<<"Tipo pedido "<<i+1<<": 'P', 'N'"<<endl;
+        //cin<<tipo;
+        //cout<<"Zona pedido "<<i+1<<": N, S, E, O"<<endl;
+        //cin<<zona;
+        Pedido ped = Pedido(mod, col);
+
+        if(ped.getTipo()=="P")
+        {
+            listaPedidos.insertar_prioridad(ped);
+            cout<<"Pedido "<<i+1<<" prioritario insertado: "<<ped.verPedido()<<endl;
+        }
+        else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
+        {
+            listaPedidos.insertar_derecha(ped);
+            cout<<"Pedido "<<i+1<<" no prioritario insertado: "<<ped.verPedido()<<endl;
+        }
+        else
+        {
+            cout<<"Error en la prioridad del pedido"<<endl;
+        }
+    }
+}
 
 void Gestor::mostrarVehiculosFabrica() //Muestra los vehiculos en la cola de la fabrica
 {
@@ -318,17 +352,24 @@ void Gestor::pruebaLista()
     listaPrueba.insertar_izquierda(pedido1);
     listaPrueba.insertar_izquierda(pedido2);
     listaPrueba.insertar_izquierda(pedido3);
+    cout<<"longitud: ";
+    cout<<listaPrueba.get_longitud()<<endl;
     listaPrueba.mostrar();
     cout<<"Borro dato del medio"<<endl;
     listaPrueba.borrar_posicion(1);
     listaPrueba.mostrar();
+    cout<<"longitud despues de borrar: ";
+    cout<<listaPrueba.get_longitud()<<endl;
     //Listas funciona bien con pedidos
 }
 
 void Gestor::buscarListaPedidos(){
-    //un intento de buscar vehiculo de la cola de fabrica en la lista de pedidos, un desastre sin sentido jajaj
-    for (int i=0; i<vehiculosFabrica.get_longitud(); i++){
-        Vehiculo vehic = vehiculosFabrica.inicio();
+    //un intento de buscar vehiculo de la cola de fabrica en la lista de pedidos, mal todo
+    //Aqui es donde hay que poner lo de que si se queda vacia la colaFabrica se hagan todos prioritarios, y en el de
+    //hasta finalizar la simulacion no?
+
+    /*for (int i=0; i<vehiculosFabrica.get_longitud(); i++){
+        Vehiculo vehic = vehiculosFabrica.inicio(); //la idea era ir sacando cada coche de la cola de fabrica e ir buscandolo en pedidos
         colaAux.encolar(vehic);
         string colorV = vehic.devolverColor();
         string modeloV = vehic.devolverModelo();
@@ -338,7 +379,7 @@ void Gestor::buscarListaPedidos(){
         if (colorV==colorP and modeloV==modeloP){
             cout<<"estatattyw4e5yw45tae"<<endl;
         }
-    }
+    }*/
 }
 
 Gestor::~Gestor()

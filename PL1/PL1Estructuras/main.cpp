@@ -57,13 +57,13 @@ int main()
             "18-Visualizar los automoviles entregados en un concesionario cuyo numero es leido de teclado\n"
             "19-Visualizar el concesionario y zona en que se ha entregado un automovil, leyendo de teclado su numero de bastidor\n"
 
-            "\n99-Pruebas Arbol y listas\n"
+            "\n99-Pruebas\n"
             "\n0-Salir\n";
         cin>>opcion;
 
         if (opcion != 2 && opcion != 6 && opcion != 10) //no se borran si se elige una de estas opciones porque exigen una entrada de datos
         {
-            system("cls"); //Para borrar la consola despues de cada accion
+            system("clear"); //Para borrar la consola despues de cada accion
         }
 
         if (opcion==0)
@@ -116,7 +116,7 @@ int main()
             int nPedidos;
             cout<<"Cuantos pedidos se van a generar?"<<endl;
             cin>>nPedidos;
-            g.generarPedidos(nPedidos);
+            g.generarPedidosCustom(nPedidos);
 
         }
         else if(opcion==7){
@@ -141,9 +141,50 @@ int main()
 
         else if(opcion==10){
             //Igual que el 9 pero solicitando NS
+
         }
+        else if(opcion==11){
+            //Hacer simulacion hasta finalizar automoviles
 
+        }
+        else if(opcion==12){
+            //Mostrar datos zonas y camiones
+            g.mostrarZonas();
+        }
+        else if(opcion==13){
+            //Almacenar en ABB automovil con datos pedidos
 
+        }
+        else if(opcion==14){
+            //Almacenar en ABB los datos de los automoviles de una de las zonas
+
+        }
+        else if(opcion==15){
+            //Almacenar en ABB los datos de los automoviles de todas las zonas
+
+        }
+        else if(opcion==16){
+            //Ver los datos de los automóviles entregados ordenados por numero de concesionario
+
+        }
+        else if(opcion==17){
+            //Eliminar del arbol binario los datos de los automoviles de un modelo dado
+            string modelo;
+            cout<<"Que modelo eliminamos?"<<endl;
+            cin>>modelo;
+        }
+        else if(opcion==18){
+            //Ver los automoviles entregados en un concesionario pedido
+            int numc;
+            cout<<"Seleccionar concesionario"<<endl;
+            cin>>numc;
+        }
+        else if(opcion==19){
+            //Ver el concesionario y zona en que se ha entregado un automovil pidiendo numero de bastidor
+            string bastidor;
+            cout<<"Introduce el bastidor: "<<endl;
+            cin>>bastidor;
+        }
 
 
         else if(opcion==99)

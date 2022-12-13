@@ -120,7 +120,7 @@
 	"Pila.h"
 	"Vehiculo.h"
 
-1670948140 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+1670920604 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -129,7 +129,7 @@
 	"ZonaReparto.h"
 	"Pedido.h"
 
-1670947978 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
+1670920604 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
@@ -137,7 +137,7 @@
 	"Lista.h"
 	"Pedido.h"
 
-1670949216 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1670920604 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -378,7 +378,7 @@
 	"Vehiculo.h"
 	<iostream>
 
-1670950175 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Lista.cpp
+1670920604 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Lista.cpp
 	"Lista.h"
 	"NodoLista.h"
 	"Pedido.h"
