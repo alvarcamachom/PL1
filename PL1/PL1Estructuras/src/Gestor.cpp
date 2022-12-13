@@ -11,7 +11,7 @@ using namespace std;
 int nv = 12;
 int ns = 4 ;
 int np = 7;
-int nc = 5;
+int nc = 12;
 
 
 
@@ -65,11 +65,13 @@ void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos
 
         if(ped.getTipo()=="P")
         {
-            listaPedidos.insertar_izquierda(ped);
+            listaPedidos.insertar_prioridad(ped);
+            cout<<"Pedido"<<i<<" prioritario insertado: "<<ped.verPedido()<<endl;
         }
         else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
         {
             listaPedidos.insertar_derecha(ped);
+            cout<<"Pedido"<<i<<" no prioritario insertado: "<<ped.verPedido()<<endl;
         }
         else
         {

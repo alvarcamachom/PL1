@@ -16,6 +16,7 @@ public:
 	void insertar_derecha(Pedido);
 	void insertar_izquierda(Pedido);
 	void insertar_enPosicion(int, Pedido);
+	void insertar_prioridad(Pedido);
 	bool es_vacia();
 	Pedido ver_primero();
 	Pedido ver_ultimo();

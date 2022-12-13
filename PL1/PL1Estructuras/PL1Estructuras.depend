@@ -238,7 +238,7 @@
 	"Pila.h"
 	"Vehiculo.h"
 
-1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\main.cpp
+1670918139 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -248,6 +248,10 @@
 	"Gestor.h"
 	"Vehiculo.h"
 	"ZonaReparto.h"
+	"Lista.h"
+	"Pedido.h"
+	"ABB.h"
+	"NodoABB.h"
 
 1669102778 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\pila.h
 	"NodoPila.h"
@@ -257,7 +261,7 @@
 	<iostream>
 	"Vehiculo.h"
 
-1669102778 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\vehiculo.h
+1670915398 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\vehiculo.h
 	<string>
 	<list>
 	<cstdlib>
@@ -272,11 +276,13 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1669709334 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\gestor.h
+1670916803 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
 	"ZonaReparto.h"
+	"Lista.h"
+	"Pedido.h"
 
 1669709334 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\zonareparto.h
 	"Cola.h"
@@ -289,13 +295,14 @@
 	<string>
 	"NodoCola.h"
 
-1669709654 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\gestor.cpp
+1670919586 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
 	"ZonaReparto.h"
+	"Pedido.h"
 
 1669102779 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\nodocola.cpp
 	"NodoCola.h"
@@ -309,7 +316,7 @@
 1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pila.cpp
 	"Pila.h"
 
-1669709334 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\vehiculo.cpp
+1670915398 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
@@ -321,10 +328,10 @@
 	"Pila.h"
 	"Cola.h"
 
-1669710538 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pedido.cpp
+1670915398 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\pedido.cpp
 	"Pedido.h"
 
-1669710381 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\pedido.h
+1670915398 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\pedido.h
 	<string>
 
 1670862778 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Pedido.cpp
@@ -387,4 +394,35 @@
 
 1670874407 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoABB.cpp
 	"NodoABB.h"
+
+1670916788 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\lista.h
+	"NodoLista.h"
+	"Pedido.h"
+
+1670915398 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\nodolista.h
+	"Pedido.h"
+	<iostream>
+
+1670915398 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\abb.h
+	"NodoABB.h"
+	<iostream>
+
+1670915398 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\nodoabb.h
+	<iostream>
+
+1670915398 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\abb.cpp
+	"ABB.h"
+
+1670919491 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\lista.cpp
+	"Lista.h"
+	"NodoLista.h"
+	"Pedido.h"
+	<iostream>
+
+1670915398 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\nodoabb.cpp
+	"NodoABB.h"
+
+1670915398 source:c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\src\nodolista.cpp
+	"NodoLista.h"
+	"Pedido.h"
 

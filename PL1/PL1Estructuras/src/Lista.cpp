@@ -87,6 +87,27 @@ void Lista::insertar_enPosicion(int posicion, Pedido p)
 	else{cout<<"Error, posicion no existe."<<endl;}
 }
 
+	void Lista::insertar_prioridad(Pedido p)
+	{
+        NodoLista *nuevo_nodo = new NodoLista(p);
+        NodoLista *aux = primero;
+        if(es_vacia()){
+            insertar_izquierda(p);
+        }
+        else if (primero->p.getTipo()=="N"){
+            insertar_izquierda(p);
+        }
+        else{
+        while(aux->siguiente!=NULL&&aux->siguiente->p.getTipo()!="N"){
+            aux=aux->siguiente;
+        }
+            nuevo_nodo->siguiente = aux->siguiente;
+			aux->siguiente = nuevo_nodo;
+
+        }
+	}
+
+
 Pedido Lista::ver_primero()
 {
 	if(!es_vacia())
@@ -179,9 +200,10 @@ void Lista::borrar_posicion(int posicion)
 		}
 
 	}
+	longitud--;
 }
 
-void Lista::vaciar_lista()//esto esta bien?
+void Lista::vaciar_lista()
 {
 	if(!es_vacia())
 	{

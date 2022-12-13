@@ -63,7 +63,7 @@ int main()
 
         if (opcion != 2 && opcion != 6 && opcion != 10) //no se borran si se elige una de estas opciones porque exigen una entrada de datos
         {
-            system("clear"); //Para borrar la consola despues de cada accion
+            system("cls"); //Para borrar la consola despues de cada accion
         }
 
         if (opcion==0)
