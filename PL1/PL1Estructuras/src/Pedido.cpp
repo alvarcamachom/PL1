@@ -12,6 +12,17 @@ Pedido::Pedido()
 
 }
 
+Pedido::Pedido(int nc)
+{
+    tipo = Pedido::tipoRand();
+    modelo = Pedido::modeloRand();
+    color = Pedido::colorRand();
+    zona = Pedido::zonaRand();
+    concesionario = rand()%nc;
+    //falta concesionario-- pongo 0 de momento
+
+}
+
 Pedido::Pedido(string m, string col)
 {
     modelo = m;

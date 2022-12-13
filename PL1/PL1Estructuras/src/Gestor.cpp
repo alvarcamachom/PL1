@@ -61,7 +61,7 @@ void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos
 {
     for (int i=0; i<nc*2; i++)
     {
-        Pedido ped = Pedido();
+        Pedido ped = Pedido(nc);
 
         if(ped.getTipo()=="P")
         {
@@ -81,7 +81,7 @@ void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos
     cout<<"Se han metido los pedidos a la lista"<<endl;
 }
 
-void Gestor::generarPedidosCustom(int nc)
+void Gestor::generarPedidosCustom(int nc) //El nombre nc es ambiguo con NC (numero concesionarios)
 {
     for (int i=0; i<nc; i++)
     {

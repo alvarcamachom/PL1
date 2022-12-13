@@ -8,6 +8,7 @@ class Pedido
 {
     public:
         Pedido();
+        Pedido(int nc);
         Pedido(string m, string col);
         virtual ~Pedido();
 
