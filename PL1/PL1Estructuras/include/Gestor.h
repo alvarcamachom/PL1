@@ -20,7 +20,7 @@ class Gestor
         void crearVehiculo(int nv);
         void mostrarVehiculosFabrica();
         void borrarVehiculosFabrica();
-        void vehiculosAZona(int zona, int ns);
+        void vehiculosAZona(Cola peds);
         void mostrarZonas();
         void finSimulacion(int ns);
         void pruebaLista();
@@ -29,7 +29,8 @@ class Gestor
         void generarPedidosCustom(int nc);
         void verPedidos();
         void borrarPedidos();
-        void buscarListaPedidos();
+        //void buscarListaPedidos();
+        Cola buscaPedidos(int ns);
 
 
     protected:

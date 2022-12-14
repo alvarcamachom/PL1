@@ -63,7 +63,7 @@ int main()
 
         if (opcion != 2 && opcion != 6 && opcion != 10) //no se borran si se elige una de estas opciones porque exigen una entrada de datos
         {
-            system("clear"); //Para borrar la consola despues de cada accion
+            system("clS"); //Para borrar la consola despues de cada accion
         }
 
         if (opcion==0)
@@ -136,7 +136,9 @@ int main()
 
             ir sacando coches de la cola fabrica y buscando si estan en la lista pedidos. si estan, se le asigna concesionario,
             se elimina de la lista y se lleva a zona*/
-            g.buscarListaPedidos();
+
+            g.vehiculosAZona(g.buscaPedidos(ns));
+            g.mostrarZonas();
             }
 
         else if(opcion==10){

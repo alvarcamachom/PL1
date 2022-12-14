@@ -81,6 +81,16 @@ int Vehiculo::devolverConcesionario()
     return concesionario;
 }
 
+int Vehiculo::getZona()
+{
+    return zona;
+}
+
+void Vehiculo::setZona(int z)
+{
+    zona = z;
+}
+
 
 string Vehiculo::verVehiculo()
 {

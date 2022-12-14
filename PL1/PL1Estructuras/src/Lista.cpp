@@ -110,8 +110,10 @@ void Lista::insertar_prioridad(Pedido p)
         }
         nuevo_nodo->siguiente = aux->siguiente;
         aux->siguiente = nuevo_nodo;
+        longitud++;
 
     }
+
 }
 
 
@@ -179,8 +181,8 @@ void Lista::borrar_izquierda()
 
 void Lista::borrar_posicion(int posicion)
 {
-    //(posicion<1) || (posicion>longitud)
-    if  (es_vacia())
+    if((posicion<1) || (posicion>longitud)){cout<<"error, posicion inexistente";}
+    else if  (es_vacia())
     {
         cout<<"No existe la posicion"<<endl;
     }

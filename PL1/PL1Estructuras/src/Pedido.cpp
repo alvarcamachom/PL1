@@ -18,7 +18,7 @@ Pedido::Pedido(int nc)
     modelo = Pedido::modeloRand();
     color = Pedido::colorRand();
     zona = Pedido::zonaRand();
-    concesionario = rand()%nc;
+    concesionario = (rand()%nc)+1;
     //falta concesionario-- pongo 0 de momento
 
 }
@@ -28,6 +28,16 @@ Pedido::Pedido(string m, string col)
     modelo = m;
     color = col;
     tipo = Pedido::tipoRand();
+    zona = Pedido::zonaRand();
+    concesionario = 0;
+    //falta concesionario
+}
+
+Pedido::Pedido(string m, string col, string prio)
+{
+    modelo = m;
+    color = col;
+    tipo = prio;
     zona = Pedido::zonaRand();
     concesionario = 0;
     //falta concesionario
@@ -62,11 +72,9 @@ string Pedido::tipoRand()
     return tipo;
 }
 
-string Pedido::zonaRand()
+int Pedido::zonaRand()
 {
-    string zonas[4] = {"N","S","E","O"};
-    int r = rand()%4;
-    string zona = zonas[r];
+    zona = rand()%4;
     return zona;
 }
 
@@ -85,7 +93,7 @@ string Pedido::getTipo()
     return tipo;
 }
 
-string Pedido::getZona()
+int Pedido::getZona()
 {
     return zona;
 }
@@ -95,7 +103,8 @@ int Pedido::getConcesionario()
     return concesionario;
 }
 
+string zonas[4]={"N", "S", "E", "O"};
 string Pedido::verPedido()
 {
-    return("Modelo: " + getModelo() + ", color: " + getColor() + ", tipo: " + getTipo() + ", zona: " + getZona() + ", concesionario: " + to_string(getConcesionario()) + "\n");
+    return("Modelo: " + getModelo() + ", color: " + getColor() + ", tipo: " + getTipo() + ", zona: " + zonas[getZona()] + ", concesionario: " + to_string(getConcesionario()) + "\n");
 }

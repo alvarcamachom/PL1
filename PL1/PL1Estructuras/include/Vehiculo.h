@@ -21,6 +21,7 @@ class Vehiculo
         string modeloRand();
         string colorRand();
         void set_concesionario(int);
+        void setZona(int);
 
         //Getters
         string verVehiculo();
@@ -28,6 +29,7 @@ class Vehiculo
         string devolverColor();
         string devolverBastidor();
         int devolverConcesionario();
+        int getZona();
 
 
     protected:
@@ -35,6 +37,7 @@ class Vehiculo
     private:
         string modelo, color, bastidor;
         int concesionario;
+        int zona;
 };
 
 #endif // VEHICULO_H

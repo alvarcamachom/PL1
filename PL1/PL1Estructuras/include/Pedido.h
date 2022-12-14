@@ -10,17 +10,18 @@ class Pedido
         Pedido();
         Pedido(int nc);
         Pedido(string m, string col);
+        Pedido(string m, string col, string prio);
         virtual ~Pedido();
 
         string modeloRand();
         string colorRand();
         string tipoRand();
-        string zonaRand();
+        int zonaRand();
 
         string getModelo();
         string getTipo();
         string getColor();
-        string getZona();
+        int getZona();
         int getConcesionario();
 
         string verPedido();
@@ -33,7 +34,7 @@ class Pedido
         string modelo;
         string color;
         int concesionario;
-        string zona;
+        int zona;
         string tipo;
 
 };
