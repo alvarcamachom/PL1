@@ -23,6 +23,7 @@ class Gestor
         void vehiculosAZona(Cola peds);
         void mostrarZonas();
         void finSimulacion(int ns);
+        void finSimulacionPedidos();
         void pruebaLista();
         void generarNVVehiculos(int nv);
         void generarPedidos(int nc);
@@ -30,6 +31,7 @@ class Gestor
         void verPedidos();
         void borrarPedidos();
         Cola buscaPedidos(int ns);
+
 
 
     protected:

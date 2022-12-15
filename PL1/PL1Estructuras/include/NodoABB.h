@@ -8,13 +8,13 @@ class NodoABB
     friend class ABB;
     public:
         NodoABB();
-        NodoABB(string nom, NodoABB *izq=NULL, NodoABB *der=NULL);
+        NodoABB(int conc, NodoABB *izq=NULL, NodoABB *der=NULL);
         virtual ~NodoABB();
 
     protected:
 
     private:
-        string nombre;
+        int concesionario;
         NodoABB *hi, *hd;
 };
 

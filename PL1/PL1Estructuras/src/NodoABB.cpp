@@ -5,10 +5,10 @@ NodoABB::NodoABB()
     //ctor
 }
 
-NodoABB::NodoABB(string nom, NodoABB *izq, NodoABB *der)
+NodoABB::NodoABB(int conc, NodoABB *izq, NodoABB *der)
 {
     //ctor
-    nombre=nom;
+    concesionario=conc;
     hi=izq;
     hd=der;
 }

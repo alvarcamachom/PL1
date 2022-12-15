@@ -153,7 +153,7 @@ int main()
         }
         else if(opcion==11){
             //Hacer simulacion hasta finalizar automoviles
-
+            //g.finSimulacion(ns);
         }
         else if(opcion==12){
             //Mostrar datos zonas y camiones
@@ -161,6 +161,16 @@ int main()
         }
         else if(opcion==13){
             //Almacenar en ABB automovil con datos pedidos
+            string col;
+            string mod;
+            string tipo;
+            //int zona;
+            cout<<"Color pedido: C1, C2, C3"<<endl;
+            cin>>col;
+            cout<<"Modelo pedido: M1, M2, M3, M4, M5"<<endl;
+            cin>>mod;
+            cout<<"Tipo pedido: 'P', 'N'"<<endl;
+            cin>>tipo;
 
         }
         else if(opcion==14){
