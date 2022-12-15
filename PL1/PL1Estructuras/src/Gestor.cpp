@@ -88,36 +88,107 @@ void Gestor::generarPedidosCustom(int n)
 {
     for (int i=0; i<n; i++)
     {
-        string col;
-        string mod;
+        string color;
+        string modelo;
         string tipo;
+        bool bucle1 = true;
+        bool bucle2 = true;
+        bool bucle3 = true;
         //int zona;
-        cout<<"Color pedido "<<i+1<<": C1, C2, C3"<<endl;
-        cin>>col;
-        cout<<"Modelo pedido "<<i+1<<": M1, M2, M3, M4, M5"<<endl;
-        cin>>mod;
-        cout<<"Tipo pedido "<<i+1<<": 'P', 'N'"<<endl;
-        cin>>tipo;
-        //cout<<"Zona pedido "<<i+1<<": 1(N), 2(S), 3(E), 4(O)"<<endl;
-        //cin>>zona;
-        Pedido ped = Pedido(mod, col, tipo);
 
-        if(ped.getTipo()=="P")
+        cout<<"Color pedido "<<i+1<<": 1,2,3"<<endl;
+        cin>>color;
+while (bucle1){
+        if(color=="1")
         {
-            listaPedidos.insertar_prioridad(ped);
-            cout<<"Pedido "<<i+1<<" prioritario insertado: "<<ped.verPedido()<<endl;
+            color="C1";
+            bucle1=false;
         }
-        else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
+        else if(color=="2")
         {
-            listaPedidos.insertar_derecha(ped);
-            cout<<"Pedido "<<i+1<<" no prioritario insertado: "<<ped.verPedido()<<endl;
+            color="C2";
+            bucle1=false;
+        }
+        else if(color=="3")
+        {
+            color="C3";
+            bucle1=false;
         }
         else
         {
-            cout<<"Error en la prioridad del pedido"<<endl;
+            cout<<"Debe elegir del 1 al 3"<<endl;
         }
+}
+while (bucle2){
+        cout<<"Modelo pedido "<<i+1<<": 1,2,3,4,5"<<endl;
+        cin>>modelo;
+        if(modelo=="1")
+        {
+            modelo="M1";
+            bucle2=false;
+        }
+        else if(modelo=="2")
+        {
+            modelo="M2";
+            bucle2=false;
+        }
+        else if(modelo=="3")
+        {
+            modelo="M3";
+            bucle2=false;
+        }
+        else if(modelo=="4")
+        {
+            modelo="M4";
+            bucle2=false;
+        }
+        else if (modelo=="5")
+        {
+            modelo="M5";
+            bucle2=false;
+        }
+        else
+        {
+            cout<<"Debe elegir del 1 al 5"<<endl;
+        }
+}
+while (bucle3){
+        cout<<"Tipo pedido "<<i+1<<": 'P', 'N'"<<endl;
+        cin>>tipo;
+        if(tipo=="P")
+        {
+            tipo="P";
+            bucle3=false;
+        }
+        else if(tipo=="N")
+        {
+            tipo="N";
+            bucle3=false;
+        }
+        else {
+        cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
+        bucle3=false;
 
     }
+}
+    Pedido ped = Pedido(modelo, color, tipo);
+
+    if(ped.getTipo()=="P")
+    {
+        listaPedidos.insertar_prioridad(ped);
+        cout<<"Pedido "<<i+1<<" prioritario insertado: "<<ped.verPedido()<<endl;
+    }
+    else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
+    {
+        listaPedidos.insertar_derecha(ped);
+        cout<<"Pedido "<<i+1<<" no prioritario insertado: "<<ped.verPedido()<<endl;
+    }
+    else
+    {
+        cout<<"Error en la prioridad del pedido"<<endl;
+    }
+
+}
 }
 
 void Gestor::mostrarVehiculosFabrica() //Muestra los vehiculos en la cola de la fabrica
