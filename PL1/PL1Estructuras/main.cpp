@@ -12,9 +12,8 @@
 #include "ABB.h"
 #include "NodoABB.h"
 
-//dudas: asignar concesionario a pedido con nc? --luego habra que crear clase concesionario por lo que he leido en la practica
-//método vaciar lista, no hace falta un bucle? -- no creo, porque lo he probado y funciona, se borra todo el contenido de la lista sin problema
-
+//Deberíamos comprobar las entradas en el 6 para no meter cosas q no son, si sobra tiempo
+//Hay q generar al menos dos behiuckos por concesionario pero nonsotros lo hacemos random(? y pedir concesionario y zona hay q hacerlo
 //apunte: he metido la implementacion de arbol de la profe, pero habria que cambiar la implementacion para que en cada nodo haya un concesionario,
 //porque ahora tiene algo raro, nombre o algo asi.
 
@@ -143,6 +142,13 @@ int main()
 
         else if(opcion==10){
             //Igual que el 9 pero solicitando NS
+            int nsORIGINAL = ns;
+            cout<<"Cuantos automoviles sacamos?\n";
+            cin>>ns;
+            g.vehiculosAZona(g.buscaPedidos(ns));
+            cout<<endl<<"Se han sacado "<<ns<<" vehiculos y se han llevado a las zonas"<<endl;
+            cout<<""<<endl;
+            ns = nsORIGINAL;
 
         }
         else if(opcion==11){

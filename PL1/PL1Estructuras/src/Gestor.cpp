@@ -202,8 +202,8 @@ void Gestor::vehiculosAZona(Cola peds)
     }
     else
     {
-
-        for (int k=1; k<= ns; k++)
+        int longi=peds.get_longitud();
+        for (int k=1; k<= longi; k++)
         {
             int zona = peds.inicio().getZona();
             if (np - zonas[zona].profundidadCamion1()+1 > 0)//miramos si los coches que se sacan caben en el primer camión
@@ -279,7 +279,7 @@ void Gestor::mostrarZonas()
 
 }
 
-/*void Gestor::finSimulacion(int ns)
+void Gestor::finSimulacion(int ns)
 {
 
     while(!vehiculosFabrica.es_vacia())
@@ -310,7 +310,7 @@ void Gestor::mostrarZonas()
 
     }
 
-}*/
+}
 
 void Gestor::verPedidos()
 {
