@@ -207,12 +207,16 @@ int main()
 
         else if(opcion==99)
         {
-            g.pruebaLista();
+            //g.pruebaLista();
             //g.pruebaArbol();
             /*Pedido ped = Pedido();
             cout<<ped.verPedido()<<endl;
             if(ped.getZona() == "N"){
                 g.vehiculosAZona(1,1);*/
+                int g = 3;
+                cout<<"int g";
+                cin>>g;
+                cout<<g;
         }
         else
         {

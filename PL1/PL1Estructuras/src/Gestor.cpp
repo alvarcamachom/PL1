@@ -96,9 +96,10 @@ void Gestor::generarPedidosCustom(int n)
         bool bucle3 = true;
         //int zona;
 
+
+while (bucle1){
         cout<<"Color pedido "<<i+1<<": 1,2,3"<<endl;
         cin>>color;
-while (bucle1){
         if(color=="1")
         {
             color="C1";
@@ -167,8 +168,6 @@ while (bucle3){
         }
         else {
         cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
-        bucle3=false;
-
     }
 }
     Pedido ped = Pedido(modelo, color, tipo);
