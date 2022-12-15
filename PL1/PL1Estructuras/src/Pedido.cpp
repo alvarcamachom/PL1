@@ -8,7 +8,7 @@ Pedido::Pedido()
     color = Pedido::colorRand();
     zona = Pedido::zonaRand();
     concesionario = 0;
-    //falta concesionario-- pongo 0 de momento
+
 
 }
 
@@ -18,8 +18,9 @@ Pedido::Pedido(int nc)
     modelo = Pedido::modeloRand();
     color = Pedido::colorRand();
     zona = Pedido::zonaRand();
-    concesionario = (rand()%nc)+1;
-    //falta concesionario-- pongo 0 de momento
+    concesionario=nc;
+    //concesionario = (rand()%nc)+1;
+
 
 }
 
@@ -30,7 +31,7 @@ Pedido::Pedido(string m, string col)
     tipo = Pedido::tipoRand();
     zona = Pedido::zonaRand();
     concesionario = 0;
-    //falta concesionario
+
 }
 
 Pedido::Pedido(string m, string col, string prio)

@@ -57,28 +57,31 @@ void Gestor::generarNVVehiculos(int nv) //Genera nv vehivulos aleatorios, de cad
     }
 }
 
-void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos
+void Gestor::generarPedidos(int nc) //Generar aleatoriamente (nc*2)*4 pedidos, teniendo cada concesionario, en cada zona, 2 pedidos.
 {
-    for (int i=0; i<nc*2; i++)
+    for (int k=0; k<2; k++)
     {
-        Pedido ped = Pedido(nc);
+        for (int i=1; i<nc+1; i++)
+        {
+            Pedido ped = Pedido(i);
 
-        if(ped.getTipo()=="P")
-        {
-            listaPedidos.insertar_prioridad(ped);
-            cout<<"Pedido"<<i<<" prioritario insertado: "<<ped.verPedido()<<endl;
+            if(ped.getTipo()=="P")
+            {
+                listaPedidos.insertar_prioridad(ped);
+                cout<<"Pedido"<<i<<" prioritario insertado: "<<ped.verPedido()<<endl;
+            }
+            else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
+            {
+                listaPedidos.insertar_derecha(ped);
+                cout<<"Pedido"<<i<<" no prioritario insertado: "<<ped.verPedido()<<endl;
+            }
+            else
+            {
+                cout<<"Error en la prioridad del pedido"<<endl;
+            }
         }
-        else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
-        {
-            listaPedidos.insertar_derecha(ped);
-            cout<<"Pedido"<<i<<" no prioritario insertado: "<<ped.verPedido()<<endl;
-        }
-        else
-        {
-            cout<<"Error en la prioridad del pedido"<<endl;
-        }
+        cout<<"Se han metido los pedidos a la lista"<<endl;
     }
-    cout<<"Se han metido los pedidos a la lista"<<endl;
 }
 
 void Gestor::generarPedidosCustom(int n)
@@ -241,6 +244,13 @@ void Gestor::vehiculosAZona(Cola peds)
 
 void Gestor::mostrarZonas()
 {
+    cout<<""<<endl;
+    cout<<""<<endl;
+    cout<<"********************REGISTROS********************"<<endl;
+    cout<<""<<endl;
+    cout<<""<<endl;
+
+
 
     cout<<"Registro de la zona N,"<<"\n";
     zonas[0].verRegistro();
@@ -279,18 +289,17 @@ void Gestor::mostrarZonas()
 
 }
 
-void Gestor::finSimulacion(int ns)
+/*void Gestor::finSimulacion(int ns)
 {
 
     while(!vehiculosFabrica.es_vacia())
     {
 
-        int zona=rand()%4;
 
         if (ns>vehiculosFabrica.get_longitud())
         {
 
-            vehiculosAZona(zona, vehiculosFabrica.get_longitud()); //Si queremos sacar más de los que quedan, sacamos todos los que queden
+            vehiculosAZona(buscaPedidos(ns)); //Si queremos sacar más de los que quedan, sacamos todos los que queden
 
             cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
             mostrarVehiculosFabrica();
@@ -310,7 +319,7 @@ void Gestor::finSimulacion(int ns)
 
     }
 
-}
+}*/
 
 void Gestor::verPedidos()
 {
