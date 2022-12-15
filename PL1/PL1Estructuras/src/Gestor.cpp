@@ -140,7 +140,8 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
 }
 
 
-Cola Gestor::buscaPedidos(int ns) //metodo que toma el numero de pedidos a buscar. Itera la lista de pedidos y la cola de fabrica. Si coincide lo elimina de ambas y lo pasa a la nueva cola a devolver.
+Cola Gestor::buscaPedidos(int ns) //metodo que toma el numero de pedidos a buscar. Itera la lista de pedidos y la cola de fabrica.
+//Si coincide lo elimina de ambas y lo pasa a la nueva cola a devolver.
 //Finalmente restauramos la cola de fabrica
 {
     Cola aux1;
@@ -341,25 +342,6 @@ void Gestor::pruebaLista()
     cout<<listaPrueba.get_longitud()<<endl;
     //Listas funciona bien con pedidos
 }
-
-/*void Gestor::buscarListaPedidos(){
-    //un intento de buscar vehiculo de la cola de fabrica en la lista de pedidos, mal todo
-    //Aqui es donde hay que poner lo de que si se queda vacia la colaFabrica se hagan todos prioritarios, y en el de
-    //hasta finalizar la simulacion no?
-
-    for (int i=0; i<vehiculosFabrica.get_longitud(); i++){
-        Vehiculo vehic = vehiculosFabrica.inicio(); //la idea era ir sacando cada coche de la cola de fabrica e ir buscandolo en pedidos
-        colaAux.encolar(vehic);
-        string colorV = vehic.devolverColor();
-        string modeloV = vehic.devolverModelo();
-        Pedido pedid = listaPedidos.ver_posicion(i+1);
-        string colorP = pedid.getColor();
-        string modeloP = pedid.getModelo();
-        if (colorV==colorP and modeloV==modeloP){
-            cout<<"estatattyw4e5yw45tae"<<endl;
-        }
-    }
-}*/
 
 Gestor::~Gestor()
 {

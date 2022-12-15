@@ -29,7 +29,6 @@ class Gestor
         void generarPedidosCustom(int nc);
         void verPedidos();
         void borrarPedidos();
-        //void buscarListaPedidos();
         Cola buscaPedidos(int ns);
 
 
