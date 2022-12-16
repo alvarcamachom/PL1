@@ -12,7 +12,7 @@
 #include "ABB.h"
 #include "NodoABB.h"
 
-//Deberíamos comprobar las entradas en el 6 para no meter cosas q no son, si sobra tiempo
+
 //y pedir concesionario y zona hay q hacerlo
 //apunte: he metido la implementacion de arbol de la profe, pero habria que cambiar la implementacion para que en cada nodo haya un concesionario,
 //porque ahora tiene algo raro, nombre o algo asi.
@@ -32,7 +32,7 @@ int main()
     int nv = 12;
     int ns = 4 ;
     int np = 7;
-    int nc = 12;
+    int nc = 10;
 
     Gestor g ;
     Vehiculo v;
@@ -43,7 +43,7 @@ int main()
         //Menu
         cout<<"Seleccione una opcion: \n1-Generar "<<nv<<" automóviles en la fabrica\n2-Generar numero pedido de automoviles, de cada modelo y color\n"
             "3-Mostrar automoviles en la fabrica\n4-Borrar automoviles en fabrica\n"
-            "5-Generar aleatoriamente "<<nc*2<<" pedidos de los concesionarios e insertarlos en la lista de pedidos\n"
+            "5-Generar aleatoriamente 2 pedidos para cada concesionario e insertarlos en la lista de pedidos\n"
             "6-Meter en la lista de pedidos los pedidos que se deseen\n"
             "7-Mostrar datos de la lista de pedidos\n8-Borrar lista de pedidos\n"
             "9-Salen "<<ns<<" automóviles de la fabrica y llegan a naves de reparto\n10-Salen un numero pedido de automoviles de la fabrica y llegan a las naves de reparto\n"
@@ -153,7 +153,7 @@ int main()
         }
         else if(opcion==11){
             //Hacer simulacion hasta finalizar automoviles
-            //g.finSimulacion(ns);
+            g.finSimulacion(ns);
         }
         else if(opcion==12){
             //Mostrar datos zonas y camiones

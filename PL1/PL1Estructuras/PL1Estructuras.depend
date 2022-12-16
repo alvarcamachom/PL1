@@ -152,7 +152,7 @@
 	"ABB.h"
 	"NodoABB.h"
 
-1671127720 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
+1671224148 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -190,7 +190,7 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1671124550 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
+1671140687 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
@@ -204,7 +204,7 @@
 	<string>
 	"NodoCola.h"
 
-1671127315 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
+1671225864 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -368,10 +368,10 @@
 	"NodoLista.h"
 	"Pedido.h"
 
-1671125017 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pedido.cpp
+1671220670 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pedido.cpp
 	"Pedido.h"
 
-1671040876 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\pedido.h
+1671220670 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\pedido.h
 	<string>
 
 1671055547 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\lista.cpp
@@ -430,16 +430,16 @@
 	"NodoLista.h"
 	"Pedido.h"
 
-1670962294 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\abb.h
+1671140687 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\abb.h
 	"NodoABB.h"
 	<iostream>
 
-1670962294 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodoabb.h
+1671140687 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodoabb.h
 	<iostream>
 
-1670962294 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\abb.cpp
+1671140687 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\abb.cpp
 	"ABB.h"
 
-1670962294 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodoabb.cpp
+1671140687 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodoabb.cpp
 	"NodoABB.h"
 

@@ -11,7 +11,7 @@ using namespace std;
 int nv = 12;
 int ns = 4 ;
 int np = 7;
-int nc = 12;
+int nc = 10;
 
 
 
@@ -57,31 +57,33 @@ void Gestor::generarNVVehiculos(int nv) //Genera nv vehivulos aleatorios, de cad
     }
 }
 
-void Gestor::generarPedidos(int nc) //Generar aleatoriamente (nc*2)*4 pedidos, teniendo cada concesionario, en cada zona, 2 pedidos.
+void Gestor::generarPedidos(int nc) //Generar aleatoriamente nc*2 pedidos, teniendo cada concesionario, 2 pedidos.
 {
-    for (int k=0; k<2; k++)
+    for (int k=0; k<2; k++) //Dos vehiculos por concesionario
     {
-        for (int i=1; i<nc+1; i++)
+
+        for (int i=1; i<nc+1; i++) //Para cada concesionario
         {
             Pedido ped = Pedido(i);
-
+            cout<<"i: "<<i<<endl;
             if(ped.getTipo()=="P")
             {
                 listaPedidos.insertar_prioridad(ped);
-                cout<<"Pedido"<<i<<" prioritario insertado: "<<ped.verPedido()<<endl;
+                cout<<"Pedido prioritario insertado: "<<ped.verPedido()<<endl;
             }
             else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
             {
                 listaPedidos.insertar_derecha(ped);
-                cout<<"Pedido"<<i<<" no prioritario insertado: "<<ped.verPedido()<<endl;
+                cout<<"Pedido no prioritario insertado: "<<ped.verPedido()<<endl;
             }
             else
             {
                 cout<<"Error en la prioridad del pedido"<<endl;
             }
         }
-        cout<<"Se han metido los pedidos a la lista"<<endl;
+
     }
+    cout<<"Se han metido los pedidos a la lista"<<endl;
 }
 
 void Gestor::generarPedidosCustom(int n)
@@ -97,97 +99,101 @@ void Gestor::generarPedidosCustom(int n)
         //int zona;
 
 
-while (bucle1){
-        cout<<"Color pedido "<<i+1<<": 1,2,3"<<endl;
-        cin>>color;
-        if(color=="1")
+        while (bucle1)
         {
-            color="C1";
-            bucle1=false;
+            cout<<"Color pedido "<<i+1<<": 1,2,3"<<endl;
+            cin>>color;
+            if(color=="1")
+            {
+                color="C1";
+                bucle1=false;
+            }
+            else if(color=="2")
+            {
+                color="C2";
+                bucle1=false;
+            }
+            else if(color=="3")
+            {
+                color="C3";
+                bucle1=false;
+            }
+            else
+            {
+                cout<<"Debe elegir del 1 al 3"<<endl;
+            }
         }
-        else if(color=="2")
+        while (bucle2)
         {
-            color="C2";
-            bucle1=false;
+            cout<<"Modelo pedido "<<i+1<<": 1,2,3,4,5"<<endl;
+            cin>>modelo;
+            if(modelo=="1")
+            {
+                modelo="M1";
+                bucle2=false;
+            }
+            else if(modelo=="2")
+            {
+                modelo="M2";
+                bucle2=false;
+            }
+            else if(modelo=="3")
+            {
+                modelo="M3";
+                bucle2=false;
+            }
+            else if(modelo=="4")
+            {
+                modelo="M4";
+                bucle2=false;
+            }
+            else if (modelo=="5")
+            {
+                modelo="M5";
+                bucle2=false;
+            }
+            else
+            {
+                cout<<"Debe elegir del 1 al 5"<<endl;
+            }
         }
-        else if(color=="3")
+        while (bucle3)
         {
-            color="C3";
-            bucle1=false;
+            cout<<"Tipo pedido "<<i+1<<": 'P', 'N'"<<endl;
+            cin>>tipo;
+            if(tipo=="P")
+            {
+                tipo="P";
+                bucle3=false;
+            }
+            else if(tipo=="N")
+            {
+                tipo="N";
+                bucle3=false;
+            }
+            else
+            {
+                cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
+            }
+        }
+        Pedido ped = Pedido(modelo, color, tipo);
+
+        if(ped.getTipo()=="P")
+        {
+            listaPedidos.insertar_prioridad(ped);
+            cout<<"Pedido "<<i+1<<" prioritario insertado: "<<ped.verPedido()<<endl;
+        }
+        else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
+        {
+            listaPedidos.insertar_derecha(ped);
+            cout<<"Pedido "<<i+1<<" no prioritario insertado: "<<ped.verPedido()<<endl;
         }
         else
         {
-            cout<<"Debe elegir del 1 al 3"<<endl;
+            cout<<"Error en la prioridad del pedido"<<endl;
         }
-}
-while (bucle2){
-        cout<<"Modelo pedido "<<i+1<<": 1,2,3,4,5"<<endl;
-        cin>>modelo;
-        if(modelo=="1")
-        {
-            modelo="M1";
-            bucle2=false;
-        }
-        else if(modelo=="2")
-        {
-            modelo="M2";
-            bucle2=false;
-        }
-        else if(modelo=="3")
-        {
-            modelo="M3";
-            bucle2=false;
-        }
-        else if(modelo=="4")
-        {
-            modelo="M4";
-            bucle2=false;
-        }
-        else if (modelo=="5")
-        {
-            modelo="M5";
-            bucle2=false;
-        }
-        else
-        {
-            cout<<"Debe elegir del 1 al 5"<<endl;
-        }
-}
-while (bucle3){
-        cout<<"Tipo pedido "<<i+1<<": 'P', 'N'"<<endl;
-        cin>>tipo;
-        if(tipo=="P")
-        {
-            tipo="P";
-            bucle3=false;
-        }
-        else if(tipo=="N")
-        {
-            tipo="N";
-            bucle3=false;
-        }
-        else {
-        cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
-    }
-}
-    Pedido ped = Pedido(modelo, color, tipo);
 
-    if(ped.getTipo()=="P")
-    {
-        listaPedidos.insertar_prioridad(ped);
-        cout<<"Pedido "<<i+1<<" prioritario insertado: "<<ped.verPedido()<<endl;
     }
-    else if(ped.getTipo()=="N")  //else if para asegurar que el tipo es solo N o P
-    {
-        listaPedidos.insertar_derecha(ped);
-        cout<<"Pedido "<<i+1<<" no prioritario insertado: "<<ped.verPedido()<<endl;
-    }
-    else
-    {
-        cout<<"Error en la prioridad del pedido"<<endl;
-    }
-
-}
 }
 
 void Gestor::mostrarVehiculosFabrica() //Muestra los vehiculos en la cola de la fabrica
@@ -216,19 +222,20 @@ void Gestor::borrarVehiculosFabrica() //Borrar todos los vehiculos de la cola
 Cola Gestor::buscaPedidos(int ns) //metodo que toma el numero de pedidos a buscar. Itera la lista de pedidos y la cola de fabrica.
 //Si coincide lo elimina de ambas y lo pasa a la nueva cola a devolver.
 //Finalmente restauramos la cola de fabrica
+
+//SI SE DESCOMENTA LO COMENTADO, LOS VEHICULOS QUE NO COINCIDAN SE MANTENDRÁN EL LA FABRICA
 {
     Cola aux1;
     Cola aux2;
 
     if(listaPedidos.get_longitud()<ns)
     {
-        cout<<listaPedidos.get_longitud()<<endl;
         cout<<"No hay suficientes pedidos"<<endl;
     }
-    else if (listaPedidos.get_longitud()>vehiculosFabrica.get_longitud())
+    /*else if (listaPedidos.get_longitud()>vehiculosFabrica.get_longitud())
     {
         cout<<"No hay suficientes coches"<<endl;
-    }
+    }*/
     else
     {
 
@@ -236,7 +243,8 @@ Cola Gestor::buscaPedidos(int ns) //metodo que toma el numero de pedidos a busca
         {
 
             Pedido ped = listaPedidos.ver_posicion(1);
-            for (int j=0; j<vehiculosFabrica.get_longitud(); j++)
+            int lo=vehiculosFabrica.get_longitud();
+            for (int j=0; j<lo; j++)
             {
                 Vehiculo v = vehiculosFabrica.inicio();
                 if (v.devolverColor()==ped.getColor() && v.devolverModelo()==ped.getModelo() )
@@ -246,18 +254,26 @@ Cola Gestor::buscaPedidos(int ns) //metodo que toma el numero de pedidos a busca
                     aux1.encolar(v);
                     listaPedidos.borrar_posicion(1);
                     vehiculosFabrica.desencolar();
+                    cout<<"Pedido encontrado"<<endl;
+                    /*if(i==4)
+                    {   int longit= vehiculosFabrica.get_longitud();
+                        for(int p=0; p<longit; p++ ) //Si es la ultima iteracion metemos los ultimos vehiculos sin revisar para que no se pierdan
+                        {
+                            aux2.encolar(vehiculosFabrica.inicio());
+                            vehiculosFabrica.desencolar();
+                        }
+                    }*/
                     break;
                 }
                 else
                 {
-                    aux2.encolar(vehiculosFabrica.inicio());
+                    //aux2.encolar(vehiculosFabrica.inicio());
                     vehiculosFabrica.desencolar();
+                    cout<<"Coche no coincide con pedido. Borrando..."<<endl;
                 }
-
             }
         }
-
-        vehiculosFabrica=aux2;
+        //vehiculosFabrica=aux2;
         return aux1;
     }
 }
@@ -271,7 +287,14 @@ void Gestor::vehiculosAZona(Cola peds)
 
     if (peds.es_vacia())
     {
-        cout<<"No se han encontrado los pedidos"<<endl;
+        if(vehiculosFabrica.es_vacia())
+        {
+            cout<<"No quedan vehiculos."<<endl;
+        }
+        else
+        {
+            cout<<"No se han encontrado los pedidos"<<endl;
+        }
     }
     else
     {
@@ -298,11 +321,19 @@ void Gestor::vehiculosAZona(Cola peds)
         {
             if (zonas[j].profundidadCamion1()>=np)
             {
-                zonas[j].meterRegistro(zonas[j].mostrarCamion1());
+                for(int k=1; k<=8; k++)  //movemos los ocho oches del camion a la cola de zona
+                {
+                    zonas[j].meterRegistro(zonas[j].mostrarCamion1());
+                    zonas[j].sacarCamion1();
+                }
             }
             if (zonas[j].profundidadCamion2()>=np)
             {
-                zonas[j].meterRegistro(zonas[j].mostrarCamion2());
+                for(int h=1; h<=8; h++)  //movemos los ocho oches del camion a la cola de zona
+                {
+                    zonas[j].meterRegistro(zonas[j].mostrarCamion2());
+                    zonas[j].sacarCamion2();
+                }
             }
         }
     }
@@ -359,37 +390,41 @@ void Gestor::mostrarZonas()
 
 }
 
-/*void Gestor::finSimulacion(int ns)
+void Gestor::finSimulacion(int ns)
 {
 
     while(!vehiculosFabrica.es_vacia())
     {
 
 
-        if (ns>vehiculosFabrica.get_longitud())
+        if (listaPedidos.es_vacia())
         {
-
-            vehiculosAZona(buscaPedidos(ns)); //Si queremos sacar más de los que quedan, sacamos todos los que queden
-
-            cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
-            mostrarVehiculosFabrica();
-
-            mostrarZonas();
+            cout<<"No hay más pedidos. Aun quedan coches"<<endl;
+            cout<<"Fabrica: "<<vehiculosFabrica.get_longitud()<<endl;
+            cout<<"Pedidos: "<<listaPedidos.get_longitud()<<endl;
+            break;
         }
         else
         {
 
-            vehiculosAZona(zona, ns);
+            vehiculosAZona(buscaPedidos(ns));
 
-            cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
-            mostrarVehiculosFabrica();
+            //cout<<"Vehiculos en el almacen de la fabrica: "<<endl;
+            //mostrarVehiculosFabrica();
+            cout<<"Fabrica: "<<vehiculosFabrica.get_longitud()<<endl;
+            cout<<"Pedidos: "<<listaPedidos.get_longitud()<<endl;
 
             mostrarZonas();
         }
 
     }
+    cout<<"#####################"<<endl;
 
-}*/
+    cout<<"Fin de la simulacion."<<endl;
+
+    cout<<"#####################"<<endl;
+
+}
 
 void Gestor::verPedidos()
 {
