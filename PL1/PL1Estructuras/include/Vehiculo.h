@@ -31,6 +31,11 @@ class Vehiculo
         int devolverConcesionario();
         int getZona();
 
+        //Pedir
+        string pedirModelo();
+        string pedirColor();
+        string pedirTipo();
+
 
     protected:
 

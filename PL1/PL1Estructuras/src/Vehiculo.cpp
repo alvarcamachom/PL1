@@ -60,7 +60,8 @@ string Vehiculo::colorRand()
     return color;
 }
 
-void Vehiculo::set_concesionario(int n){
+void Vehiculo::set_concesionario(int n)
+{
     concesionario=n;
 }
 
@@ -91,6 +92,98 @@ void Vehiculo::setZona(int z)
     zona = z;
 }
 
+string Vehiculo::pedirTipo()
+{
+    bool bucle = true;
+    while (bucle)
+    {
+        string tipo;
+        cout<<"Tipo pedido: 'P', 'N'"<<endl;
+        cin>>tipo;
+        if(tipo=="P")
+        {
+            return "P";
+            bucle=false;
+        }
+        else if(tipo=="N")
+        {
+            return "N";
+            bucle=false;
+        }
+        else
+        {
+            cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
+        }
+    }
+}
+
+string Vehiculo::pedirModelo()
+{
+    bool bucle = true;
+    while (bucle)
+    {
+        cout<<"Modelo: 1,2,3,4,5"<<endl;
+        cin>>modelo;
+        if(modelo=="1")
+        {
+            return "M1";
+            bucle=false;
+        }
+        else if(modelo=="2")
+        {
+            return "M2";
+            bucle=false;
+        }
+        else if(modelo=="3")
+        {
+            return "M3";
+            bucle=false;
+        }
+        else if(modelo=="4")
+        {
+            return "M4";
+            bucle=false;
+        }
+        else if (modelo=="5")
+        {
+            return "M5";
+            bucle=false;
+        }
+        else
+        {
+            cout<<"Debe elegir del 1 al 5"<<endl;
+        }
+    }
+}
+
+string Vehiculo::pedirColor()
+{
+    bool bucle = true;
+    while (bucle)
+    {
+        cout<<"Color: 1,2,3"<<endl;
+        cin>>color;
+        if(color=="1")
+        {
+            return "C1";
+            bucle=false;
+        }
+        else if(color=="2")
+        {
+           return "C2";
+            bucle=false;
+        }
+        else if(color=="3")
+        {
+            return "C3";
+            bucle=false;
+        }
+        else
+        {
+            cout<<"Debe elegir del 1 al 3"<<endl;
+        }
+    }
+}
 
 string Vehiculo::verVehiculo()
 {

@@ -97,85 +97,11 @@ void Gestor::generarPedidosCustom(int n)
         bool bucle2 = true;
         bool bucle3 = true;
         //int zona;
+        Vehiculo ve;
+        color = ve.pedirColor();
+        modelo = ve.pedirModelo();
+        tipo = ve.pedirTipo();
 
-
-        while (bucle1)
-        {
-            cout<<"Color pedido "<<i+1<<": 1,2,3"<<endl;
-            cin>>color;
-            if(color=="1")
-            {
-                color="C1";
-                bucle1=false;
-            }
-            else if(color=="2")
-            {
-                color="C2";
-                bucle1=false;
-            }
-            else if(color=="3")
-            {
-                color="C3";
-                bucle1=false;
-            }
-            else
-            {
-                cout<<"Debe elegir del 1 al 3"<<endl;
-            }
-        }
-        while (bucle2)
-        {
-            cout<<"Modelo pedido "<<i+1<<": 1,2,3,4,5"<<endl;
-            cin>>modelo;
-            if(modelo=="1")
-            {
-                modelo="M1";
-                bucle2=false;
-            }
-            else if(modelo=="2")
-            {
-                modelo="M2";
-                bucle2=false;
-            }
-            else if(modelo=="3")
-            {
-                modelo="M3";
-                bucle2=false;
-            }
-            else if(modelo=="4")
-            {
-                modelo="M4";
-                bucle2=false;
-            }
-            else if (modelo=="5")
-            {
-                modelo="M5";
-                bucle2=false;
-            }
-            else
-            {
-                cout<<"Debe elegir del 1 al 5"<<endl;
-            }
-        }
-        while (bucle3)
-        {
-            cout<<"Tipo pedido "<<i+1<<": 'P', 'N'"<<endl;
-            cin>>tipo;
-            if(tipo=="P")
-            {
-                tipo="P";
-                bucle3=false;
-            }
-            else if(tipo=="N")
-            {
-                tipo="N";
-                bucle3=false;
-            }
-            else
-            {
-                cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
-            }
-        }
         Pedido ped = Pedido(modelo, color, tipo);
 
         if(ped.getTipo()=="P")
@@ -436,6 +362,14 @@ void Gestor::borrarPedidos()
     listaPedidos.vaciar_lista();
     cout<<"Se ha borrado la lista de pedidos"<<endl;
 }
+
+void Gestor::insertAutomovilABB(string col, string mod, int concesionario, string bastidor)
+{
+    //meter en el arbol el automovil con esos datos
+    //Vehiculo vehic = Vehiculo(string mod, string col, string bastidor, int con);
+
+}
+
 
 void Gestor::pruebaLista()
 {

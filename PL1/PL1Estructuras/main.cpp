@@ -161,16 +161,12 @@ int main()
         }
         else if(opcion==13){
             //Almacenar en ABB automovil con datos pedidos
-            string col;
-            string mod;
-            string tipo;
-            //int zona;
-            cout<<"Color pedido: C1, C2, C3"<<endl;
-            cin>>col;
-            cout<<"Modelo pedido: M1, M2, M3, M4, M5"<<endl;
-            cin>>mod;
-            cout<<"Tipo pedido: 'P', 'N'"<<endl;
-            cin>>tipo;
+
+            string col = v.pedirColor();
+            string mod = v.pedirModelo();
+            //string conc = v.pedirConcesionario();
+            //string bast = v.pedirBastidor(); estas dos faltan
+            //g.insertAutomovilABB(col, mod, conc, bast);
 
         }
         else if(opcion==14){
