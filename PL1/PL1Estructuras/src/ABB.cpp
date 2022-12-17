@@ -38,6 +38,7 @@ void ABB::insertar(Vehiculo v)
 
 void ABB::insertar(Vehiculo v, NodoABB *nodo)//En este método insertamos un nombre en el ABB en orden
 {
+
     if ((nodo->v.devolverConcesionario()>v.devolverConcesionario()) || (nodo->v.devolverConcesionario() == v.devolverConcesionario())) //Si el nombre es menor o igual al del nodo raíz
     {
         if (nodo->hi == NULL) //Si el nodo izquierdo está vacio entoces

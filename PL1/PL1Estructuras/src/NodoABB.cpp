@@ -5,10 +5,11 @@ NodoABB::NodoABB()
     //ctor
 }
 
-NodoABB::NodoABB(Vehiculo v, NodoABB *izq, NodoABB *der)
+NodoABB::NodoABB(Vehiculo ve, NodoABB *izq, NodoABB *der)
 {
+
     //ctor
-    v=v;
+    v=ve;
     hi=izq;
     hd=der;
 }

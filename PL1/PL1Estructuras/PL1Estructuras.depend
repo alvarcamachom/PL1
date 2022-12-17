@@ -153,7 +153,7 @@
 	"ABB.h"
 	"NodoABB.h"
 
-1671224148 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
+1671301867 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -176,7 +176,7 @@
 	<iostream>
 	"Vehiculo.h"
 
-1671040588 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\vehiculo.h
+1671309298 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\vehiculo.h
 	<string>
 	<list>
 	<cstdlib>
@@ -191,7 +191,7 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1671140687 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
+1671299116 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
@@ -205,7 +205,7 @@
 	<string>
 	"NodoCola.h"
 
-1671225864 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
+1671309298 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -213,6 +213,7 @@
 	"Cola.h"
 	"ZonaReparto.h"
 	"Pedido.h"
+	"ABB.h"
 
 1668259120 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodocola.cpp
 	"NodoCola.h"
@@ -226,7 +227,7 @@
 1669497437 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\pila.cpp
 	"Pila.h"
 
-1671052442 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
+1671309298 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
@@ -432,16 +433,17 @@
 	"NodoLista.h"
 	"Pedido.h"
 
-1671140687 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\abb.h
+1671305741 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\abb.h
 	"NodoABB.h"
 	<iostream>
 
-1671140687 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodoabb.h
+1671301867 c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\include\nodoabb.h
 	<iostream>
+	"Vehiculo.h"
 
-1671140687 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\abb.cpp
+1671308431 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\abb.cpp
 	"ABB.h"
 
-1671140687 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodoabb.cpp
+1671308393 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodoabb.cpp
 	"NodoABB.h"
 

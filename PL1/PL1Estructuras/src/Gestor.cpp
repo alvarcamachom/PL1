@@ -368,8 +368,8 @@ void Gestor::insertAutomovilABB(string col, string mod, int concesionario, strin
 {
     //meter en el arbol el automovil con esos datos
     Vehiculo vehic = Vehiculo(mod, col, bastidor,concesionario);
-    ABB arbolVehiculos = ABB();
-    arbolVehiculos.insertar(vehic);
+    ABB arbolVehiculos = ABB(vehic);
+    arbolVehiculos.insertar(Vehiculo());
     arbolVehiculos.verInOrden();
 }
 
