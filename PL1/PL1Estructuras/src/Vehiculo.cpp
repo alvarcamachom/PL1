@@ -191,7 +191,7 @@ string Vehiculo::pedirBastidor()
     bool bucle=true;
     while (bucle)
     {
-        cout<<"Introduce el numero de bastidor"<<endl;
+        cout<<"Introduce el numero de bastidor:"<<endl;
         cin>>bast;
         if (bast.length()==8)
         {
@@ -211,7 +211,7 @@ int Vehiculo::pedirConcesionario(int nc)
     bool bucle=true;
     while (bucle)
     {
-        cout<<"Introduce el numero de concesionario"<<endl;
+        cout<<"Introduce el numero de concesionario:"<<endl;
         cin>>con;
         if ((0<con) && (con<=nc))
         {

@@ -166,7 +166,7 @@ int main()
             string mod = v.pedirModelo();
             int conc = v.pedirConcesionario(nc);
             string bast = v.pedirBastidor();
-            //g.insertAutomovilABB(col, mod, conc, bast);
+            g.insertAutomovilABB(col, mod, conc, bast);
 
         }
         else if(opcion==14){

@@ -5,10 +5,10 @@ NodoABB::NodoABB()
     //ctor
 }
 
-NodoABB::NodoABB(int conc, NodoABB *izq, NodoABB *der)
+NodoABB::NodoABB(Vehiculo v, NodoABB *izq, NodoABB *der)
 {
     //ctor
-    concesionario=conc;
+    v=v;
     hi=izq;
     hd=der;
 }

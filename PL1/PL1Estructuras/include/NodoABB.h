@@ -1,6 +1,7 @@
 #ifndef NODOABB_H
 #define NODOABB_H
 #include <iostream>
+#include "Vehiculo.h"
 using namespace std;
 
 class NodoABB
@@ -8,13 +9,13 @@ class NodoABB
     friend class ABB;
     public:
         NodoABB();
-        NodoABB(int conc, NodoABB *izq=NULL, NodoABB *der=NULL);
+        NodoABB(Vehiculo v, NodoABB *izq=NULL, NodoABB *der=NULL);
         virtual ~NodoABB();
 
     protected:
 
     private:
-        int concesionario;
+        Vehiculo v;
         NodoABB *hi, *hd;
 };
 

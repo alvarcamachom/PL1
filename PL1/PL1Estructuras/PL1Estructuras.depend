@@ -103,7 +103,7 @@
 	"NodoPila.h"
 	"Vehiculo.h"
 
-1671233803 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
+1671235836 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
@@ -120,7 +120,7 @@
 	"Pila.h"
 	"Vehiculo.h"
 
-1671234409 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+1671274100 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -128,6 +128,7 @@
 	"Cola.h"
 	"ZonaReparto.h"
 	"Pedido.h"
+	"ABB.h"
 
 1671234409 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
@@ -137,7 +138,7 @@
 	"Lista.h"
 	"Pedido.h"
 
-1671235512 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1671273272 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -386,17 +387,18 @@
 	"Pedido.h"
 	<iostream>
 
-1671129323 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ABB.cpp
+1671273823 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ABB.cpp
 	"ABB.h"
 
-1671130010 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ABB.h
+1671273700 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ABB.h
 	"NodoABB.h"
 	<iostream>
 
-1671130010 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/NodoABB.h
+1671273728 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/NodoABB.h
 	<iostream>
+	"Vehiculo.h"
 
-1671128981 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoABB.cpp
+1671273848 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoABB.cpp
 	"NodoABB.h"
 
 1670916788 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\lista.h

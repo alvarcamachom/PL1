@@ -5,6 +5,7 @@
 #include "Cola.h"
 #include "ZonaReparto.h"
 #include "Pedido.h"
+#include "ABB.h"
 
 using namespace std;
 
@@ -366,8 +367,10 @@ void Gestor::borrarPedidos()
 void Gestor::insertAutomovilABB(string col, string mod, int concesionario, string bastidor)
 {
     //meter en el arbol el automovil con esos datos
-    //Vehiculo vehic = Vehiculo(string mod, string col, string bastidor, int con);
-
+    Vehiculo vehic = Vehiculo(mod, col, bastidor,concesionario);
+    ABB arbolVehiculos = ABB();
+    arbolVehiculos.insertar(vehic);
+    arbolVehiculos.verInOrden();
 }
 
 
