@@ -35,6 +35,8 @@ class Vehiculo
         string pedirModelo();
         string pedirColor();
         string pedirTipo();
+        string pedirBastidor();
+        int pedirConcesionario(int);
 
 
     protected:

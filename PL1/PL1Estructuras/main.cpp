@@ -164,8 +164,8 @@ int main()
 
             string col = v.pedirColor();
             string mod = v.pedirModelo();
-            //string conc = v.pedirConcesionario();
-            //string bast = v.pedirBastidor(); estas dos faltan
+            int conc = v.pedirConcesionario(nc);
+            string bast = v.pedirBastidor();
             //g.insertAutomovilABB(col, mod, conc, bast);
 
         }

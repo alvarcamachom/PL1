@@ -170,7 +170,7 @@ string Vehiculo::pedirColor()
         }
         else if(color=="2")
         {
-           return "C2";
+            return "C2";
             bucle=false;
         }
         else if(color=="3")
@@ -185,6 +185,45 @@ string Vehiculo::pedirColor()
     }
 }
 
+string Vehiculo::pedirBastidor()
+{
+    string bast;
+    bool bucle=true;
+    while (bucle)
+    {
+        cout<<"Introduce el numero de bastidor"<<endl;
+        cin>>bast;
+        if (bast.length()==8)
+        {
+            return bast;
+            bucle=false;
+        }
+        else
+        {
+            cout<<"El bastidor debe tener 8 caracteres"<<endl;
+        }
+    }
+}
+int Vehiculo::pedirConcesionario(int nc)
+{
+    int con;
+
+    bool bucle=true;
+    while (bucle)
+    {
+        cout<<"Introduce el numero de concesionario"<<endl;
+        cin>>con;
+        if ((0<con) && (con<=nc))
+        {
+            return con;
+            bucle=false;
+        }
+        else
+        {
+            cout<<"El numero de concesionario debe estar entre 1 y "<<nc<<endl;
+        }
+    }
+}
 string Vehiculo::verVehiculo()
 {
     return("Vehiculo: " + devolverModelo() + ", color: " + devolverColor() + ", bastidor: " + devolverBastidor() + ", concesionario: " + to_string(devolverConcesionario()) + "\n");
