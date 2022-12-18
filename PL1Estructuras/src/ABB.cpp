@@ -4,8 +4,9 @@
 ABB::ABB(int nc) //crea árbol vacío
 {
         int zon=rand()%4;
-        Lista lis= Lista();
-        c = Concesionario(nc/2, zon, lis);
+        ListaVehiculos lis= ListaVehiculos();
+        Concesionario c = Concesionario(nc/2, zon, lis);
+        raiz= new NodoABB(c);
 }
 
 ABB::ABB(NodoABB *r)
@@ -33,12 +34,13 @@ void ABB::verInOrden(NodoABB *arb) //Ver ABB en inorden
     }
 }
 
-void ABB::insertar(Concesionario c)
+/*void ABB::insertar(Concesionario c)
 {
     insertar(c, raiz);
-}
+}*/
 
-void ABB::insertar(Concesionario c, NodoABB *nodo)//En este método insertamos un nombre en el ABB en orden
+
+/*void ABB::insertar(Concesionario c, NodoABB *nodo)//En este método insertamos un nombre en el ABB en orden
 {
 
     if ((nodo->c.getNumero()>c.getNumero()) || (nodo->c.getNumero() == c.getNumero())) //Si el nombre es menor o igual al del nodo raíz
@@ -65,12 +67,56 @@ void ABB::insertar(Concesionario c, NodoABB *nodo)//En este método insertamos 
             insertar(c, nodo->hd);// insertamos el pasajero al nodo derecho
         }
     }
-}
+}*/
 
-void ABB::insertarVehiculo(Vehiculo ve)
+void ABB::insertar(Vehiculo ve)
 {
+    insertarVehiculo(ve, raiz);
+}
+
+void ABB::insertarVehiculo(Vehiculo ve, NodoABB *nodo)
+{
+    int ncon=ve.devolverConcesionario();
+    cout<<raiz->c.getNumero()<<endl;
+    cout<<"aaaaaaa"<<endl;
+    if(ncon<nodo->c.getNumero() || ncon==nodo->c.getNumero())
+    {
+        cout<<"aaaa"<<endl;
+        if(nodo->hi==NULL)
+        {
+            ListaVehiculos lis= ListaVehiculos();
+            lis.insertar_derecha(Vehiculo());
+            int zona=ve.getZona();
+            Concesionario c = Concesionario(ncon, zona, lis);
+            NodoABB *nuevo=new NodoABB(c); //creo un objeto NodoABB para insertarlo en el ABB
+            nodo->hi= nuevo;
+        }
+        else
+        {
+            insertarVehiculo(ve,nodo->hi);
+        }
+    }
+    else
+    {
+        if(nodo->hd==NULL)
+        {
+            ListaVehiculos lis= ListaVehiculos();
+            lis.insertar_derecha(Vehiculo());
+            int zona=ve.getZona();
+            Concesionario c = Concesionario(ncon, zona, lis);
+            NodoABB *nuevo=new NodoABB(c); //creo un objeto NodoABB para insertarlo en el ABB
+            nodo->hd= nuevo;
+        }
+        else
+        {
+            insertarVehiculo(ve,nodo->hd);
+        }
+    }
+
 
 }
+
+
 ABB::~ABB()
 {
 //dtor

@@ -585,7 +585,7 @@
 1671397426 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Concesionario.cpp
 	"Concesionario.h"
 
-1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\main.cpp
+1671402187 source:c:\users\oscar\desktop\c++\github\pl1estructuras\main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -648,20 +648,20 @@
 1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\pedido.h
 	<string>
 
-1671395966 c:\users\oscar\desktop\c++\github\pl1estructuras\include\abb.h
+1671401871 c:\users\oscar\desktop\c++\github\pl1estructuras\include\abb.h
 	"NodoABB.h"
 	<iostream>
 	"Concesionario.h"
 	"Vehiculo.h"
 
-1671395243 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodoabb.h
+1671398361 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodoabb.h
 	<iostream>
 	"Concesionario.h"
 
-1671395243 c:\users\oscar\desktop\c++\github\pl1estructuras\include\concesionario.h
-	"Lista.h"
+1671400013 c:\users\oscar\desktop\c++\github\pl1estructuras\include\concesionario.h
+	"ListaVehiculos.h"
 
-1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\abb.cpp
+1671402187 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\abb.cpp
 	"ABB.h"
 
 1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\cola.cpp
@@ -670,10 +670,10 @@
 	<string>
 	"NodoCola.h"
 
-1671395243 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\concesionario.cpp
+1671400739 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\concesionario.cpp
 	"Concesionario.h"
 
-1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\gestor.cpp
+1671402187 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -682,6 +682,7 @@
 	"ZonaReparto.h"
 	"Pedido.h"
 	"ABB.h"
+	"ListaVehiculos.h"
 
 1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\lista.cpp
 	"Lista.h"
@@ -689,7 +690,7 @@
 	"Pedido.h"
 	<iostream>
 
-1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodoabb.cpp
+1671398361 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodoabb.cpp
 	"NodoABB.h"
 
 1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodocola.cpp
@@ -738,6 +739,24 @@
 	<iostream>
 
 1671398625 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/NodoListaVehiculos.cpp
+	"NodoListaVehiculos.h"
+	"Vehiculo.h"
+
+1671399487 c:\users\oscar\desktop\c++\github\pl1estructuras\include\listavehiculos.h
+	"NodoListaVehiculos.h"
+	"Vehiculo.h"
+
+1671399487 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodolistavehiculos.h
+	"Vehiculo.h"
+	<iostream>
+
+1671400652 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\listavehiculos.cpp
+	"ListaVehiculos.h"
+	"NodoListaVehiculos.h"
+	"Vehiculo.h"
+	<iostream>
+
+1671399487 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodolistavehiculos.cpp
 	"NodoListaVehiculos.h"
 	"Vehiculo.h"
 

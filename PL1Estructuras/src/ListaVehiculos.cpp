@@ -245,7 +245,7 @@ void ListaVehiculos::mostrar()
         while(aux)
         {
             o++;
-            cout<< "Pedido: " <<o <<endl;
+            cout<< "Vehiculo: " <<o <<endl;
             cout << aux->v.verVehiculo();
             aux = aux->siguiente;
         }

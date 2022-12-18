@@ -62,7 +62,7 @@ int main()
 
         if (opcion != 2 && opcion != 6 && opcion != 10) //no se borran si se elige una de estas opciones porque exigen una entrada de datos
         {
-            system("clear"); //Para borrar la consola despues de cada accion
+            system("cls"); //Para borrar la consola despues de cada accion
         }
 
         if (opcion==0)
@@ -204,17 +204,6 @@ int main()
             g.verConcZona(bastidor);
         }
 
-
-        else if(opcion==99)
-        {
-            //g.pruebaLista();
-            g.pruebaABB();
-            /*Pedido ped = Pedido();
-            cout<<ped.verPedido()<<endl;
-            if(ped.getZona() == "N"){
-                g.vehiculosAZona(1,1);*/
-
-        }
         else
         {
             cout<<error;

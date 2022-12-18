@@ -1,17 +1,17 @@
 #ifndef CONCESIONARIO_H
 #define CONCESIONARIO_H
-#include "Lista.h"
+#include "ListaVehiculos.h"
 using namespace std;
 
 
 class Concesionario
 {
     public:
-        Concesionario(int num, int zon, Lista vConc);
+        Concesionario(int num, int zon, ListaVehiculos vConc);
         Concesionario();
         int getNumero();
         int getZona();
-        Lista getVehiculos();
+        ListaVehiculos getVehiculos();
         string verConcesionario();
         virtual ~Concesionario();
 
@@ -20,7 +20,7 @@ class Concesionario
     private:
         int numero;
         int zona;
-        Lista vehiculosConcesionario;
+        ListaVehiculos vehiculosConcesionario;
 };
 
 #endif // CONCESIONARIO_H

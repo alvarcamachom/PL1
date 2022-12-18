@@ -396,20 +396,21 @@ void Gestor::pruebaABB()
     //tiene que tener una lista de vehiculos... pero la implementacion de listas
     //la tenemos con pedido, entonces da error, habria que crear otra clase listaVehiculos??
     //o meter los vehiculos en una lista normal de c? esta parte me esta rayando
-    /*listaPrueba.insertar_izquierda(v1);
+    listaPrueba.insertar_izquierda(v1);
     listaPrueba.insertar_izquierda(v2);
     listaPrueba.insertar_izquierda(v3);
     Concesionario cagd = Concesionario(3, zonas[2], listaPrueba);
     ABB arbolPrueba = ABB(cagd, NodoABB *hIz, NodoABB *hDer);
-    arbolPrueba.verInOrden();*/
+    arbolPrueba.verInOrden();
     ListaVehiculos listaPrueba;
     Vehiculo v1 = Vehiculo();
     Vehiculo v2 = Vehiculo();
     Vehiculo v3 = Vehiculo();
-    listaPrueba.insertar_izquierda(v1);
-    listaPrueba.insertar_izquierda(v2);
-    listaPrueba.insertar_izquierda(v3);
-    listaPrueba.mostrar();
+    ABB arbol=ABB(nc);
+    arbol.insertar(v1);
+    arbol.insertar(v2);
+    arbol.insertar(v2);*/
+
 }
 
 Gestor::~Gestor()
