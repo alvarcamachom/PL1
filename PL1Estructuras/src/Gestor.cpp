@@ -6,6 +6,7 @@
 #include "ZonaReparto.h"
 #include "Pedido.h"
 #include "ABB.h"
+#include "ListaVehiculos.h"
 
 using namespace std;
 
@@ -383,7 +384,7 @@ void Gestor::eliminarModelo(string modelo){
 
 void Gestor::pruebaABB()
 {
-    zonas[0].setNombre("N");
+    /*zonas[0].setNombre("N");
     zonas[1].setNombre("S");
     zonas[2].setNombre("E");
     zonas[3].setNombre("O");
@@ -401,6 +402,14 @@ void Gestor::pruebaABB()
     Concesionario cagd = Concesionario(3, zonas[2], listaPrueba);
     ABB arbolPrueba = ABB(cagd, NodoABB *hIz, NodoABB *hDer);
     arbolPrueba.verInOrden();*/
+    ListaVehiculos listaPrueba;
+    Vehiculo v1 = Vehiculo();
+    Vehiculo v2 = Vehiculo();
+    Vehiculo v3 = Vehiculo();
+    listaPrueba.insertar_izquierda(v1);
+    listaPrueba.insertar_izquierda(v2);
+    listaPrueba.insertar_izquierda(v3);
+    listaPrueba.mostrar();
 }
 
 Gestor::~Gestor()
