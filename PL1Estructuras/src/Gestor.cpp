@@ -363,8 +363,9 @@ void Gestor::borrarPedidos()
 void Gestor::insertAutomovilABB(string col, string mod, int concesionario, string bastidor)
 {
     //meter en el arbol el automovil con esos datos
-
-}
+    Vehiculo vehic = Vehiculo(mod, col, bastidor, concesionario);
+    //Concesionario c = Concesionario(concesionario, "zona?", )
+    }
 
 void Gestor::verConcZona(string bastidor){
     //Ver el concesionario y zona del vehiculo que tiene el bastidor introducido
@@ -372,10 +373,8 @@ void Gestor::verConcZona(string bastidor){
 }
 
 void Gestor::verVehiculosConcesionario(int numc){
-    //Ver los vehiculos que hay en el concesionario dado (en la cola vehiculos zona)
-    /*for (int i=0; i<(ZonaReparto.vehiculosZona.get_longitud()); i++){
-        cout<<"hola";
-    }*/
+    //Ver los vehiculos que hay en el concesionario dado
+
 }
 
 void Gestor::pruebaLista()
