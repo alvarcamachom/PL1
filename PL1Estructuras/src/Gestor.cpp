@@ -322,7 +322,7 @@ void Gestor::finSimulacion(int ns)
 
         if (listaPedidos.es_vacia())
         {
-            cout<<"No hay más pedidos. Aun quedan coches"<<endl;
+            cout<<"No hay mas pedidos. Aun quedan coches"<<endl;
             cout<<"Fabrica: "<<vehiculosFabrica.get_longitud()<<endl;
             cout<<"Pedidos: "<<listaPedidos.get_longitud()<<endl;
             break;

@@ -510,15 +510,17 @@
 1671095506 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Pedido.h
 	<string>
 
-1671387473 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/ABB.h
+1671397426 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/ABB.h
 	"NodoABB.h"
 	<iostream>
+	"Concesionario.h"
+	"Vehiculo.h"
 
 1671388060 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/NodoABB.h
 	<iostream>
 	"Concesionario.h"
 
-1671388143 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/ABB.cpp
+1671397426 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/ABB.cpp
 	"ABB.h"
 
 1668529388 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Cola.cpp
@@ -545,7 +547,7 @@
 	"NodoLista.h"
 	"Pedido.h"
 
-1671387951 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Gestor.cpp
+1671398077 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -577,10 +579,10 @@
 	"Pila.h"
 	"Cola.h"
 
-1671388134 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Concesionario.h
+1671397426 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Concesionario.h
 	"Lista.h"
 
-1671388163 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Concesionario.cpp
+1671397426 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Concesionario.cpp
 	"Concesionario.h"
 
 1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\main.cpp
@@ -720,4 +722,22 @@
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
+
+1671397932 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/ListaVehiculos.cpp
+	"ListaVehiculos.h"
+	"NodoListaVehiculos.h"
+	"Vehiculo.h"
+	<iostream>
+
+1671397920 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/ListaVehiculos.h
+	"NodoListaVehiculos.h"
+	"Vehiculo.h"
+
+1671397850 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/NodoListaVehiculos.h
+	"Vehiculo.h"
+	<iostream>
+
+1671397989 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/NodoListaVehiculos.cpp
+	"NodoListaVehiculos.h"
+	"Vehiculo.h"
 
