@@ -6,7 +6,7 @@ Concesionario::Concesionario()
     //ctor
 }
 
-Concesionario::Concesionario(int num, string zon, Lista vConc)
+Concesionario::Concesionario(int num, int zon, Lista vConc)
 {
     numero = num;
     zona = zon;
@@ -17,7 +17,7 @@ int Concesionario::getNumero()
 {
     return numero;
 }
-string Concesionario::getZona()
+int Concesionario::getZona()
 {
     return zona;
 }
@@ -28,7 +28,7 @@ Lista Concesionario::getVehiculos()
 }
 string Concesionario::verConcesionario()
 {
-    return ("Concesionario: " + to_string(getNumero()) + ", zona: " + getZona() /*+ ", con vehiculos: " + getVehiculos().mostrar()*/ + "\n");
+    return ("Concesionario: " + to_string(getNumero()) + ", zona: " + to_string(getZona()) /*+ ", con vehiculos: " + getVehiculos().mostrar()*/ + "\n");
 }
 
 Concesionario::~Concesionario()

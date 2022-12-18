@@ -7,10 +7,10 @@ using namespace std;
 class Concesionario
 {
     public:
-        Concesionario(int num, string zon, Lista vConc);
+        Concesionario(int num, int zon, Lista vConc);
         Concesionario();
         int getNumero();
-        string getZona();
+        int getZona();
         Lista getVehiculos();
         string verConcesionario();
         virtual ~Concesionario();
@@ -19,7 +19,7 @@ class Concesionario
 
     private:
         int numero;
-        string zona;
+        int zona;
         Lista vehiculosConcesionario;
 };
 

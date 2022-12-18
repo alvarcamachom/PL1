@@ -1,9 +1,11 @@
 #include "ABB.h"
 
-ABB::ABB() //crea árbol vacío
+
+ABB::ABB(int nc) //crea árbol vacío
 {
-    //ctor
-    raiz=NULL;
+        int zon=rand()%4;
+        Lista lis= Lista();
+        c = Concesionario(nc/2, zon, lis);
 }
 
 ABB::ABB(NodoABB *r)
@@ -63,6 +65,11 @@ void ABB::insertar(Concesionario c, NodoABB *nodo)//En este método insertamos 
             insertar(c, nodo->hd);// insertamos el pasajero al nodo derecho
         }
     }
+}
+
+void ABB::insertarVehiculo(Vehiculo ve)
+{
+
 }
 ABB::~ABB()
 {

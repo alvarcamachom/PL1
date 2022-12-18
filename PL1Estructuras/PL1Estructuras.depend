@@ -583,3 +583,141 @@
 1671388163 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Concesionario.cpp
 	"Concesionario.h"
 
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<string>
+	"Pila.h"
+	"Cola.h"
+	"Gestor.h"
+	"Vehiculo.h"
+	"ZonaReparto.h"
+	"Lista.h"
+	"Pedido.h"
+	"ABB.h"
+	"NodoABB.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\pila.h
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodopila.h
+	<iostream>
+	"Vehiculo.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\vehiculo.h
+	<string>
+	<list>
+	<cstdlib>
+	<time.h>
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\cola.h
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodocola.h
+	"Vehiculo.h"
+	<cstddef>
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\gestor.h
+	"Vehiculo.h"
+	"Pila.h"
+	"Cola.h"
+	"ZonaReparto.h"
+	"Lista.h"
+	"Pedido.h"
+	"ABB.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\zonareparto.h
+	"Cola.h"
+	"Pila.h"
+	"Vehiculo.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\lista.h
+	"NodoLista.h"
+	"Pedido.h"
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodolista.h
+	"Pedido.h"
+	<iostream>
+
+1671393970 c:\users\oscar\desktop\c++\github\pl1estructuras\include\pedido.h
+	<string>
+
+1671395966 c:\users\oscar\desktop\c++\github\pl1estructuras\include\abb.h
+	"NodoABB.h"
+	<iostream>
+	"Concesionario.h"
+	"Vehiculo.h"
+
+1671395243 c:\users\oscar\desktop\c++\github\pl1estructuras\include\nodoabb.h
+	<iostream>
+	"Concesionario.h"
+
+1671395243 c:\users\oscar\desktop\c++\github\pl1estructuras\include\concesionario.h
+	"Lista.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\abb.cpp
+	"ABB.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\cola.cpp
+	<iostream>
+	"Cola.h"
+	<string>
+	"NodoCola.h"
+
+1671395243 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\concesionario.cpp
+	"Concesionario.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\gestor.cpp
+	"Gestor.h"
+	<time.h>
+	"Vehiculo.h"
+	"Pila.h"
+	"Cola.h"
+	"ZonaReparto.h"
+	"Pedido.h"
+	"ABB.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\lista.cpp
+	"Lista.h"
+	"NodoLista.h"
+	"Pedido.h"
+	<iostream>
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodoabb.cpp
+	"NodoABB.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodocola.cpp
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodolista.cpp
+	"NodoLista.h"
+	"Pedido.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\nodopila.cpp
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\pedido.cpp
+	"Pedido.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\pila.cpp
+	"Pila.h"
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\vehiculo.cpp
+	"Vehiculo.h"
+	"Gestor.h"
+	<string>
+	<cstddef>
+
+1671393970 source:c:\users\oscar\desktop\c++\github\pl1estructuras\src\zonareparto.cpp
+	"ZonaReparto.h"
+	"Vehiculo.h"
+	"Pila.h"
+	"Cola.h"
+

@@ -2,16 +2,19 @@
 #define ABB_H
 #include "NodoABB.h"
 #include <iostream>
+#include "Concesionario.h"
+#include "Vehiculo.h"
 
 
 class ABB
 {
     public:
-        ABB();
+        ABB(int);
         ABB(NodoABB *r);
         ABB(Concesionario c, NodoABB *hIz=NULL, NodoABB *hDer=NULL);
         void verInOrden();
         void insertar(Concesionario c);
+        void insertarVehiculo(Vehiculo);
         virtual ~ABB();
 
     protected:
