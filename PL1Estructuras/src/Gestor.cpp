@@ -373,6 +373,17 @@ void Gestor::insertAutomovilABB(string col, string mod, int concesionario, strin
     arbolVehiculos.verInOrden();
 }
 
+void Gestor::verConcZona(string bastidor){
+    //Ver el concesionario y zona del vehiculo que tiene el bastidor introducido
+
+}
+
+void Gestor::verVehiculosConcesionario(int numc){
+    //Ver los vehiculos que hay en el concesionario dado (en la cola vehiculos zona)
+    /*for (int i=0; i<(ZonaReparto.vehiculosZona.get_longitud()); i++){
+        cout<<"hola";
+    }*/
+}
 
 void Gestor::pruebaLista()
 {

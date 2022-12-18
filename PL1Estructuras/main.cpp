@@ -62,7 +62,7 @@ int main()
 
         if (opcion != 2 && opcion != 6 && opcion != 10) //no se borran si se elige una de estas opciones porque exigen una entrada de datos
         {
-            system("clS"); //Para borrar la consola despues de cada accion
+            system("clear"); //Para borrar la consola despues de cada accion
         }
 
         if (opcion==0)
@@ -190,14 +190,16 @@ int main()
         else if(opcion==18){
             //Ver los automoviles entregados en un concesionario pedido
             int numc;
-            cout<<"Seleccionar concesionario"<<endl;
+            cout<<"Seleccionar concesionario: "<<endl;
             cin>>numc;
+            g.verVehiculosConcesionario(numc);
         }
         else if(opcion==19){
             //Ver el concesionario y zona en que se ha entregado un automovil pidiendo numero de bastidor
             string bastidor;
             cout<<"Introduce el bastidor: "<<endl;
             cin>>bastidor;
+            g.verConcZona(bastidor);
         }
 
 

@@ -32,6 +32,8 @@ class Gestor
         void borrarPedidos();
         Cola buscaPedidos(int ns);
         void insertAutomovilABB(string, string, int, string);
+        void verConcZona(string);
+        void verVehiculosConcesionario(int);
 
 
     protected:

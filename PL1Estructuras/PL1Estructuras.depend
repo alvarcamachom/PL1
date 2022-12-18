@@ -103,7 +103,7 @@
 	"NodoPila.h"
 	"Vehiculo.h"
 
-1671235836 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
+1671275409 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Vehiculo.cpp
 	"Vehiculo.h"
 	"Gestor.h"
 	<string>
@@ -120,7 +120,7 @@
 	"Pila.h"
 	"Vehiculo.h"
 
-1671274100 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
+1671363126 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/Gestor.cpp
 	"Gestor.h"
 	<time.h>
 	"Vehiculo.h"
@@ -130,7 +130,7 @@
 	"Pedido.h"
 	"ABB.h"
 
-1671234409 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
+1671365378 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
@@ -138,7 +138,7 @@
 	"Lista.h"
 	"Pedido.h"
 
-1671273272 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
+1671365378 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -388,7 +388,7 @@
 	"Pedido.h"
 	<iostream>
 
-1671273823 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ABB.cpp
+1671363126 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/ABB.cpp
 	"ABB.h"
 
 1671273700 /Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/include/ABB.h
@@ -399,7 +399,7 @@
 	<iostream>
 	"Vehiculo.h"
 
-1671273848 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoABB.cpp
+1671363126 source:/Users/alvarocamacho/Desktop/PL1/PL1/PL1Estructuras/src/NodoABB.cpp
 	"NodoABB.h"
 
 1670916788 c:\users\moscardo\documents\github\pl1\pl1\pl1estructuras\include\lista.h
@@ -446,4 +446,101 @@
 
 1671308393 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodoabb.cpp
 	"NodoABB.h"
+
+1671365378 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<string>
+	"Pila.h"
+	"Cola.h"
+	"Gestor.h"
+	"Vehiculo.h"
+	"ZonaReparto.h"
+	"Lista.h"
+	"Pedido.h"
+	"ABB.h"
+	"NodoABB.h"
+
+1668529388 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Pila.h
+	"NodoPila.h"
+	"Vehiculo.h"
+
+1666632716 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/NodoPila.h
+	<iostream>
+	"Vehiculo.h"
+
+1671235476 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Vehiculo.h
+	<string>
+	<list>
+	<cstdlib>
+	<time.h>
+
+1668344431 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Cola.h
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1668529386 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/NodoCola.h
+	"Vehiculo.h"
+	<cstddef>
+
+1671365378 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Gestor.h
+	"Vehiculo.h"
+	"Pila.h"
+	"Cola.h"
+	"ZonaReparto.h"
+	"Lista.h"
+	"Pedido.h"
+
+1669573583 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/ZonaReparto.h
+	"Cola.h"
+	"Pila.h"
+	"Vehiculo.h"
+
+1670920604 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Lista.h
+	"NodoLista.h"
+	"Pedido.h"
+
+1670862071 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/NodoLista.h
+	"Pedido.h"
+	<iostream>
+
+1671095506 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Pedido.h
+	<string>
+
+1671273700 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/ABB.h
+	"NodoABB.h"
+	<iostream>
+
+1671273728 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/NodoABB.h
+	<iostream>
+	"Vehiculo.h"
+
+1671363126 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/ABB.cpp
+	"ABB.h"
+
+1668529388 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Cola.cpp
+	<iostream>
+	"Cola.h"
+	<string>
+	"NodoCola.h"
+
+1671095506 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/Lista.cpp
+	"Lista.h"
+	"NodoLista.h"
+	"Pedido.h"
+	<iostream>
+
+1671363126 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/NodoABB.cpp
+	"NodoABB.h"
+
+1668529386 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/NodoCola.cpp
+	"NodoCola.h"
+	<string>
+	"Vehiculo.h"
+
+1670862071 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/src/NodoLista.cpp
+	"NodoLista.h"
+	"Pedido.h"
 
