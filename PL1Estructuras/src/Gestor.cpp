@@ -377,24 +377,30 @@ void Gestor::verVehiculosConcesionario(int numc){
 
 }
 
-void Gestor::pruebaLista()
+void Gestor::eliminarModelo(string modelo){
+    //eliminar el modelo del arbol
+}
+
+void Gestor::pruebaABB()
 {
+    zonas[0].setNombre("N");
+    zonas[1].setNombre("S");
+    zonas[2].setNombre("E");
+    zonas[3].setNombre("O");
     Lista listaPrueba;
-    Pedido pedido1 = Pedido();
-    Pedido pedido2 = Pedido();
-    Pedido pedido3 = Pedido();
-    listaPrueba.insertar_izquierda(pedido1);
-    listaPrueba.insertar_izquierda(pedido2);
-    listaPrueba.insertar_izquierda(pedido3);
-    cout<<"longitud: ";
-    cout<<listaPrueba.get_longitud()<<endl;
-    listaPrueba.mostrar();
-    cout<<"Borro dato del medio"<<endl;
-    listaPrueba.borrar_posicion(1);
-    listaPrueba.mostrar();
-    cout<<"longitud despues de borrar: ";
-    cout<<listaPrueba.get_longitud()<<endl;
-    //Listas funciona bien con pedidos
+    Vehiculo v1 = Vehiculo();
+    Vehiculo v2 = Vehiculo();
+    Vehiculo v3 = Vehiculo();
+    //Aqui estaba haciendo las pruebas del arbol y me he dado cuenta que concesionario
+    //tiene que tener una lista de vehiculos... pero la implementacion de listas
+    //la tenemos con pedido, entonces da error, habria que crear otra clase listaVehiculos??
+    //o meter los vehiculos en una lista normal de c? esta parte me esta rayando
+    /*listaPrueba.insertar_izquierda(v1);
+    listaPrueba.insertar_izquierda(v2);
+    listaPrueba.insertar_izquierda(v3);
+    Concesionario cagd = Concesionario(3, zonas[2], listaPrueba);
+    ABB arbolPrueba = ABB(cagd, NodoABB *hIz, NodoABB *hDer);
+    arbolPrueba.verInOrden();*/
 }
 
 Gestor::~Gestor()

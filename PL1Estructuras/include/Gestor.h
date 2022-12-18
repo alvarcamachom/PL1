@@ -6,6 +6,7 @@
 #include "ZonaReparto.h"
 #include "Lista.h"
 #include "Pedido.h"
+#include "ABB.h"
 
 
 using namespace std;
@@ -24,7 +25,7 @@ class Gestor
         void mostrarZonas();
         void finSimulacion(int ns);
         void finSimulacionPedidos();
-        void pruebaLista();
+        void pruebaABB();
         void generarNVVehiculos(int nv);
         void generarPedidos(int nc);
         void generarPedidosCustom(int nc);
@@ -34,6 +35,7 @@ class Gestor
         void insertAutomovilABB(string, string, int, string);
         void verConcZona(string);
         void verVehiculosConcesionario(int);
+        void eliminarModelo(string);
 
 
     protected:

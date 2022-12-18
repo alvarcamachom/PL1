@@ -186,8 +186,8 @@ int main()
         else if(opcion==17){
             //Eliminar del arbol binario los datos de los automoviles de un modelo dado
             string modelo;
-            cout<<"Que modelo eliminamos?"<<endl;
-            cin>>modelo;
+            modelo=v.pedirModelo();
+            g.eliminarModelo(modelo);
         }
         else if(opcion==18){
             //Ver los automoviles entregados en un concesionario pedido
@@ -208,15 +208,12 @@ int main()
         else if(opcion==99)
         {
             //g.pruebaLista();
-            //g.pruebaArbol();
+            g.pruebaABB();
             /*Pedido ped = Pedido();
             cout<<ped.verPedido()<<endl;
             if(ped.getZona() == "N"){
                 g.vehiculosAZona(1,1);*/
-                int g = 3;
-                cout<<"int g";
-                cin>>g;
-                cout<<g;
+
         }
         else
         {

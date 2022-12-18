@@ -447,7 +447,7 @@
 1671308393 source:c:\users\oscar\desktop\c++\github\pl1\pl1estructuras\src\nodoabb.cpp
 	"NodoABB.h"
 
-1671388409 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/main.cpp
+1671391093 source:/Users/alvarocamacho/Desktop/PL1/PL1Estructuras/main.cpp
 	<iostream>
 	<cstdlib>
 	<time.h>
@@ -485,13 +485,14 @@
 	"Vehiculo.h"
 	<cstddef>
 
-1671371420 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Gestor.h
+1671391495 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/Gestor.h
 	"Vehiculo.h"
 	"Pila.h"
 	"Cola.h"
 	"ZonaReparto.h"
 	"Lista.h"
 	"Pedido.h"
+	"ABB.h"
 
 1669573583 /Users/alvarocamacho/Desktop/PL1/PL1Estructuras/include/ZonaReparto.h
 	"Cola.h"
