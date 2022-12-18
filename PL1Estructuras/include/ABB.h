@@ -9,9 +9,9 @@ class ABB
     public:
         ABB();
         ABB(NodoABB *r);
-        ABB(Vehiculo v, NodoABB *hIz=NULL, NodoABB *hDer=NULL);
+        ABB(Concesionario c, NodoABB *hIz=NULL, NodoABB *hDer=NULL);
         void verInOrden();
-        void insertar(Vehiculo v);
+        void insertar(Concesionario c);
         virtual ~ABB();
 
     protected:
@@ -19,8 +19,8 @@ class ABB
     private:
         NodoABB *raiz;
         void verInOrden(NodoABB *arb);
-        void insertar(Vehiculo v, NodoABB *nodo);
-        Vehiculo v;
+        void insertar(Concesionario c, NodoABB *nodo);
+        Concesionario c;
 };
 
 #endif // ABB_H

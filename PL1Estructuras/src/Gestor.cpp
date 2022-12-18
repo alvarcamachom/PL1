@@ -94,10 +94,6 @@ void Gestor::generarPedidosCustom(int n)
         string color;
         string modelo;
         string tipo;
-        bool bucle1 = true;
-        bool bucle2 = true;
-        bool bucle3 = true;
-        //int zona;
         Vehiculo ve;
         color = ve.pedirColor();
         modelo = ve.pedirModelo();
@@ -367,10 +363,7 @@ void Gestor::borrarPedidos()
 void Gestor::insertAutomovilABB(string col, string mod, int concesionario, string bastidor)
 {
     //meter en el arbol el automovil con esos datos
-    Vehiculo vehic = Vehiculo(mod, col, bastidor,concesionario);
-    ABB arbolVehiculos = ABB(vehic);
-    arbolVehiculos.insertar(Vehiculo());
-    arbolVehiculos.verInOrden();
+
 }
 
 void Gestor::verConcZona(string bastidor){

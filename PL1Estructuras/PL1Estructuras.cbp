@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/ABB.h" />
 		<Unit filename="include/Cola.h" />
+		<Unit filename="include/Concesionario.h" />
 		<Unit filename="include/Gestor.h" />
 		<Unit filename="include/Lista.h" />
 		<Unit filename="include/NodoABB.h" />
@@ -49,6 +50,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ABB.cpp" />
 		<Unit filename="src/Cola.cpp" />
+		<Unit filename="src/Concesionario.cpp" />
 		<Unit filename="src/Gestor.cpp" />
 		<Unit filename="src/Lista.cpp" />
 		<Unit filename="src/NodoABB.cpp" />
