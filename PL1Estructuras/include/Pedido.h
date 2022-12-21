@@ -10,7 +10,7 @@ class Pedido
         Pedido();
         Pedido(int nc);
         Pedido(string m, string col);
-        Pedido(string m, string col, string prio);
+        Pedido(string m, string col, string prio, int conc);
         virtual ~Pedido();
 
         string modeloRand();

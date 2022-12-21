@@ -97,22 +97,22 @@ string Vehiculo::pedirTipo()
     bool bucle = true;
     while (bucle)
     {
-        string tipo;
-        cout<<"Tipo pedido: 'P', 'N'"<<endl;
+        int tipo;
+        cout<<"Tipo pedido: 1-'P', 2-'N'"<<endl;
         cin>>tipo;
-        if(tipo=="P")
+        if(tipo==1)
         {
             return "P";
             bucle=false;
         }
-        else if(tipo=="N")
+        else if(tipo==2)
         {
             return "N";
             bucle=false;
         }
         else
         {
-            cout<<"Debe elegir entre P(Prioritario) y N(No prioritario)"<<endl;
+            cout<<"Debe elegir entre 1-P(Prioritario) y 2-N(No prioritario)"<<endl;
         }
     }
 }

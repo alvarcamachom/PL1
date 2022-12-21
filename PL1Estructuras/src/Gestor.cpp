@@ -95,12 +95,14 @@ void Gestor::generarPedidosCustom(int n)
         string color;
         string modelo;
         string tipo;
+        int concesionario;
         Vehiculo ve;
-        color = ve.pedirColor();
+        concesionario = ve.pedirConcesionario(nc);
         modelo = ve.pedirModelo();
+        color = ve.pedirColor();
         tipo = ve.pedirTipo();
 
-        Pedido ped = Pedido(modelo, color, tipo);
+        Pedido ped = Pedido(modelo, color, tipo, concesionario);
 
         if(ped.getTipo()=="P")
         {

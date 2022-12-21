@@ -34,13 +34,13 @@ Pedido::Pedido(string m, string col)
 
 }
 
-Pedido::Pedido(string m, string col, string prio)
+Pedido::Pedido(string m, string col, string prio, int conc)
 {
     modelo = m;
     color = col;
     tipo = prio;
     zona = Pedido::zonaRand();
-    concesionario = 0;
+    concesionario = conc;
     //falta concesionario
 }
 
