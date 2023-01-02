@@ -119,6 +119,10 @@ void Gestor::generarPedidosCustom(int n)
             cout<<"Error en la prioridad del pedido"<<endl;
         }
 
+        cout<<"**************************************************"<< endl;
+        cout<<"LISTA DE PEDIDOS: "<< endl;
+        listaPedidos.mostrar();
+        cout<<"**************************************************"<< endl;
     }
 }
 
